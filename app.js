@@ -1,13 +1,13 @@
-/* TogetherWeTri — site logic. 通常は編集不要です（内容の更新は data.js で行います）。 */
+/* TogetherWeTri — site logic. You normally do not need to edit this file; update content in data.js. */
 
 /* If data.js has a typo, show where instead of a half-broken page */
 if (window.__dataError || typeof SITE === "undefined" || typeof EVENTS === "undefined" || typeof MEMBERS === "undefined" || typeof POSTS === "undefined" || typeof TOPICS === "undefined") {
   const err = window.__dataError;
   const bar = document.createElement("div");
   bar.className = "data-error"; bar.setAttribute("role", "alert");
-  bar.innerHTML = "<b>data.js の書き方に誤りがあり、内容を表示できません。</b>" +
-    (err && err.line ? ` ${err.line}行目付近を確認してください。` : "") +
-    " カンマ（,）の抜けや重複、\" の閉じ忘れがよくある原因です。GitHubの History から直前の版に戻すこともできます。";
+  bar.innerHTML = "<b>The content cannot be shown because data.js has a mistake.</b>" +
+    (err && err.line ? ` Check around line ${err.line}.` : "") +
+    " Common causes are a missing or extra comma ( , ) or a missing closing quote (\"). You can also restore the previous version from History on GitHub.";
   document.body.prepend(bar);
   throw new Error("data.js could not be loaded" + (err ? ` (line ${err.line}: ${err.msg})` : ""));
 }
@@ -29,11 +29,12 @@ let LANG = "en";
 let evFilter = "upcoming";
 let postFilter = "all";
 const TODAY = new Date(); TODAY.setHours(0, 0, 0, 0);
-// Event lists in data.js: "jp" = EVENTS (Japan Branch), "kr" = KOREA_EVENTS (Korea Branch)
+// Event lists in data.js: "jp" = EVENTS (Japan), "kr" = KOREA_EVENTS (Korea), "us" = US_EVENTS, "aeif" = AEIF_EVENTS
 const EV_SETS = {
   jp: { list: () => EVENTS, topic: "event" },
   kr: { list: () => (typeof KOREA_EVENTS !== "undefined" ? KOREA_EVENTS : []), topic: "korea" },
-  us: { list: () => (typeof US_EVENTS !== "undefined" ? US_EVENTS : []), topic: "us" }
+  us: { list: () => (typeof US_EVENTS !== "undefined" ? US_EVENTS : []), topic: "us" },
+  aeif: { list: () => (typeof AEIF_EVENTS !== "undefined" ? AEIF_EVENTS : []), topic: "general" }
 };
 // Members of the Korea and U.S. branches (data.js: KOREA_MEMBERS, US_MEMBERS)
 const BRANCH_MEMBERS = {

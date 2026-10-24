@@ -1,48 +1,52 @@
-# TogetherWeTri 統合サイト（英語・日本語・韓国語）
+# TogetherWeTri website (English · 日本語 · 한국어)
 
-TogetherWeTri 全体と、日本・韓国・米国の各支部のページをまとめた1つのサイトです。
+One site for TogetherWeTri and its Japan, Korea and U.S. branches.
+Live at https://togetherwetri-all.github.io/togetherwetri/
 
-## ページ構成
+## Pages
 
-| メニュー | アドレス | 内容 |
+| Menu | Address | Contents |
 |---|---|---|
-| ホーム | `#home` | 全体の紹介、三か国の支部 |
-| 私たちについて | `#about` / `#about-aeif` | 「私たちについて」と「AEIF採択事業」の2タブ |
-| 日本支部 | `#japan` ほか | 概要・イベント（`#japan-events`）・ニュース（`#japan-news`）・メンバー（`#japan-members`） |
-| 韓国支部 | `#korea` / `#korea-events` | 概要・イベント |
-| 米国支部 | `#us` | 準備中のお知らせ・参加の呼びかけ |
-| お問い合わせ | `#contact` | フォーム、各支部のメール、参加の方法、よくある質問 |
+| Home | `#home` | Introduction, the three branches |
+| About us | `#about` / `#about-aeif` | Two tabs: "About us" and "AEIF Project" |
+| Japan Branch | `#japan` | Overview, Events (`#japan-events`), News (`#japan-news`), Members (`#japan-members`) |
+| Korea Branch | `#korea` | Overview, Events (`#korea-events`), Members (`#korea-members`) |
+| U.S. Branch | `#us` | Overview, Events (`#us-events`), Members (`#us-members`) |
+| Contact | `#contact` | Contact form, branch email addresses, ways to get involved, FAQ |
 
-旧アドレス（`#aeif` `#events` `#news` など）も、自動で新しいページに移動します。
+Old addresses such as `#aeif`, `#events` and `#news` still work and open the matching page.
 
-## 更新のしかた
+## Updating content
 
-ふだん編集するのは **data.js だけ** です。
+For everyday updates, edit **data.js only**. Instructions are written at the top of the file.
 
-- メールアドレス・フォーム・SNS …… `SITE`（`email` 全体／`japanEmail` 日本支部／`koreaEmail` 韓国支部）
-- 日本支部のメンバー・イベント・ニュース …… `MEMBERS` `EVENTS` `POSTS`
-- 韓国支部のイベント …… `KOREA_EVENTS`（ファイルの一番下）
-- 問い合わせの種類 …… `TOPICS`（`to: "japan"` は日本支部、`to: "korea"` は韓国支部のアドレス宛て）
+- Email addresses, form, social media: `SITE` (`email` general, `japanEmail` Japan Branch, `koreaEmail` Korea Branch)
+- Japan Branch members, events, news: `MEMBERS`, `EVENTS`, `POSTS`
+- Korea Branch events and members: `KOREA_EVENTS`, `KOREA_MEMBERS`
+- U.S. Branch events and members: `US_EVENTS`, `US_MEMBERS`
+- AEIF activities with a detail pop-up (Tokyo program): `AEIF_EVENTS`
+- Contact form topics: `TOPICS` (`to: "japan"` goes to the Japan Branch address, `to: "korea"` to the Korea Branch address)
 
-文章は `en`（英語）・`ja`（日本語）・`ko`（韓国語）で書けます。`ko` がない項目は、韓国語表示のときに英語で表示されます。
+Text can be written in `en` (English), `ja` (Japanese) and `ko` (Korean). If `ko` is missing, the Korean version shows the English text.
 
-写真・PDF はリポジトリの一番上（index.html と同じ場所）にアップロードし、ファイル名だけを data.js に書きます。
-ブラウザからアップロードできるのは1ファイル25MBまでなので、大きいPDFは圧縮してからアップロードしてください。
+Upload photos and PDFs to the top level of the repository (next to index.html) and write only the file name in data.js.
+GitHub's browser upload accepts files up to 25 MB, so compress large PDFs before uploading.
 
-**全体のメールアドレス**：`SITE.email` が空欄の間は、全体宛ての問い合わせ（一般・連携・取材など）は日本支部のアドレスに届きます。全体用のアドレスができたら入れてください。
+**General email address:** while `SITE.email` is empty, general questions (general, partnership, media, etc.) go to the Japan Branch address. Add the general address when you have one.
 
-## 公開のしかた（GitHub Pages・無料）
+## Files
 
-1. 全体用の GitHub アカウントで、新しいリポジトリ（Public）を作ります。
-2. 「Add file」→「Upload files」で、このフォルダの中身を**すべて**アップロードします（フォルダごとではなく、中のファイルを一番上に）。
-3. 「Settings」→「Pages」→ Branch を `main`、フォルダを `/ (root)` にして Save。
-4. 数分後、`https://アカウント名.github.io/リポジトリ名/` で公開されます。
+- `index.html` — page layout and fixed text (in three languages)
+- `app.js` — site logic (normally no need to edit)
+- `data.js` — content you update regularly
+- images (`.jpg`, `.png`, `.webp`) and reports (`.pdf`)
 
-## 旧日本支部サイトからの転送
+## Publishing (GitHub Pages, free)
 
-旧サイト（togetherwetri-japan リポジトリ）の訪問者を新サイトに送るには：
+1. Upload or edit files in the repository (Add file → Upload files, or the pencil icon to edit).
+2. Settings → Pages → Branch: `main`, folder: `/ (root)` → Save (only needed once).
+3. Changes appear on the live site within a few minutes.
 
-1. 同梱の `redirect-for-old-japan-site/index.html` で、旧リポジトリ（togetherwetri-japan）の `index.html` を置き換えます。転送先（https://togetherwetri-all.github.io/togetherwetri/）は設定済みです。
-2. 他のファイルは残しても消してもかまいません。
+## Redirect from the old Japan Branch site
 
-旧サイトの各ページは、新サイトの日本支部タブの対応するページに自動で移動します。
+To send visitors of the old site (togetherwetri-japan repository) to this site, replace the `index.html` of the old repository with `redirect-for-old-japan-site/index.html`. The destination is already set. Each old page opens the matching Japan Branch page here.

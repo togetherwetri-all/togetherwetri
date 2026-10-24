@@ -1,51 +1,53 @@
 /* ==================================================================
-   TogetherWeTri ― サイトの内容ファイル（data.js）
+   TogetherWeTri - site content (data.js)
    ------------------------------------------------------------------
-   日々の更新は、基本的にこのファイルだけを編集します。
-   ・メールアドレスやフォームの設定 …………… SITE
-   ・日本支部のメンバー紹介 ………………………… MEMBERS
-   ・日本支部のイベント …………………………… EVENTS
-   ・日本支部のニュース／ニュースレター記事 … POSTS
-   ・韓国支部のイベント・メンバー …………… KOREA_EVENTS / KOREA_MEMBERS（ファイルの下のほう）
-   ・米国支部のイベント・メンバー …………… US_EVENTS / US_MEMBERS（ファイルの一番下）
-   ・問い合わせの種類 ………………………………… TOPICS
+   Day-to-day updates only need this file.
+   - Email addresses and form settings ............ SITE
+   - Japan Branch members ......................... MEMBERS
+   - Japan Branch events .......................... EVENTS
+   - Japan Branch news / newsletter posts ......... POSTS
+   - Contact form topics .......................... TOPICS
+   - Korea Branch events and members .............. KOREA_EVENTS / KOREA_MEMBERS (near the bottom)
+   - U.S. Branch events and members ............... US_EVENTS / US_MEMBERS (at the bottom)
+   - AEIF project activities (detail pop-ups) ..... AEIF_EVENTS (at the bottom)
 
-   書き方のルール
-   1. 文字は必ず "ダブルクォート" で囲みます。文中に " を使うときは \" と書きます。
-   2. 項目と項目の間は , （半角カンマ）で区切ります。カンマ忘れが一番多いミスです。
-   3. 日付は "2026-11-14" の形（年-月-日、半角）で書きます。
-      今日より前の日付のイベントは自動で「過去のイベント」に移ります。
-   4. en が英語、ja が日本語、ko が韓国語です。
-      ko を書かなかった項目は、韓国語表示のときに英語で表示されます（あとから足せます）。
-      例： title: { en: "...", ja: "...", ko: "..." }
-   5. 写真やPDFは index.html と同じ場所（リポジトリの一番上）にアップロードし、ファイル名だけを書きます。
-   6. 一番簡単な追加方法は、既存の1件を丸ごとコピーして書き換えることです。
+   Rules
+   1. Always wrap text in "double quotes". To use " inside text, write \".
+   2. Separate items with a comma ( , ). A missing comma is the most common mistake.
+   3. Write dates as "2026-11-14" (year-month-day).
+      Events whose date has passed move to "Past events" automatically.
+   4. en = English, ja = Japanese, ko = Korean.
+      If ko is missing, the Korean version of the site shows the English text.
+      Example: title: { en: "...", ja: "...", ko: "..." }
+   5. Upload photos and PDFs to the top level of the repository (next to index.html)
+      and write only the file name here.
+   6. The easiest way to add an item is to copy an existing one and edit it.
 
-   保存後にサイトが真っ白になったり内容が消えたりしたら、
-   画面上部の赤い表示に出る行番号のあたりで、カンマやクォートを確認してください。
+   If the site goes blank or content disappears after saving, check the commas
+   and quotes near the line number shown in the red bar at the top of the page.
    ================================================================== */
 
 const SITE = {
-  // TogetherWeTri 全体の問い合わせ先メールアドレス。
-  // 空欄 "" のままだと、下の日本支部アドレスだけが表示され、すべての問い合わせがそちらに届きます。
+  // General TogetherWeTri email address.
+  // If left empty (""), general questions go to the Japan Branch address below.
   email: "",
 
-  // 日本支部の問い合わせ先（日本支部・イベント申し込み・メンバー応募・ニュースレターなど）
+  // Japan Branch address (Japan Branch questions, event registration, joining the team, newsletter, etc.)
   japanEmail: "togetherwetri.japan@gmail.com",
 
-  // 韓国支部の問い合わせ先
+  // Korea Branch address
   koreaEmail: "togetherwetri.dosaeif@gmail.com",
 
-  // Formspree のフォームURL（例: "https://formspree.io/f/abcdwxyz"）
-  // 入れると、問い合わせフォームから直接メールが届くようになります。
-  // 空欄 "" のままだと、訪問者がメッセージをコピーして自分でメールする方式になります。
+  // Formspree form URL (e.g. "https://formspree.io/f/abcdwxyz").
+  // When set, the contact form sends messages directly to your inbox.
+  // When empty (""), visitors copy their message and send it by email themselves.
   formEndpoint: "",
 
-  // ニュースレター登録用のURL（Googleフォームなど）。空欄ならメールでの申し込み案内を表示します。
+  // Newsletter sign-up URL (e.g. a Google Form). If empty, the site asks people to subscribe by email.
   newsletterSignupUrl: "",
 
-  // SNS のリンク。url を入れたものだけが、フッターとお問い合わせページに表示されます。
-  // 使わないものは url を "" のままにするか、行ごと消してください。並び順もそのまま表示順になります。
+  // Social media links. Only entries with a url are shown (footer and contact page).
+  // Leave url as "" or delete the line to hide one. The order here is the display order.
   social: [
     { name: "LinkedIn",  url: "https://www.linkedin.com/company/togetherwetri-ytl/" },
     { name: "Instagram (All)", url: "https://www.instagram.com/togetherwetri_ytl" },
@@ -63,16 +65,17 @@ const MEMBERS = [
   { name: { en: "Member Name", ja: "氏名" }, role: { en: "Partnerships", ja: "渉外担当" }, aff: { en: "University / Organization · YTL 20XX", ja: "所属 · YTL 20XX年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
   { name: { en: "Member Name", ja: "氏名" }, role: { en: "Community", ja: "コミュニティ担当" }, aff: { en: "University / Organization · YTL 20XX", ja: "所属 · YTL 20XX年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" }
 ];
-const MEMBERS_ARE_PLACEHOLDERS = false;  // 実際のメンバー情報に差し替えたら false にすると「テンプレート」表示が消えます
+const MEMBERS_ARE_PLACEHOLDERS = false;  // true shows a "Template" note above the member list
 
-// sample: true の項目には「サンプル」表示が付きます。実際のイベントでは sample: false にするか、その行を消してください。
-// イベントの詳細（タイトルを押すと開く画面）に表示できる項目（どれも省略できます）：
-//   participants: { en: "...", ja: "..." }            参加者数など
-//   schedule: [ { time: "14:00–14:20", en: "...", ja: "..." }, ... ]   スケジュール
-//             日をまたぐときは { day: { en: "June 12 (Fri)", ja: "6月12日（金）" } } で見出しを入れる
-//   gallery: [ { src: "写真.jpg", en: "説明", ja: "説明" }, ... ]       当日の写真
-//   video: "https://youtu.be/..."                                     YouTube の動画（画面内で再生）
-//   lead: "..."                                                       企画担当
+// Items with sample: true get a "Sample" label. For real events, set sample: false or delete that line.
+// Optional fields shown in the event details (opened by clicking the event title):
+//   participants: { en: "...", ja: "..." }                             number of participants, etc.
+//   schedule: [ { time: "14:00–14:20", en: "...", ja: "..." }, ... ]   program
+//             for multi-day events add a heading: { day: { en: "June 12 (Fri)", ja: "6月12日（金）" } }
+//   gallery: [ { src: "photo.jpg", en: "caption", ja: "caption" }, ... ]   photos from the day
+//   video: "https://youtu.be/..."                                       YouTube video (plays in the page)
+//   organizer / cohost / support / sponsor / partners / lead            credits
+//   poster: "poster.jpg", report: "report.pdf" (or a Google Drive link)
 const EVENTS = [
   { date: "2026-10-10", time: "14:00–17:00 JST", sample: false,
     title: { en: "Japan-U.S.-ROK Youth Dialogue: Innovation & Resilience", ja: "日米韓の次世代がつくるイノベーションとレジリエンス" },
@@ -194,8 +197,8 @@ const POSTS = [
             ja: ["このサンプルを実際のメンバーのストーリーに差し替えてください。YTLサミットに参加する前の期待、考えが変わった瞬間、現在取り組んでいることを書くと伝わりやすくなります。", "4〜5段落程度の短い文章にまとめ、写真があれば添えてください。"] } }
 ];
 
-// 問い合わせフォームの「お問い合わせ内容」の選択肢
-// to: "japan" の項目は日本支部（SITE.japanEmail）、to: "korea" の項目は韓国支部（SITE.koreaEmail）宛てになります。
+// Choices for "Topic" in the contact form.
+// Topics with to: "japan" go to SITE.japanEmail; topics with to: "korea" go to SITE.koreaEmail. Others go to SITE.email.
 const TOPICS = [
   { id: "general",     en: "General question",          ja: "一般的なご質問",         ko: "일반 문의" },
   { id: "japan",       en: "Japan Branch",              ja: "日本支部について",       ko: "일본 지부 관련",       to: "japan" },
@@ -210,8 +213,8 @@ const TOPICS = [
 ];
 
 // ------------------------------------------------------------------
-// 韓国支部のイベント（書き方は上の EVENTS と同じです。ko に韓国語を書けます）
-//   links: [ { en: "...", ja: "...", ko: "...", url: "https://..." } ]   報道・関連リンク
+// Korea Branch events (same format as EVENTS above; add Korean text with ko).
+//   links: [ { en: "...", ja: "...", ko: "...", url: "https://..." } ]   media coverage / related links
 // ------------------------------------------------------------------
 const KOREA_EVENTS = [
   { date: "2025-12-19 ~ 2025-12-20", format: "In person", langs: "EN / KO",
@@ -280,16 +283,48 @@ const KOREA_EVENTS = [
     poster: "poster-gwangju1115.jpg", report: "report-gwangju1115.pdf" }
 ];
 
-// 한국지부 멤버
-// 예시: { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
+// Korea Branch members (same format as MEMBERS). If empty, "coming soon" is shown.
+// Example: { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
 const KOREA_MEMBERS = [ { name: { en: "Seungbeom Ryan Son", ja: "Seungbeom Ryan Son", ko: "손승범" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: ""},
   { name: { en: "Seoyeong Lee", ja: "Seoyeong Lee", ko: "이서영" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
   { name: { en: "Gabi Kim", ja: "Gabi Kim", ko: "김가빈" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
   { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Role", ja: "役割", ko: "역할" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: ""  }                     
 ];
 
-// 米国支部のイベントとメンバー（書き方は EVENTS・MEMBERS と同じです）
+// U.S. Branch events and members (same format as EVENTS and MEMBERS).
 const US_EVENTS = [
 ];
 const US_MEMBERS = [
+];
+
+// AEIF project activities that open a detail pop-up on the "AEIF Project" page (same format as EVENTS).
+const AEIF_EVENTS = [
+  { date: "2026-03-04 ~ 2026-03-08", format: "In person", langs: "EN",
+    title: { en: "Tokyo Trilateral Engagement Program", ja: "東京トライラテラル・エンゲージメント・プログラム", ko: "도쿄 한미일 교류 프로그램" },
+    place: { en: "Tokyo", ja: "東京", ko: "도쿄" },
+    desc: { en: "Five days in Tokyo that expanded TogetherWeTri into Japan. Alongside two public dialogues, the team met diplomatic, policy, academic and civil-society partners to discuss priorities such as supply chain resilience, critical minerals and emerging technology, and to lay the groundwork for the Japan Branch.",
+            ja: "TogetherWeTriの活動を日本へと広げた東京での5日間。2つの公開ダイアローグに加え、外交・政策・学術・市民社会のパートナーと面会し、サプライチェーンの強靭化、重要鉱物、新興技術などの優先分野について意見を交わしながら、日本支部の土台をつくりました。",
+            ko: "TogetherWeTri의 활동을 일본으로 확장한 도쿄에서의 5일. 두 차례의 공개 대화와 함께 외교·정책·학계·시민사회 파트너를 만나 공급망 회복력, 핵심 광물, 신흥 기술 등 우선 분야를 논의하고, 일본 지부의 기반을 마련했습니다." },
+    organizer: { en: "TogetherWeTri", ja: "TogetherWeTri", ko: "TogetherWeTri" },
+    schedule: [
+      { day: { en: "March 5 (Thu) · Meetings and exchanges", ja: "3月5日（木）面会・交流", ko: "3월 5일 (목) 면담 및 교류" } },
+      { en: "Embassy of the Republic of Korea in Japan", ja: "駐日大韓民国大使館", ko: "주일 대한민국 대사관" },
+      { en: "U.S. Embassy Tokyo (Public Diplomacy and Political Sections)", ja: "在日米国大使館（広報・文化交流部、政治部）", ko: "주일 미국 대사관 (공공외교·정무 담당)" },
+      { en: "GR Japan", ja: "GR Japan", ko: "GR Japan" },
+      { en: "Temple University Japan, Institute of Contemporary Asian Studies (joint seminar)", ja: "テンプル大学ジャパン 現代アジア研究所（合同セミナー）", ko: "템플대학교 재팬 현대아시아연구소 (공동 세미나)" },
+      { day: { en: "March 6 (Fri)", ja: "3月6日（金）", ko: "3월 6일 (금)" } },
+      { en: "National Diet of Japan (tour and meeting with members of the House of Representatives)", ja: "国会（見学と衆議院議員との面会）", ko: "일본 국회 (견학 및 중의원 의원 면담)" },
+      { en: "Public dialogue: YTL U.S.-ROK-Japan Cooperation Dialogue in Tokyo", ja: "公開ダイアローグ：YTL U.S.-ROK-Japan Cooperation Dialogue in Tokyo", ko: "공개 대화: YTL U.S.-ROK-Japan Cooperation Dialogue in Tokyo" },
+      { day: { en: "March 7 (Sat)", ja: "3月7日（土）", ko: "3월 7일 (토)" } },
+      { en: "Japan-America Student Conference (JASC)", ja: "日米学生会議（JASC）", ko: "일미학생회의 (JASC)" },
+      { en: "Meeting with academic experts on trilateral cooperation", ja: "日米韓協力の有識者との面会", ko: "한미일 협력 전문가 면담" },
+      { day: { en: "March 8 (Sun)", ja: "3月8日（日）", ko: "3월 8일 (일)" } },
+      { en: "Public dialogue: Trilateral Sports Diplomacy Dialogue in Tokyo", ja: "公開ダイアローグ：Trilateral Sports Diplomacy Dialogue in Tokyo", ko: "공개 대화: Trilateral Sports Diplomacy Dialogue in Tokyo" }
+    ],
+    gallery: [
+      { src: "tokyo0306-1.jpg", en: "Cooperation Dialogue (March 6)", ja: "協力ダイアローグ（3月6日）", ko: "협력 대화 (3월 6일)" },
+      { src: "tokyo0308-1.jpg", en: "Sports Diplomacy Dialogue (March 8)", ja: "スポーツ外交ダイアローグ（3月8日）", ko: "스포츠 외교 대화 (3월 8일)" }
+    ],
+    video: ["https://youtu.be/sIRlnjUECDs", "https://youtu.be/BWPahOFDPqM"],
+    report: "report-tokyo0308.pdf" }
 ];

@@ -8,7 +8,6 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="TogetherWeTri">
 <meta property="og:description" content="Bridging the U.S., the ROK and Japan through public diplomacy. パブリック・ディプロマシーで、日米韓をつなぐ。공공외교로 한·미·일을 잇다.">
-<!-- 公開後、og:image を絶対URL（例: https://ユーザー名.github.io/リポジトリ名/og.png）に書き換えると、SNSでのリンク表示に画像が出ます -->
 <meta property="og:image" content="https://togetherwetri-all.github.io/togetherwetri/og.png">
 <meta property="og:url" content="https://togetherwetri-all.github.io/togetherwetri/">
 <meta name="twitter:card" content="summary_large_image">
@@ -617,6 +616,12 @@ html[data-lang="ja"] .branch-hero h1, html[data-lang="ko"] .branch-hero h1 { max
 html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-width: none; font-size: clamp(1.1rem, 5.4vw, 3.4rem); }
 .ed-sched li.no-time { grid-template-columns: 14px 1fr; gap: 10px; }
 .ed-sched li.no-time .ed-time { width: 6px; height: 6px; border-radius: 50%; background: var(--red); margin-top: .62em; }
+.mz-programs-l { top: -68px; right: 36px; }
+@media (max-width: 600px) { .mz-programs-l { top: -55px; right: 18px; } }
+.rt.rt-wide { grid-column: 1 / -1; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto; }
+.rt.rt-wide img { height: 100%; aspect-ratio: auto; min-height: 200px; object-position: 50% 100%; }
+@media (max-width: 700px) { .rt.rt-wide { grid-template-columns: 1fr; } .rt.rt-wide img { min-height: 0; aspect-ratio: 3 / 1; } }
+.rt-detail { appearance: none; border: 0; background: none; padding: 0; font: inherit; color: var(--red); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .ed-links { display: flex; flex-wrap: wrap; gap: 10px; }
 @media (max-width: 600px) {
   .home-hero .hero-art > img, .kr-hero .hero-art > img { height: 150px; object-fit: cover; }
@@ -714,7 +719,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
       <div class="stats has-mz">
         <span class="mz mz-peek mz-stats" data-say="Hi!" aria-hidden="true"><img src="hank-peek.png" alt=""></span>
         <div class="stat">
-          <span class="big">6</span>
+          <span class="big">8</span>
           <h3><span class="en">Regional cooperation roundtables</span><span class="ja">地域協力ラウンドテーブル</span><span class="ko">지역 협력 라운드테이블</span></h3>
           <p><span class="en">Expanding dialogue across cities and sectors in Korea and Japan.</span><span class="ja">韓国と日本で、都市・分野を越えて対話を広げました。</span><span class="ko">한국과 일본에서 도시와 분야를 넘어 대화를 넓혔습니다.</span></p>
         </div>
@@ -888,6 +893,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
           <span class="when">2025</span>
           <h3><span class="en">TogetherWeTri launches in Korea</span><span class="ja">TogetherWeTri、韓国で始動</span><span class="ko">TogetherWeTri, 한국에서 출범</span></h3>
           <p><span class="en">Alumni of the YTL Summit start the initiative in Korea.</span><span class="ja">日米韓ヤング・リーダーズ・サミット（YTL）の修了生が、韓国でイニシアティブを立ち上げました。</span><span class="ko">YTL 서밋 수료생들이 한국에서 이니셔티브를 시작했습니다.</span></p>
+          <p><a href="#korea" data-nav="korea"><span class="en">Korea Branch page →</span><span class="ja">韓国支部のページへ →</span><span class="ko">한국 지부 페이지로 →</span></a></p>
         </div>
         <div class="tl">
           <span class="when"><span class="en">August 2025 – September 2026</span><span class="ja">2025年8月〜2026年9月</span><span class="ko">2025년 8월 ~ 2026년 9월</span></span>
@@ -981,7 +987,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
       </div>
       <div class="stats">
         <div class="stat">
-          <span class="big">6</span>
+          <span class="big">8</span>
           <h3><span class="en">Regional cooperation roundtables</span><span class="ja">地域協力ラウンドテーブル</span><span class="ko">지역 협력 라운드테이블</span></h3>
           <p><span class="en">Expanding dialogue across cities and sectors in Korea and Japan.</span><span class="ja">韓国と日本で、都市・分野を越えて対話を広げました。</span><span class="ko">한국과 일본에서 도시와 분야를 넘어 대화를 넓혔습니다.</span></p>
         </div>
@@ -1004,7 +1010,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
     <div class="wrap">
       <div class="block-head">
         <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Regional cooperation roundtables</span><span class="ja">地域協力ラウンドテーブル</span><span class="ko">지역 협력 라운드테이블</span></span>
-        <h2><span class="en">Six roundtables across Korea and Japan</span><span class="ja">韓国と日本で開いた6つのラウンドテーブル</span><span class="ko">한국과 일본에서 열린 6개의 라운드테이블</span></h2>
+        <h2><span class="en">Eight roundtables across Korea and Japan</span><span class="ja">韓国と日本で開いた8つのラウンドテーブル</span><span class="ko">한국과 일본에서 열린 8개의 라운드테이블</span></h2>
         <p class="muted"><span class="en">Expanding dialogue across cities and sectors, with youth and university students from diverse academic backgrounds.</span><span class="ja">都市や分野を越えて対話を広げ、多様な学問分野の若者・大学生が参加しました。</span><span class="ko">도시와 분야를 넘어 대화를 넓히며, 다양한 전공의 청년과 대학생이 참여했습니다.</span></p>
       </div>
       <div class="rt-list">
@@ -1070,29 +1076,16 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
             <div class="rt-links"><a href="report-tokyo0613.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="block tint" id="aeif-tokyo">
-    <div class="wrap split">
-      <div class="block-head" style="margin-bottom:0">
-        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Tokyo Trilateral Engagement Program</span><span class="ja">東京トライラテラル・エンゲージメント・プログラム</span><span class="ko">도쿄 한미일 교류 프로그램</span></span>
-        <h2><span class="en">Five days in Tokyo, March 4–8, 2026</span><span class="ja">東京での5日間（2026年3月4〜8日）</span><span class="ko">도쿄에서의 5일 (2026년 3월 4~8일)</span></h2>
-        <p class="muted"><span class="en">The program expanded TogetherWeTri into Japan. Alongside two public dialogues, the team met diplomatic, policy, academic and civil-society partners to discuss priorities such as supply chain resilience, critical minerals and emerging technology, and to lay the groundwork for the Japan Branch.</span><span class="ja">このプログラムで、TogetherWeTriの活動は日本へと広がりました。2つの公開ダイアローグに加え、外交・政策・学術・市民社会のパートナーと面会し、サプライチェーンの強靭化、重要鉱物、新興技術などの優先分野について意見を交わしながら、日本支部の土台をつくりました。</span><span class="ko">이 프로그램을 통해 TogetherWeTri의 활동이 일본으로 확장되었습니다. 두 차례의 공개 대화와 함께 외교·정책·학계·시민사회 파트너를 만나 공급망 회복력, 핵심 광물, 신흥 기술 등 우선 분야를 논의하고, 일본 지부의 기반을 마련했습니다.</span></p>
-        <p><a href="report-tokyo0308.pdf" target="_blank" rel="noopener"><span class="en">Read the Tokyo program report (PDF) ↗</span><span class="ja">東京プログラムのレポートを読む（PDF） ↗</span><span class="ko">도쿄 프로그램 보고서 읽기(PDF) ↗</span></a></p>
-      </div>
-      <div>
-        <h3 style="font-size:1.0625rem;margin-bottom:6px"><span class="en">Meetings and exchanges</span><span class="ja">面会・交流先</span><span class="ko">면담 및 교류</span></h3>
-        <ul class="engage" style="grid-template-columns:1fr">
-            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">Embassy of the Republic of Korea in Japan</span><span class="ja">駐日大韓民国大使館</span><span class="ko">주일 대한민국 대사관</span></span></li>
-            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">U.S. Embassy Tokyo (Public Diplomacy and Political Sections)</span><span class="ja">在日米国大使館（広報・文化交流部、政治部）</span><span class="ko">주일 미국 대사관(공공외교·정무 담당)</span></span></li>
-            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">GR Japan</span><span class="ja">GR Japan</span><span class="ko">GR Japan</span></span></li>
-            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">Temple University Japan, Institute of Contemporary Asian Studies (joint seminar)</span><span class="ja">テンプル大学ジャパン 現代アジア研究所（合同セミナー）</span><span class="ko">템플대학교 재팬 현대아시아연구소(공동 세미나)</span></span></li>
-            <li><span class="d"><span class="en">Mar 6</span><span class="ja">3月6日</span><span class="ko">3월 6일</span></span><span><span class="en">National Diet of Japan (tour and meeting with members of the House of Representatives)</span><span class="ja">国会（見学と衆議院議員との面会）</span><span class="ko">일본 국회(견학 및 중의원 의원 면담)</span></span></li>
-            <li><span class="d"><span class="en">Mar 7</span><span class="ja">3月7日</span><span class="ko">3월 7일</span></span><span><span class="en">Japan-America Student Conference (JASC)</span><span class="ja">日米学生会議（JASC）</span><span class="ko">일미학생회의(JASC)</span></span></li>
-            <li><span class="d"><span class="en">Mar 7</span><span class="ja">3月7日</span><span class="ko">3월 7일</span></span><span><span class="en">Meeting with academic experts on trilateral cooperation</span><span class="ja">日米韓協力の有識者との面会</span><span class="ko">한미일 협력 전문가 면담</span></span></li>
-        </ul>
+        <article class="rt rt-wide">
+          <img src="banner.webp" width="1115" height="296" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Tokyo · March 4–8, 2026</span><span class="ja">東京・2026年3月4〜8日</span><span class="ko">도쿄 · 2026년 3월 4~8일</span></span>
+            <h3><span class="en">Tokyo Trilateral Engagement Program</span><span class="ja">東京トライラテラル・エンゲージメント・プログラム</span><span class="ko">도쿄 한미일 교류 프로그램</span></h3>
+            <span class="rt-num"><span class="en">5 days · meetings, exchanges and 2 public dialogues</span><span class="ja">5日間・面会、交流、2つの公開ダイアローグ</span><span class="ko">5일간 · 면담, 교류, 공개 대화 2회</span></span>
+            <p><span class="en">The program that expanded TogetherWeTri into Japan and laid the groundwork for the Japan Branch.</span><span class="ja">TogetherWeTriの活動を日本へ広げ、日本支部の土台をつくったプログラムです。</span><span class="ko">TogetherWeTri의 활동을 일본으로 넓히고, 일본 지부의 기반을 마련한 프로그램입니다.</span></p>
+            <div class="rt-links"><button type="button" class="rt-detail" data-detail="aeif:0"><span class="en">Details: meetings and exchanges →</span><span class="ja">詳細を見る（面会・交流先など） →</span><span class="ko">자세히 보기 (면담·교류처 등) →</span></button><a href="report-tokyo0308.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1166,7 +1159,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
         <h2><span class="en">Four ways the Japan Branch works</span><span class="ja">日本支部の4つの活動</span><span class="ko">일본 지부의 네 가지 활동</span></h2>
       </div>
       <div class="programs has-mz">
-        <span class="mz mz-peek mz-programs" data-say="Hi!" aria-hidden="true"><img src="hank-peek.png" alt=""></span>
+        <span class="mz mz-lounge mz-programs-l" data-say="こんにちは！" aria-hidden="true"><img src="haru.png" alt=""></span>
         <div class="program">
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-3.5-3"/></svg></span>
           <h3><span class="en">Dialogues &amp; workshops</span><span class="ja">対話・ワークショップ</span><span class="ko">대화·워크숍</span></h3>
@@ -1436,7 +1429,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
         <div style="display:grid;gap:10px;justify-items:start">
           <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></span>
           <h2><span class="en">Funded by the U.S. Department of State</span><span class="ja">米国国務省の助成を受けた事業</span><span class="ko">미국 국무부 지원 사업</span></h2>
-          <p class="muted"><span class="en">From August 2025 to September 2026, the Korea Branch carried out an Alumni Engagement Innovation Fund (AEIF) project, including six regional cooperation roundtables in Korea and Japan.</span><span class="ja">2025年8月から2026年9月まで、韓国支部は同窓生エンゲージメント・イノベーション基金（AEIF）の事業を実施し、韓国と日本で6回の地域協力ラウンドテーブルを開きました。</span><span class="ko">2025년 8월부터 2026년 9월까지 한국 지부는 동문 참여 혁신 기금(AEIF) 사업을 수행하며, 한국과 일본에서 6회의 지역 협력 라운드테이블을 개최했습니다.</span></p>
+          <p class="muted"><span class="en">From August 2025 to September 2026, the Korea Branch carried out an Alumni Engagement Innovation Fund (AEIF) project, including eight regional cooperation roundtables in Korea and Japan.</span><span class="ja">2025年8月から2026年9月まで、韓国支部は同窓生エンゲージメント・イノベーション基金（AEIF）の事業を実施し、韓国と日本で8回の地域協力ラウンドテーブルを開きました。</span><span class="ko">2025년 8월부터 2026년 9월까지 한국 지부는 동문 참여 혁신 기금(AEIF) 사업을 수행하며, 한국과 일본에서 8회의 지역 협력 라운드테이블을 개최했습니다.</span></p>
           <a class="btn ghost" href="#about-aeif" data-nav="about-aeif"><span class="en">See the AEIF project →</span><span class="ja">AEIF採択事業の詳細を見る →</span><span class="ko">AEIF 사업 자세히 보기 →</span></a>
         </div>
       </div>
@@ -1798,8 +1791,7 @@ html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-wid
   <div data-menu-for="about-aeif" style="display:contents">
   <button type="button" role="menuitem" data-jump="aeif-overview"><span class="en">Project overview</span><span class="ja">事業の概要</span><span class="ko">사업 개요</span></button>
   <button type="button" role="menuitem" data-jump="aeif-results"><span class="en">Results</span><span class="ja">成果</span><span class="ko">성과</span></button>
-  <button type="button" role="menuitem" data-jump="aeif-roundtables"><span class="en">Six roundtables</span><span class="ja">6つのラウンドテーブル</span><span class="ko">6개의 라운드테이블</span></button>
-  <button type="button" role="menuitem" data-jump="aeif-tokyo"><span class="en">Tokyo program</span><span class="ja">東京プログラム</span><span class="ko">도쿄 프로그램</span></button>
+  <button type="button" role="menuitem" data-jump="aeif-roundtables"><span class="en">Eight roundtables</span><span class="ja">8つのラウンドテーブル</span><span class="ko">8개의 라운드테이블</span></button>
   <button type="button" role="menuitem" data-jump="aeif-resources"><span class="en">Reports and videos</span><span class="ja">レポート・動画</span><span class="ko">보고서 및 영상</span></button>
   </div>
 </div>
