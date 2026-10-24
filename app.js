@@ -14,15 +14,35 @@ if (window.__dataError || typeof SITE === "undefined" || typeof EVENTS === "unde
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const LANGS = ["en", "ja", "ko"];
-const PAGES = ["home", "about", "aeif", "japan", "contact"];
-// Japan Branch tab: each view has its own address (#japan-events etc.)
-const JP_VIEWS = ["japan", "japan-events", "japan-news", "japan-members"];
+const PAGES = ["home", "about", "japan", "korea", "us", "contact"];
+// Pages with sub-pages: each sub-page has its own address (#japan-events, #about-aeif …)
+const SUBS = {
+  about: ["about", "about-aeif"],
+  japan: ["japan", "japan-events", "japan-news", "japan-members"],
+  korea: ["korea", "korea-events", "korea-members"],
+  us: ["us", "us-events", "us-members"]
+};
+const pageOf = (route) => Object.keys(SUBS).find((p) => SUBS[p].includes(route)) || route;
 // Addresses used by the old sites keep working
-const ALIASES = { events: "japan-events", news: "japan-news", members: "japan-members", "about-members": "japan-members", branches: "japan" };
+const ALIASES = { aeif: "about-aeif", events: "japan-events", news: "japan-news", members: "japan-members", "about-members": "japan-members", branches: "home" };
 let LANG = "en";
 let evFilter = "upcoming";
 let postFilter = "all";
 const TODAY = new Date(); TODAY.setHours(0, 0, 0, 0);
+// Event lists in data.js: "jp" = EVENTS (Japan Branch), "kr" = KOREA_EVENTS (Korea Branch)
+const EV_SETS = {
+  jp: { list: () => EVENTS, topic: "event" },
+  kr: { list: () => (typeof KOREA_EVENTS !== "undefined" ? KOREA_EVENTS : []), topic: "korea" },
+  us: { list: () => (typeof US_EVENTS !== "undefined" ? US_EVENTS : []), topic: "us" }
+};
+// Members of the Korea and U.S. branches (data.js: KOREA_MEMBERS, US_MEMBERS)
+const BRANCH_MEMBERS = {
+  kr: () => (typeof KOREA_MEMBERS !== "undefined" ? KOREA_MEMBERS : []),
+  us: () => (typeof US_MEMBERS !== "undefined" ? US_MEMBERS : [])
+};
+const brFilter = {};
+const evKey = (e) => { for (const k in EV_SETS) { const i = EV_SETS[k].list().indexOf(e); if (i > -1) return k + ":" + i; } return ""; };
+const evByKey = (key) => { const [k, i] = String(key).split(":"); return EV_SETS[k] ? EV_SETS[k].list()[Number(i)] : null; };
 
 const L = (en, ja, ko) => (LANG === "ja" ? ja : LANG === "ko" ? (ko ?? en) : en);
 // text from data.js: { en, ja, ko } — falls back to English when a language is missing
@@ -81,7 +101,8 @@ const posterBtn = (e, i, lazy) => `<button type="button" class="ev-poster" data-
 function eventActions(e, past) {
   const report = e.report || "";
   const out = [];
-  if (!past) out.push(`<a class="btn" href="#contact" data-nav="contact" data-topic="event" data-event="${esc(t(e.title))}">${L("Register", "申し込む", "신청하기")}</a>`);
+  const topic = (EV_SETS[evKey(e).split(":")[0]] || EV_SETS.jp).topic;
+  if (!past) out.push(`<a class="btn" href="#contact" data-nav="contact" data-topic="${topic}" data-event="${esc(t(e.title))}">${L("Register", "申し込む", "신청하기")}</a>`);
   if (report) out.push(`<a class="btn ${past ? "" : "ghost"}" href="${esc(report)}" target="_blank" rel="noopener">${DOC_ICON}${L("Event report", "イベントレポート", "행사 보고서")}${/\.pdf($|[?#])/i.test(report) ? " (PDF)" : ""}</a>`);
   return out;
 }
@@ -92,7 +113,7 @@ const chipsHTML = (e, past) => `<div class="chips">
       </div>`;
 
 function eventHTML(e) {
-  const i = EVENTS.indexOf(e);
+  const i = evKey(e);
   const d = evStart(e);
   const past = evEnd(e) < TODAY;
   const poster = e.poster || e.photo || "";
@@ -130,6 +151,41 @@ function renderEvents() {
   $("#home-events").innerHTML = up.length ? up.slice(0, 2).map(eventHTML).join("")
     : emptyHTML(L("No upcoming events yet. Here are our most recent ones.", "現在予定されているイベントはありません。最近のイベントをご覧ください。", "현재 예정된 행사가 없습니다. 최근 행사를 확인해 보세요.")) + past.slice(0, 2).map(eventHTML).join("");
 }
+// Korea / U.S. branch events: same layout as the Japan Branch (upcoming / past)
+function renderBranchEvents(prefix) {
+  const all = EV_SETS[prefix].list();
+  const up = all.filter((e) => evEnd(e) >= TODAY).sort((a, b) => a.date.localeCompare(b.date));
+  const past = all.filter((e) => evEnd(e) < TODAY).sort((a, b) => b.date.localeCompare(a.date));
+  if (!brFilter[prefix]) brFilter[prefix] = up.length ? "upcoming" : "past";
+  const f = brFilter[prefix];
+  const list = f === "upcoming" ? up : past;
+  $("#" + prefix + "-events-list").innerHTML = list.length ? list.map(eventHTML).join("")
+    : emptyHTML(f === "upcoming"
+      ? L("No upcoming events yet. Check back soon.", "現在予定されているイベントはありません。決まり次第お知らせします。", "현재 예정된 행사가 없습니다. 정해지는 대로 알려 드리겠습니다.")
+      : L("No past events yet.", "過去のイベントはまだありません。", "아직 지난 행사가 없습니다."));
+  $("#" + prefix + "-ev-count").textContent = LANG === "ja" ? `${list.length}件` : LANG === "ko" ? `${list.length}건` : `${list.length} ${list.length === 1 ? "event" : "events"}`;
+  $$(`[data-ev-branch="${prefix}"]`).forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.evf === f)));
+  const home = $("#" + prefix + "-home-events");
+  if (home) home.innerHTML = up.length ? up.slice(0, 2).map(eventHTML).join("")
+    : past.length ? past.slice(0, 2).map(eventHTML).join("")
+    : emptyHTML(L("Events will be announced here.", "イベントが決まったら、ここでお知らせします。", "행사가 정해지면 여기에서 알려 드립니다."));
+}
+function memberCard(m) {
+  return `<article class="member">
+    <div class="avatar">${m.photo ? `<img src="${esc(m.photo)}" alt="">` : `<img class="ph" src="mark.png" alt="">`}</div>
+    <div>
+      <span class="role">${esc(t(m.role))}</span>
+      <h3>${esc(t(m.name))}</h3>
+      <span class="aff">${esc(t(m.aff))}</span>
+    </div>
+    <p class="bio">${esc(t(m.bio))}</p>
+  </article>`;
+}
+function renderBranchMembers(prefix) {
+  const list = BRANCH_MEMBERS[prefix]();
+  $("#" + prefix + "-members").innerHTML = list.length ? list.map(memberCard).join("")
+    : `<div style="grid-column:1/-1">${emptyHTML(L("Member profiles are coming soon.", "メンバー紹介は準備中です。", "멤버 소개는 준비 중입니다."))}</div>`;
+}
 
 /* ---------- posts ---------- */
 function postHTML(p, i) {
@@ -164,15 +220,7 @@ function openPost(i) {
 /* ---------- members ---------- */
 function renderMembers() {
   $("#members-note").hidden = !(typeof MEMBERS_ARE_PLACEHOLDERS !== "undefined" && MEMBERS_ARE_PLACEHOLDERS);
-  $("#members").innerHTML = MEMBERS.map((m) => `<article class="member">
-    <div class="avatar">${m.photo ? `<img src="${esc(m.photo)}" alt="">` : `<img class="ph" src="mark.png" alt="">`}</div>
-    <div>
-      <span class="role">${esc(t(m.role))}</span>
-      <h3>${esc(t(m.name))}</h3>
-      <span class="aff">${esc(t(m.aff))}</span>
-    </div>
-    <p class="bio">${esc(t(m.bio))}</p>
-  </article>`).join("");
+  $("#members").innerHTML = MEMBERS.map(memberCard).join("");
 }
 
 /* ---------- event details (schedule, photos, video) ---------- */
@@ -188,7 +236,7 @@ function scheduleHTML(e) {
   const rows = (e.schedule || []).map((r) => {
     if (r.day) return `<li class="ed-day">${esc(t(r.day))}</li>`;
     const label = capOf(r) || t(r.title);
-    return `<li><span class="ed-time">${esc(r.time || "")}</span><span>${esc(label)}</span></li>`;
+    return `<li${r.time ? "" : ' class="no-time"'}><span class="ed-time">${esc(r.time || "")}</span><span>${esc(label)}</span></li>`;
   }).join("");
   return rows ? `<section class="ed-sec"><h3>${L("Schedule", "スケジュール", "일정")}</h3><ol class="ed-sched">${rows}</ol></section>` : "";
 }
@@ -203,6 +251,12 @@ function videosHTML(e) {
   }).join("");
   return `<section class="ed-sec"><h3>${L("Video", "動画", "영상")}</h3>${items}</section>`;
 }
+function linksHTML(e) {
+  const list = (e.links || []).filter((x) => x && x.url);
+  if (!list.length) return "";
+  return `<section class="ed-sec"><h3>${L("Media & links", "メディア掲載・関連リンク", "언론 보도·관련 링크")}</h3><div class="ed-links">${list.map((x) =>
+    `<a class="btn ghost" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(capOf(x) || x.url)} ↗</a>`).join("")}</div></section>`;
+}
 function galleryHTML(e, i) {
   const g = (e.gallery || []).map(galleryItem).filter((x) => x.src);
   if (!g.length) return "";
@@ -212,7 +266,7 @@ function galleryHTML(e, i) {
   }).join("")}</div></section>`;
 }
 function openDetail(i) {
-  const e = EVENTS[i]; if (!e) return;
+  const e = evByKey(i); if (!e) return;
   const past = evEnd(e) < TODAY;
   const poster = e.poster || e.photo || "";
   const actions = eventActions(e, past);
@@ -232,7 +286,8 @@ function openDetail(i) {
     </div>
     ${scheduleHTML(e)}
     ${galleryHTML(e, i)}
-    ${videosHTML(e)}`;
+    ${videosHTML(e)}
+    ${linksHTML(e)}`;
   const d = $("#ev-detail");
   openDialog(d);
   d.scrollTop = 0;
@@ -250,13 +305,13 @@ function showImage(title, src, alt) {
   openDialog($("#poster-view"));
 }
 function openPhoto(i, k) {
-  const e = EVENTS[i]; if (!e) return;
+  const e = evByKey(i); if (!e) return;
   const x = galleryItem((e.gallery || [])[k]); if (!x.src) return;
   const cap = capOf(x) || t(e.title);
   showImage(cap, x.src, cap);
 }
 function openPoster(i) {
-  const e = EVENTS[i]; if (!e) return;
+  const e = evByKey(i); if (!e) return;
   showImage(t(e.title), e.poster || e.photo, L("Poster: ", "ポスター：", "포스터: ") + t(e.title));
 }
 $("#pv-close").addEventListener("click", () => closeDialog($("#poster-view")));
@@ -268,8 +323,10 @@ $("#reader").addEventListener("click", (e) => { if (e.target === e.currentTarget
 // Topics marked to: "japan" in data.js go to the Japan Branch address
 const generalEmail = () => SITE.email || SITE.japanEmail || "";
 const japanEmail = () => SITE.japanEmail || SITE.email || "";
+const koreaEmail = () => SITE.koreaEmail || SITE.email || SITE.japanEmail || "";
 const currentTopic = () => TOPICS.find((x) => x.id === $("#c-topic").value) || TOPICS[0];
-const recipient = (tp) => (tp && tp.to === "japan") ? japanEmail() : generalEmail();
+const recipient = (tp) => (tp && tp.to === "japan") ? japanEmail() : (tp && tp.to === "korea") ? koreaEmail() : generalEmail();
+const subjectTag = (tp) => tp && tp.to === "japan" ? " Japan" : tp && tp.to === "korea" ? " Korea" : "";
 
 function renderTopics(keep) {
   const sel = $("#c-topic");
@@ -278,12 +335,13 @@ function renderTopics(keep) {
   sel.value = TOPICS.some((tp) => tp.id === cur) ? cur : TOPICS[0].id;
 }
 function renderEmails() {
-  const both = SITE.email && SITE.japanEmail && SITE.email !== SITE.japanEmail;
-  $("#email-addr").textContent = generalEmail();
+  // the general address is shown only when it is set; branch addresses are always labeled
+  $("#email-addr").textContent = SITE.email || "";
   $("#email-addr-jp").textContent = japanEmail();
-  // with only one address, show it once without labels
-  $$("[data-jp-email]").forEach((el) => { el.hidden = !both; });
-  $$(".email-label[data-gen-email]").forEach((el) => { el.hidden = !both; });
+  $("#email-addr-kr").textContent = SITE.koreaEmail || "";
+  $$("[data-gen-email]").forEach((el) => { el.hidden = !SITE.email; });
+  $$("[data-jp-email]").forEach((el) => { el.hidden = !SITE.japanEmail; });
+  $$("[data-kr-email]").forEach((el) => { el.hidden = !SITE.koreaEmail; });
 }
 function renderSubscribe() {
   const slot = $("#subscribe-slot");
@@ -319,7 +377,7 @@ function buildCompose() {
   const name = $("#c-name").value.trim(), email = $("#c-email").value.trim(), aff = $("#c-aff").value.trim(), msg = $("#c-msg").value.trim();
   const topic = currentTopic();
   const to = recipient(topic);
-  const subject = `[TogetherWeTri${topic.to === "japan" ? " Japan" : ""}] ${topic[LANG] || topic.en} - ${name}`;
+  const subject = `[TogetherWeTri${subjectTag(topic)}] ${topic[LANG] || topic.en} - ${name}`;
   const body = `${msg}\n\n${name}${aff ? "\n" + aff : ""}\n${email}`;
   $("#compose-text").textContent = `To: ${to}\nSubject: ${subject}\n\n${body}`;
   $("#mailto-compose").href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -341,7 +399,8 @@ $("#contact-form").addEventListener("submit", async (ev) => {
     try {
       const fd = new FormData(form);
       const topic = currentTopic();
-      fd.append("_subject", `[TogetherWeTri${topic.to === "japan" ? " Japan" : ""}] ${topic.en} - ${name}`);
+      fd.append("_subject", `[TogetherWeTri${subjectTag(topic)}] ${topic.en} - ${name}`);
+      fd.append("_to_branch", topic.to || "general");
       const res = await fetch(SITE.formEndpoint, { method: "POST", body: fd, headers: { Accept: "application/json" } });
       if (!res.ok) throw new Error("HTTP " + res.status);
       form.reset(); renderTopics("general");
@@ -366,7 +425,7 @@ function applyLinks() {
   });
 }
 function renderAll() {
-  renderEvents(); renderPosts(); renderMembers();
+  renderEvents(); renderBranchEvents("kr"); renderBranchEvents("us"); renderPosts(); renderMembers(); renderBranchMembers("kr"); renderBranchMembers("us");
   renderTopics(); renderEmails(); renderSubscribe(); setSubmitLabel(); renderSocial();
   $("#c-msg").placeholder = L("How can we help?", "ご用件をご記入ください。", "문의 내용을 입력해 주세요.");
 }
@@ -381,26 +440,29 @@ function setLang(l) {
 }
 
 /* ---------- navigation ---------- */
-const resolve = (h) => { h = ALIASES[h] || h; return (PAGES.includes(h) || JP_VIEWS.includes(h)) ? h : "home"; };
+const resolve = (h) => { h = ALIASES[h] || h; return PAGES.includes(pageOf(h)) ? h : "home"; };
 let current = "";
 function show(route, opts = {}) {
   route = resolve(route);
-  const page = JP_VIEWS.includes(route) ? "japan" : route;
-  const wasJapan = JP_VIEWS.includes(current);
+  const page = pageOf(route);
+  const samePage = current && pageOf(current) === page;
   current = route;
   closeSecMenu();
   $$(".page").forEach((p) => { p.hidden = p.dataset.page !== page; });
   $$(".nav a").forEach((a) => { if (a.dataset.nav === page) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-  if (page === "japan") {
-    $$(".jp-view").forEach((v) => { v.hidden = v.dataset.view !== route; });
-    $$(".jp-tabs a").forEach((a) => { if (a.dataset.nav === route) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  const pg = $("#page-" + page);
+  if (SUBS[page]) {
+    $$(".sub-view", pg).forEach((v) => { v.hidden = v.dataset.view !== route; });
+    $$(".sub-tabs a", pg).forEach((a) => { if (a.dataset.nav === route) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   }
+  // hero buttons stay colored while their sub-page is open
+  $$(".hero-btn").forEach((b) => b.classList.toggle("is-on", b.dataset.nav === route));
   $("#site-nav").classList.remove("open");
   $("#menu-btn").setAttribute("aria-expanded", "false");
   if (opts.keepScroll) return;
-  // switching tabs inside the Japan Branch page keeps the tab bar in view
-  const hero = $(".jp-hero");
-  if (page === "japan" && wasJapan && hero) {
+  // switching sub-pages keeps the tab bar in view
+  const hero = pg && $(".branch-hero", pg);
+  if (samePage && hero) {
     const top = hero.offsetTop + hero.offsetHeight - $(".site-header").offsetHeight;
     window.scrollTo({ top: Math.min(window.scrollY, top) });
   } else window.scrollTo({ top: 0 });
@@ -427,8 +489,9 @@ function openSecMenu(btn) {
   const menu = $("#sec-menu");
   if (secToggle === btn) { closeSecMenu(); return; }
   closeSecMenu();
-  // show only the sections of the page the button is on
-  const pg = btn.closest(".page"); const page = pg ? pg.dataset.page : "";
+  // show only the sections of the page (or sub-page) the button is on
+  const sv = btn.closest(".sub-view"), pg = btn.closest(".page");
+  const page = sv ? sv.dataset.view : pg ? pg.dataset.page : "";
   $$("[data-menu-for]", menu).forEach((g) => { g.hidden = g.dataset.menuFor !== page; });
   menu.hidden = false;
   const r = btn.getBoundingClientRect();
@@ -447,9 +510,9 @@ document.addEventListener("click", (ev) => {
   const jump = ev.target.closest("[data-jump]");
   if (jump) { closeSecMenu(); const el = document.getElementById(jump.dataset.jump); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
   if (secToggle && !ev.target.closest("#sec-menu")) closeSecMenu();
-  const pv = ev.target.closest("[data-poster]"); if (pv) { openPoster(Number(pv.dataset.poster)); return; }
-  const ph = ev.target.closest("[data-photo]"); if (ph) { const [i, k] = ph.dataset.photo.split(":").map(Number); openPhoto(i, k); return; }
-  const dt = ev.target.closest("[data-detail]"); if (dt) { openDetail(Number(dt.dataset.detail)); return; }
+  const pv = ev.target.closest("[data-poster]"); if (pv) { openPoster(pv.dataset.poster); return; }
+  const ph = ev.target.closest("[data-photo]"); if (ph) { const p = ph.dataset.photo.split(":"); openPhoto(p[0] + ":" + p[1], Number(p[2])); return; }
+  const dt = ev.target.closest("[data-detail]"); if (dt) { openDetail(dt.dataset.detail); return; }
   const nav = ev.target.closest("[data-nav]");
   if (nav) {
     ev.preventDefault();
@@ -465,9 +528,10 @@ document.addEventListener("click", (ev) => {
   }
   const lb = ev.target.closest(".lang button"); if (lb) { setLang(lb.dataset.lang); return; }
   const evb = ev.target.closest("[data-ev]"); if (evb) { evFilter = evb.dataset.ev; renderEvents(); return; }
+  const bf = ev.target.closest("[data-evf]"); if (bf) { brFilter[bf.dataset.evBranch] = bf.dataset.evf; renderBranchEvents(bf.dataset.evBranch); return; }
   const pf = ev.target.closest("[data-pf]"); if (pf) { postFilter = pf.dataset.pf; renderPosts(); return; }
   const pb = ev.target.closest("[data-post]"); if (pb) { openPost(Number(pb.dataset.post)); return; }
-  const cb = ev.target.closest("[data-copy]"); if (cb) { copyText(cb.dataset.copy === "japan" ? japanEmail() : generalEmail(), cb); return; }
+  const cb = ev.target.closest("[data-copy]"); if (cb) { copyText(cb.dataset.copy === "japan" ? japanEmail() : cb.dataset.copy === "korea" ? koreaEmail() : generalEmail(), cb); return; }
 });
 $("#menu-btn").addEventListener("click", () => {
   const open = $("#site-nav").classList.toggle("open");

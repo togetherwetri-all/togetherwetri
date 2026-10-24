@@ -6,6 +6,8 @@
    ・日本支部のメンバー紹介 ………………………… MEMBERS
    ・日本支部のイベント …………………………… EVENTS
    ・日本支部のニュース／ニュースレター記事 … POSTS
+   ・韓国支部のイベント・メンバー …………… KOREA_EVENTS / KOREA_MEMBERS（ファイルの下のほう）
+   ・米国支部のイベント・メンバー …………… US_EVENTS / US_MEMBERS（ファイルの一番下）
    ・問い合わせの種類 ………………………………… TOPICS
 
    書き方のルール
@@ -31,6 +33,9 @@ const SITE = {
   // 日本支部の問い合わせ先（日本支部・イベント申し込み・メンバー応募・ニュースレターなど）
   japanEmail: "togetherwetri.japan@gmail.com",
 
+  // 韓国支部の問い合わせ先
+  koreaEmail: "togetherwetri.dosaeif@gmail.com",
+
   // Formspree のフォームURL（例: "https://formspree.io/f/abcdwxyz"）
   // 入れると、問い合わせフォームから直接メールが届くようになります。
   // 空欄 "" のままだと、訪問者がメッセージをコピーして自分でメールする方式になります。
@@ -38,9 +43,6 @@ const SITE = {
 
   // ニュースレター登録用のURL（Googleフォームなど）。空欄ならメールでの申し込み案内を表示します。
   newsletterSignupUrl: "",
-
-  // 韓国支部サイトのURL。できたら入れると、ホームの韓国支部カードに「韓国支部サイトへ」ボタンが表示されます。
-  koreaUrl: "",
 
   // SNS のリンク。url を入れたものだけが、フッターとお問い合わせページに表示されます。
   // 使わないものは url を "" のままにするか、行ごと消してください。並び順もそのまま表示順になります。
@@ -192,15 +194,98 @@ const POSTS = [
 ];
 
 // 問い合わせフォームの「お問い合わせ内容」の選択肢
-// to: "japan" の項目は、日本支部のアドレス（SITE.japanEmail）宛てになります。
+// to: "japan" の項目は日本支部（SITE.japanEmail）、to: "korea" の項目は韓国支部（SITE.koreaEmail）宛てになります。
 const TOPICS = [
   { id: "general",     en: "General question",          ja: "一般的なご質問",         ko: "일반 문의" },
   { id: "japan",       en: "Japan Branch",              ja: "日本支部について",       ko: "일본 지부 관련",       to: "japan" },
-  { id: "korea",       en: "Korea Branch",              ja: "韓国支部について",       ko: "한국 지부 관련" },
+  { id: "korea",       en: "Korea Branch",              ja: "韓国支部について",       ko: "한국 지부 관련",       to: "korea" },
+  { id: "us",          en: "U.S. Branch",               ja: "米国支部について",       ko: "미국 지부 관련" },
   { id: "event",       en: "Event registration",        ja: "イベント参加申し込み",   ko: "행사 참가 신청",       to: "japan" },
   { id: "join",        en: "Joining the team",          ja: "運営メンバーへの応募",   ko: "운영 멤버 지원",       to: "japan" },
   { id: "partnership", en: "Partnership or co-hosting", ja: "連携・共催のご相談",     ko: "협력·공동 개최 제안" },
   { id: "speaker",     en: "Speaking or mentoring",     ja: "登壇・メンター",         ko: "연사·멘토",            to: "japan" },
   { id: "media",       en: "Media",                     ja: "取材",                   ko: "언론 문의" },
   { id: "newsletter",  en: "Newsletter subscription",   ja: "ニュースレター購読",     ko: "뉴스레터 구독",        to: "japan" }
+];
+
+// ------------------------------------------------------------------
+// 韓国支部のイベント（書き方は上の EVENTS と同じです。ko に韓国語を書けます）
+//   links: [ { en: "...", ja: "...", ko: "...", url: "https://..." } ]   報道・関連リンク
+// ------------------------------------------------------------------
+const KOREA_EVENTS = [
+  { date: "2025-12-19 ~ 2025-12-20", format: "In person", langs: "EN / KO",
+    title: { en: "YTL Regional Cooperation Roundtable in Busan", ja: "YTL地域協力ラウンドテーブル in 釜山", ko: "YTL 지역 협력 라운드테이블 in 부산" },
+    place: { en: "Busan American Corner, Pukyong National University", ja: "釜山アメリカン・コーナー（国立釜慶大学校）", ko: "부산 아메리칸 코너 (국립부경대학교)" },
+    desc: { en: "Exploring U.S.–ROK–Japan cooperation in the global maritime city of Busan. Next-generation leaders, policy experts and local university students discussed maritime security, emerging technologies and value-based alliances through expert lectures, interactive roundtables and a policy proposal session.",
+            ja: "海洋都市・釜山で日米韓協力を考えるワークショップ。次世代リーダー、政策専門家、地元の大学生が、専門家の講演、参加型ラウンドテーブル、政策提言セッションを通じて、海洋安全保障、新興技術、価値観に基づく同盟について議論しました。",
+            ko: "글로벌 해양도시 부산에서 한미일 협력을 모색한 워크숍입니다. 차세대 리더, 정책 전문가, 지역 대학생들이 전문가 강연, 참여형 라운드테이블, 정책 제안 세션을 통해 해양 안보, 신기술, 가치 기반 동맹에 대해 논의했습니다." },
+    participants: { en: "42 participants · about 120 online engagements", ja: "42名が参加・オンラインで約120件の反響", ko: "42명 참가 · 온라인 반응 약 120건" },
+    organizer: { en: "TogetherWeTri Korea Branch", ja: "TogetherWeTri 韓国支部", ko: "TogetherWeTri 한국 지부" },
+    partners: { en: "Busan American Corner, Pusan National University, Pukyong National University, Korea Maritime and Ocean University, U.S. Consulate in Busan", ja: "釜山アメリカン・コーナー、釜山大学校、釜慶大学校、韓国海洋大学校、在釜山米国領事館", ko: "부산 아메리칸 코너, 부산대학교, 부경대학교, 한국해양대학교, 주부산 미국영사관" },
+    schedule: [
+      { day: { en: "December 19 (Fri) · Workshop, 14:00–16:00", ja: "12月19日（金）ワークショップ 14:00–16:00", ko: "12월 19일 (금) 워크숍 14:00–16:00" } },
+      { time: "", en: "Opening — Gabi Kim (moderator)", ja: "開会 — Gabi Kim（司会）", ko: "개회 — Gabi Kim (사회)" },
+      { time: "", en: "Why the Sea Matters: Trilateral Maritime Security Cooperation — Jinwan Park", ja: "なぜ海が重要か：日米韓の海洋安全保障協力 — Jinwan Park", ko: "왜 바다가 중요한가: 한미일 해양안보 협력 — Jinwan Park" },
+      { time: "", en: "Korea's SSN Debate and the East Asian AUKUS — SeungHwan Kim", ja: "韓国の原子力潜水艦論争と「東アジア版AUKUS」 — SeungHwan Kim", ko: "한국의 핵추진잠수함 논쟁과 동아시아판 AUKUS — SeungHwan Kim" },
+      { time: "", en: "Understanding consensus of democratic value for advanced trilateral relations — JoongEon An", ja: "日米韓関係の深化に向けた民主主義的価値の共通理解 — JoongEon An", ko: "한미일 관계 발전을 위한 민주주의 가치의 공감대 — JoongEon An" },
+      { time: "", en: "Panel and roundtable with local students — Ji-Yun Park, Seoyeong Lee, Seungbeom Ryan Son, Daehan Lee, Joseph Sejin Kim", ja: "パネル・地元学生とのラウンドテーブル — Ji-Yun Park、Seoyeong Lee、Seungbeom Ryan Son、Daehan Lee、Joseph Sejin Kim", ko: "패널 토론 및 지역 학생 라운드테이블 — Ji-Yun Park, Seoyeong Lee, Seungbeom Ryan Son, Daehan Lee, Joseph Sejin Kim" },
+      { day: { en: "December 20 (Sat)", ja: "12月20日（土）", ko: "12월 20일 (토)" } },
+      { time: "", en: "Closed-door meeting with Consul Dewey Moore, U.S. Consulate in Busan", ja: "在釜山米国領事館 デューイ・ムーア領事との非公開ミーティング", ko: "주부산 미국영사관 듀이 무어 영사와의 비공개 미팅" },
+      { time: "", en: "Policy proposal meeting", ja: "政策提言ミーティング", ko: "정책 제안 미팅" }
+    ],
+    gallery: [
+      { src: "busan1219-1.jpg", en: "Group photo", ja: "集合写真", ko: "단체 사진" },
+      { src: "busan1219-2.jpg", en: "Gabi Kim (moderator)", ja: "Gabi Kim（司会）", ko: "Gabi Kim (사회)" },
+      { src: "busan1219-3.jpg", en: "Jinwan Park", ja: "Jinwan Park", ko: "Jinwan Park" },
+      { src: "busan1219-4.jpg", en: "Panel: Daehan Lee and Joseph Sejin Kim", ja: "パネル：Daehan Lee、Joseph Sejin Kim", ko: "패널: Daehan Lee, Joseph Sejin Kim" },
+      { src: "busan1219-5.jpg", en: "Roundtable with local university students", ja: "地元の大学生とのラウンドテーブル", ko: "지역 대학생과의 라운드테이블" },
+      { src: "busan1219-6.jpg", en: "Meeting with Consul Dewey Moore", ja: "デューイ・ムーア領事とのミーティング", ko: "듀이 무어 영사와의 미팅" }
+    ],
+    video: "https://drive.google.com/file/d/1yHC5_UxoXDRwLEDXUXRKrssu14qtksHz/view?usp=drive_link",
+    links: [
+      { en: "BeFM “Busan Worldwide” (Jan 16, 2026)", ja: "BeFM「Busan Worldwide」（2026年1月16日）", ko: "BeFM ‘Busan Worldwide’ (2026년 1월 16일)", url: "https://www.youtube.com/live/aPqa5k5ALpE" },
+      { en: "BeFM “Morning Wave in Busan” (Dec 18, 2025)", ja: "BeFM「Morning Wave in Busan」（2025年12月18日）", ko: "BeFM ‘Morning Wave in Busan’ (2025년 12월 18일)", url: "https://www.youtube.com/live/CTQ5f2fELKA" },
+      { en: "Pukyong National University Press", ja: "釜慶大学校 学内新聞", ko: "부경대신문", url: "https://press.pknu.ac.kr/news/articleView.html?idxno=789" }
+    ],
+    poster: "poster-busan1219.jpg", report: "report-busan1219.pdf" },
+
+  { date: "2025-11-15 ~ 2025-11-16", format: "In person", langs: "EN / KO",
+    title: { en: "YTL Regional Cooperation Roundtable in Gwangju", ja: "YTL地域協力ラウンドテーブル in 光州", ko: "YTL 지역 협력 라운드테이블 in 광주" },
+    place: { en: "Gwangju American Corner", ja: "光州アメリカン・コーナー", ko: "광주 아메리칸 코너" },
+    desc: { en: "The first TogetherWeTri convening. YTL alumni and Gwangju-based young people examined how locally anchored engagement can reinforce U.S.–ROK–Japan cooperation, and proposed ideas ranging from a Gwangju–San Antonio–Sendai youth congress to cooperation on energy storage, AI and drones.",
+            ja: "TogetherWeTri最初のワークショップ。YTL修了生と光州の若者が、地域に根ざした取り組みが日米韓協力をどう支えられるかを議論し、光州・サンアントニオ・仙台の三都市ユース会議から、エネルギー貯蔵・AI・ドローン分野での協力まで、さまざまな提案をまとめました。",
+            ko: "TogetherWeTri의 첫 워크숍입니다. YTL 수료생과 광주 지역 청년들이 지역에 뿌리내린 참여가 한미일 협력을 어떻게 뒷받침할 수 있는지 논의하고, 광주–샌안토니오–센다이 청년 회의부터 에너지 저장장치·AI·드론 분야 협력까지 다양한 제안을 도출했습니다." },
+    participants: { en: "14 participants · 8 YTL alumni speakers · 93.3% high satisfaction", ja: "14名が参加・YTL修了生8名が登壇・満足度93.3%", ko: "14명 참가 · YTL 수료생 연사 8명 · 만족도 93.3%" },
+    organizer: { en: "TogetherWeTri Korea Branch", ja: "TogetherWeTri 韓国支部", ko: "TogetherWeTri 한국 지부" },
+    partners: { en: "Gwangju American Corner", ja: "光州アメリカン・コーナー", ko: "광주 아메리칸 코너" },
+    schedule: [
+      { day: { en: "Day 1", ja: "1日目", ko: "1일 차" } },
+      { time: "", en: "Opening — Seungbeom Ryan Son (moderator)", ja: "開会 — Seungbeom Ryan Son（司会）", ko: "개회 — Seungbeom Ryan Son (사회)" },
+      { time: "", en: "YTL alumni presentations — Jaewon Kim, Soren Israel Dickson, Hyoseo Nam, Byungjoon You, SeungHwan Kim, Gabi Kim", ja: "YTL修了生による発表 — Jaewon Kim、Soren Israel Dickson、Hyoseo Nam、Byungjoon You、SeungHwan Kim、Gabi Kim", ko: "YTL 수료생 발표 — Jaewon Kim, Soren Israel Dickson, Hyoseo Nam, Byungjoon You, SeungHwan Kim, Gabi Kim" },
+      { time: "", en: "Roundtable with local participants", ja: "地元参加者とのラウンドテーブル", ko: "지역 참가자와의 라운드테이블" },
+      { day: { en: "Day 2", ja: "2日目", ko: "2일 차" } },
+      { time: "", en: "Policy proposal session", ja: "政策提言セッション", ko: "정책 제안 세션" },
+      { time: "", en: "Cultural visit to the Asia Culture Center (ACC)", ja: "国立アジア文化殿堂（ACC）見学", ko: "국립아시아문화전당(ACC) 문화 탐방" }
+    ],
+    gallery: [
+      { src: "gwangju1115-1.jpg", en: "Group photo", ja: "集合写真", ko: "단체 사진" },
+      { src: "gwangju1115-2.jpg", en: "Opening", ja: "開会", ko: "개회" },
+      { src: "gwangju1115-3.jpg", en: "Soren Israel Dickson", ja: "Soren Israel Dickson", ko: "Soren Israel Dickson" },
+      { src: "gwangju1115-4.jpg", en: "Group photo", ja: "集合写真", ko: "단체 사진" },
+      { src: "gwangju1115-5.jpg", en: "Policy proposal meeting", ja: "政策提言ミーティング", ko: "정책 제안 미팅" },
+      { src: "gwangju1115-6.jpg", en: "Policy proposal meeting", ja: "政策提言ミーティング", ko: "정책 제안 미팅" }
+    ],
+    video: "https://youtu.be/43I2Fiacp_0",
+    poster: "poster-gwangju1115.jpg", report: "report-gwangju1115.pdf" }
+];
+
+// 韓国支部のメンバー（書き方は上の MEMBERS と同じです。空のままだと「準備中」と表示されます）
+// 例: { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
+const KOREA_MEMBERS = [
+];
+
+// 米国支部のイベントとメンバー（書き方は EVENTS・MEMBERS と同じです）
+const US_EVENTS = [
+];
+const US_MEMBERS = [
 ];
