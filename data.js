@@ -291,9 +291,33 @@ const KOREA_MEMBERS = [ { name: { en: "Seungbeom Ryan Son", ja: "Seungbeom Ryan 
 
 // U.S. Branch events and members (same format as EVENTS and MEMBERS).
 const US_EVENTS = [
+   { date: "2026-04-15", time: "5:00–6:15 PM EDT", format: "In person", langs: "EN",
+    title: { en: "Sustaining Trilateralism: People-to-People Diplomacy and the Future of US-ROK-Japan Relations",
+             ja: "Sustaining Trilateralism：人と人の外交と日米韓関係の未来",
+             ko: "Sustaining Trilateralism: 인적 교류 외교와 한미일 관계의 미래" },
+    place: { en: "Room 703, The Fletcher School, Tufts University"},
+    desc: { en: "This dialogue brings together TogetherWeTri, Fletcher Asia Forum, Fletcher Korea Working Group, Northeastern University's Indo-Pacific Minilateral Cooperation Lab, and Harvard Kennedy School (Japan & Korea Caucus), convening practitioners and emerging voices to explore how trust, social ties, and youth engagement can contribute to the long-term sustainability of trilateral cooperation.",
+            ja: "TogetherWeTri、Fletcher Asia Forum、Fletcher Korea Working Group、ノースイースタン大学 Indo-Pacific Minilateral Cooperation Lab、ハーバード・ケネディスクール（Japan & Korea Caucus）が共催するダイアローグ。実務家と次世代の担い手が集まり、信頼や社会的なつながり、若者の参画が、日米韓協力の長期的な持続にどう貢献できるかを考えます。",
+            ko: "TogetherWeTri, Fletcher Asia Forum, Fletcher Korea Working Group, 노스이스턴대학교 Indo-Pacific Minilateral Cooperation Lab, 하버드 케네디스쿨(Japan & Korea Caucus)이 함께하는 대화 행사입니다. 실무자와 차세대 리더들이 모여 신뢰, 사회적 유대, 청년 참여가 한미일 협력의 장기적 지속에 어떻게 기여할 수 있는지 논의합니다." },
+    cohost: { en: "TogetherWeTri, Fletcher Asia Forum, Fletcher Korea Working Group, Northeastern University Indo-Pacific Minilateral Cooperation Lab, Harvard Kennedy School Japan Caucus and Korea Caucus",
+              ja: "TogetherWeTri、Fletcher Asia Forum、Fletcher Korea Working Group、ノースイースタン大学 Indo-Pacific Minilateral Cooperation Lab、ハーバード・ケネディスクール Japan Caucus・Korea Caucus",
+              ko: "TogetherWeTri, Fletcher Asia Forum, Fletcher Korea Working Group, 노스이스턴대학교 Indo-Pacific Minilateral Cooperation Lab, 하버드 케네디스쿨 Japan Caucus·Korea Caucus" },
+    schedule: [
+      { day: { en: "April 15 (Wed), 5:00–6:15 PM · Panel discussion", ja: "4月15日（水）17:00–18:15・パネルディスカッション", ko: "4월 15일 (수) 17:00–18:15 · 패널 토론" } },
+      { en: "Moderator — Deborah Jeong (Co-Founder, Fletcher Asia Forum at Tufts University)", ja: "モデレーター — Deborah Jeong（タフツ大学 Fletcher Asia Forum 共同創設者）", ko: "모더레이터 — Deborah Jeong (터프츠대학교 Fletcher Asia Forum 공동 창립자)" },
+      { en: "Panelist — Byeongkyu Jun (Co-Chair, The Korea Caucus at Harvard Kennedy School)", ja: "パネリスト — Byeongkyu Jun（ハーバード・ケネディスクール Korea Caucus 共同代表）", ko: "패널 — Byeongkyu Jun (하버드 케네디스쿨 Korea Caucus 공동 대표)" },
+      { en: "Panelist — Keita Menjo (Diplomatic Attaché, Consulate-General of Japan in Boston; Harvard University)", ja: "パネリスト — Keita Menjo（在ボストン日本国総領事館 外交官補／ハーバード大学）", ko: "패널 — Keita Menjo (주보스턴 일본 총영사관 외교관보 / 하버드대학교)" },
+      { en: "Panelist — Matthew F. Fleming (Project Lead, The Indo-Pacific Minilateral Cooperation Lab at Northeastern University)", ja: "パネリスト — Matthew F. Fleming（ノースイースタン大学 Indo-Pacific Minilateral Cooperation Lab プロジェクトリード）", ko: "패널 — Matthew F. Fleming (노스이스턴대학교 Indo-Pacific Minilateral Cooperation Lab 프로젝트 리드)" }
+    ],
+    poster: "poster-boston0415.jpg" }
+   
 ];
-const US_MEMBERS = [
+const US_MEMBERS = [ 
+  { name: { en: "Matthew F. Fleming"}, role: { en: "ROLE", ja: "役職" }, aff: { en: "Affiliation · YTL 2024 Busan", ja: "所属 · YTL 2024年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "member-sora.jpg" },
+  { name: { en: "Deborah Jeong" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "Affiliation · YTL 2024 Busan", ja: "所属 · YTL 2024年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
 ];
+
+
 
 // AEIF project activities that open a detail pop-up on the "AEIF Project" page (same format as EVENTS).
 const AEIF_EVENTS = [
