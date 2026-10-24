@@ -48,7 +48,8 @@ const SITE = {
   // 使わないものは url を "" のままにするか、行ごと消してください。並び順もそのまま表示順になります。
   social: [
     { name: "LinkedIn",  url: "https://www.linkedin.com/company/togetherwetri-ytl/" },
-    { name: "Instagram (Japan)", url: "https://www.instagram.com/togetherwetri_japan/" },
+    { name: "Instagram (All)", url: "https://www.instagram.com/togetherwetri_ytl" },
+    { name: "Instagram (Japan)", url: "https://www.instagram.com/togetherwetri_japan/" }
     { name: "X",         url: "" },
     { name: "Facebook",  url: "" }
   ]
@@ -279,9 +280,12 @@ const KOREA_EVENTS = [
     poster: "poster-gwangju1115.jpg", report: "report-gwangju1115.pdf" }
 ];
 
-// 韓国支部のメンバー（書き方は上の MEMBERS と同じです。空のままだと「準備中」と表示されます）
-// 例: { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
-const KOREA_MEMBERS = [
+// 한국지부 멤버
+// 예시: { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
+const KOREA_MEMBERS = [ { name: { en: "Seungbeom Ryan Son", ja: "Seungbeom Ryan Son", ko: "손승범" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: ""},
+  { name: { en: "Seoyeong Lee", ja: "Seoyeong Lee", ko: "이서영" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
+  { name: { en: "Gabi Kim", ja: "Gabi Kim", ko: "김가빈" }, role: { en: "Co-founder", ja: "共同創設者", ko: "공동 창립자" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: "" },
+  { name: { en: "Name", ja: "氏名", ko: "이름" }, role: { en: "Role", ja: "役割", ko: "역할" }, aff: { en: "...", ja: "...", ko: "..." }, bio: { en: "...", ja: "...", ko: "..." }, photo: ""  }                     
 ];
 
 // 米国支部のイベントとメンバー（書き方は EVENTS・MEMBERS と同じです）
