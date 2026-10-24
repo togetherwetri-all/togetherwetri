@@ -49,7 +49,7 @@ const SITE = {
   social: [
     { name: "LinkedIn",  url: "https://www.linkedin.com/company/togetherwetri-ytl/" },
     { name: "Instagram (All)", url: "https://www.instagram.com/togetherwetri_ytl" },
-    { name: "Instagram (Japan)", url: "https://www.instagram.com/togetherwetri_japan/" }
+    { name: "Instagram (Japan)", url: "https://www.instagram.com/togetherwetri_japan/" },
     { name: "X",         url: "" },
     { name: "Facebook",  url: "" }
   ]
