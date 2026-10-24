@@ -313,7 +313,7 @@ const US_EVENTS = [
    
 ];
 const US_MEMBERS = [ 
-  { name: { en: "Matthew F. Fleming"}, role: { en: "ROLE", ja: "役職" }, aff: { en: "Affiliation · YTL 2024 Busan", ja: "所属 · YTL 2024年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "member-sora.jpg" },
+  { name: { en: "Matthew F. Fleming"}, role: { en: "ROLE", ja: "役職" }, aff: { en: "Affiliation · YTL 2024 Busan", ja: "所属 · YTL 2024年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
   { name: { en: "Deborah Jeong" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "Affiliation · YTL 2024 Busan", ja: "所属 · YTL 2024年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
 ];
 
