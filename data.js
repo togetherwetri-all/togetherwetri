@@ -58,7 +58,7 @@ const SITE = {
 };
 
 const MEMBERS = [
-  { name: { en: "Sora Yamasaki", ja: "山﨑蒼空", ko: "신소라" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "Japan Institue for Health Security · YTL 2025 Osaka", ja: "国立健康危機管理研究機構 · YTL 2025年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "member-sora.jpg" },
+  { name: { en: "Sora Yamasaki/Sora Shin", ja: "山﨑蒼空", ko: "신소라" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "Japan Institue for Health Security · YTL 2025 Osaka", ja: "国立健康危機管理研究機構 · YTL 2025年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "member-sora.jpg" },
   { name: { en: "Mayu Kitahara", ja: "北原真悠", ko: "키타하라 마유" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "Sophia University · YTL 2025 Osaka", ja: "所属 · YTL 2025年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
   { name: { en: "Tamaki Hoshi", ja: "星たまき", ko: "호시 타마키" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "University / Organization · YTL 2024 Busan", ja: "所属 · YTL 2024年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
   { name: { en: "Aruto Masuda", ja: "氏名" }, role: { en: "ROLE", ja: "役職" }, aff: { en: "University / Organization · YTL 20XX", ja: "所属 · YTL 20XX年" }, bio: { en: "One or two sentences about this person's focus and why they joined.", ja: "専門分野や参加のきっかけを1〜2文で紹介します。" }, photo: "" },
