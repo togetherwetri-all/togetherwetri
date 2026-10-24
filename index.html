@@ -1,0 +1,1453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TogetherWeTri | U.S.–ROK–Japan Youth Initiative</title>
+<meta name="description" content="TogetherWeTri bridges the U.S., the ROK and Japan through public diplomacy. A youth initiative by alumni of the Young Trilateral Leaders (YTL) Summit, with branches in Korea and Japan. 日米韓ユース・イニシアティブ／한미일 청년 이니셔티브">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TogetherWeTri">
+<meta property="og:description" content="Bridging the U.S., the ROK and Japan through public diplomacy. パブリック・ディプロマシーで、日米韓をつなぐ。공공외교로 한·미·일을 잇다.">
+<!-- 公開後、og:image を絶対URL（例: https://ユーザー名.github.io/リポジトリ名/og.png）に書き換えると、SNSでのリンク表示に画像が出ます -->
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Caveat+Brush&family=Source+Sans+3:wght@700;800&display=swap">
+<style>
+html, body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: poster-style pages. Sky-to-white gradient headers (from the Tokyo banner), white content,
+   navy checkered bands for calls to action. Brand marks: logo "W≡" bars, the three tigers, brush lettering.
+   Deliberately light-only: the brand artwork is drawn on white. */
+:root {
+  color-scheme: light;
+  --navy: #142F4C;
+  --indigo: #28356A;
+  --blue: #2C538E;
+  --red: #BE3431;
+  --red-deep: #8C2826;
+  --ink: #242223;
+  --muted: #5B6275;
+  --sky: #9AB4E9;
+  --sky-soft: #EAF0FB;
+  --sky-mist: #F5F8FE;
+  --blush: #F2A7AE;
+  --paper: #FFFFFF;
+  --line: #DFE5F1;
+
+  --f-display: "Open Sans", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --f-body: "Noto Sans JP", "Open Sans", "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+  --f-brush: "Caveat Brush", "Comic Sans MS", cursive;
+
+  --s-xs: .8125rem; --s-sm: .9375rem; --s-md: 1.0625rem; --s-lg: 1.3125rem; --s-xl: clamp(1.6rem, 3.2vw, 2.1rem);
+  --r: 14px;
+  --col: 1120px;
+}
+html:not([data-lang="ja"]) .ja, html:not([data-lang="ko"]) .ko { display: none !important; }
+html[data-lang="ja"] .en, html[data-lang="ko"] .en:has(~ .ko) { display: none !important; }
+html[data-lang="ko"] { --f-body: "Noto Sans KR", "Open Sans", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; --f-display: "Open Sans", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; }
+html[data-lang="ko"] body { word-break: keep-all; }
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: var(--s-md); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+a { color: var(--blue); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--f-display); color: var(--navy); line-height: 1.18; text-wrap: balance; margin: 0; }
+html[data-lang="ja"] h1, html[data-lang="ko"] h1, html[data-lang="ja"] h2, html[data-lang="ko"] h2, html[data-lang="ja"] h3, html[data-lang="ko"] h3 { font-family: var(--f-body); line-height: 1.4; }
+h2 { font-size: var(--s-xl); font-weight: 800; letter-spacing: -0.01em; }
+h3 { font-size: var(--s-lg); font-weight: 700; }
+p { margin: 0; }
+img { display: block; }
+.wrap { max-width: var(--col); margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Eyebrow: tracked capitals like "T O G E T H E R" in the logo, led by the logo's three bars */
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-display); font-weight: 700; font-size: var(--s-xs); letter-spacing: .2em; text-transform: uppercase; color: var(--blue); }
+html[data-lang="ja"] .eyebrow, html[data-lang="ko"] .eyebrow { letter-spacing: .08em; }
+.eyebrow svg { width: 22px; height: 16px; flex: none; }
+.brush { font-family: var(--f-brush); font-weight: 400; letter-spacing: 0; }
+.swoosh { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 10 C 50 3, 130 2, 197 6' fill='none' stroke='%23BE3431' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") left 100% / 100% .32em no-repeat; padding-bottom: .12em; }
+
+/* Header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.site-header::before { content: ""; display: block; height: 4px; background: linear-gradient(90deg, var(--blue) 0 33.3%, var(--indigo) 33.3% 66.6%, var(--red) 66.6%); }
+.site-header .wrap { display: flex; align-items: center; gap: 14px; min-height: 66px; position: relative; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; color: var(--ink); }
+.brand img { height: 30px; width: auto; }
+/* Logo text: Source Sans 3 is closest to the logo lettering and its J sits on the baseline.
+   JAPAN uses the same size, weight and letter-spacing as the first line. */
+.brand-txt { display: inline-grid; gap: 3px; font-family: "Source Sans 3", "Open Sans", system-ui, sans-serif; font-weight: 800; font-size: 1rem; line-height: 1; letter-spacing: .06em; }
+.brand-txt .bt-top { white-space: nowrap; }
+.brand-txt .bt-sub { white-space: nowrap; color: var(--blue); }
+.nav { display: flex; gap: 2px; align-items: center; }
+.nav a { color: var(--ink); text-decoration: none; font-size: var(--s-sm); font-weight: 500; padding: 8px 12px; border-radius: 999px; white-space: nowrap; }
+.nav a:hover { background: var(--sky-soft); }
+.nav a[aria-current="page"] { color: var(--red); background: #FBECEC; }
+.nav a.nav-ext { color: var(--blue); font-weight: 700; }
+.foot-ext { color: var(--red) !important; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; flex: none; background: var(--paper); }
+.lang button { appearance: none; border: 0; background: transparent; color: var(--muted); font: 600 var(--s-xs)/1 var(--f-body); padding: 7px 11px; border-radius: 999px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.menu-btn { display: none; appearance: none; background: var(--paper); border: 1px solid var(--line); color: var(--navy); border-radius: 999px; padding: 8px 14px; font: 600 var(--s-sm)/1 var(--f-body); cursor: pointer; }
+@media (max-width: 900px) {
+  .menu-btn { display: inline-block; }
+  .nav { position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 2px; background: var(--paper); border-bottom: 1px solid var(--line);
+    padding: 10px max(16px, env(safe-area-inset-right, 0px)) 16px max(16px, env(safe-area-inset-left, 0px)); box-shadow: 0 12px 24px rgba(20,47,76,.1); }
+  .nav:not(.open) { display: none; }
+  .nav a { padding: 12px 14px; font-size: var(--s-md); border-radius: 10px; }
+}
+@media (max-width: 420px) { .brand-txt { display: none; } }
+
+/* Buttons */
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; cursor: pointer; font: 700 var(--s-sm)/1 var(--f-body);
+  padding: 14px 22px; border-radius: 999px; border: 2px solid var(--red); background: var(--red); color: #fff; transition: transform .15s ease, background .15s ease; }
+.btn:hover { background: var(--red-deep); border-color: var(--red-deep); transform: translateY(-1px); }
+.btn.ghost { background: var(--paper); color: var(--navy); border-color: var(--navy); }
+.btn.ghost:hover { background: var(--navy); color: #fff; }
+.btn.light { background: #fff; color: var(--navy); border-color: #fff; }
+.btn.light:hover { background: var(--sky-soft); border-color: var(--sky-soft); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+
+/* Home hero: headline over the Tokyo skyline banner */
+.hero { background: linear-gradient(180deg, var(--sky-mist) 0%, #DCE6F8 52%, #FFFFFF 100%); overflow: hidden; }
+.hero-copy { display: grid; justify-items: center; text-align: center; gap: 18px; padding-block: 56px 8px; }
+.hero-tag { font-family: var(--f-brush); font-size: clamp(1.6rem, 3.4vw, 2.2rem); color: var(--red); line-height: 1; display: inline-flex; align-items: center; gap: 10px; }
+.hero-tag svg { width: 22px; height: 22px; color: var(--blue); }
+.hero h1 { font-size: clamp(2.2rem, 5.6vw, 4rem); font-weight: 800; letter-spacing: -0.025em; max-width: 17ch; }
+html[data-lang="ja"] .hero h1, html[data-lang="ko"] .hero h1 { font-weight: 900; letter-spacing: 0; max-width: 16em; font-size: clamp(2rem, 5vw, 3.4rem); }
+.hero .lede { max-width: 60ch; color: #3E4558; font-size: var(--s-md); }
+.hero .btns { justify-content: center; margin-top: 4px; }
+.hero-art { max-width: 1180px; margin: -8px auto 0; }
+.hero-art > img { width: 100%; height: auto;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 26%);
+  -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 26%); mask-composite: intersect; }
+.cities { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 26px; padding-block: 6px 26px; font-family: var(--f-display); font-size: var(--s-xs); font-weight: 700; letter-spacing: .16em; color: var(--muted); }
+.cities b { color: var(--navy); font-weight: 800; letter-spacing: .04em; margin-left: 8px; font-variant-numeric: tabular-nums; }
+
+/* Sections */
+section.block { padding-block: 72px; }
+.block-head { display: grid; gap: 10px; margin-bottom: 36px; max-width: 720px; }
+.block-head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 32px; }
+.block-head-row .block-head { margin-bottom: 0; }
+.tint { background: var(--sky-mist); }
+
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-radius: var(--r); background: var(--paper); border: 1px solid var(--line); overflow: hidden; }
+.fact { padding: 22px 24px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.fact + .fact { border-left: 1px solid var(--line); }
+.fact .k { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
+html[data-lang="ja"] .fact .k, html[data-lang="ko"] .fact .k { letter-spacing: .06em; }
+.fact .v { font-weight: 700; color: var(--navy); font-size: 1.0625rem; line-height: 1.4; }
+@media (max-width: 820px) { .facts { grid-template-columns: 1fr 1fr; } .fact:nth-child(3) { border-left: 0; } .fact:nth-child(n+3) { border-top: 1px solid var(--line); } }
+@media (max-width: 440px) { .facts { grid-template-columns: 1fr; } .fact + .fact { border-left: 0; border-top: 1px solid var(--line); } }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.split > * { min-width: 0; }
+@media (max-width: 820px) { .split { grid-template-columns: 1fr; gap: 32px; } }
+.values { display: grid; gap: 16px; }
+.value { position: relative; padding: 26px 26px 26px 30px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); display: grid; gap: 6px; overflow: hidden; }
+.value::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--blue); }
+.value.two::before { background: var(--red); }
+.value .n { font-family: var(--f-brush); font-size: 1.5rem; line-height: 1; color: var(--red); }
+.value p { color: var(--muted); font-size: var(--s-sm); }
+
+/* Mascots */
+.mascots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mascot { display: grid; justify-items: center; text-align: center; gap: 6px; padding: 26px 20px 24px; border-radius: 22px; background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+.mascot img { height: 132px; width: auto; max-width: 100%; margin-bottom: 6px; }
+.mascot .name { font-family: var(--f-brush); font-size: 2.4rem; line-height: 1; }
+.mascot .who { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+html[data-lang="ja"] .mascot .who, html[data-lang="ko"] .mascot .who { letter-spacing: .06em; }
+.mascot p { font-size: var(--s-sm); color: var(--muted); max-width: 30ch; }
+.mascot.hanul .name { color: #1F5FC9; } .mascot.hank .name { color: var(--indigo); } .mascot.haru .name { color: var(--red); }
+@media (prefers-reduced-motion: no-preference) {
+  .mascot img { transition: transform .3s cubic-bezier(.3,1.6,.5,1); }
+  .mascot:hover img { transform: translateY(-6px) rotate(-3deg); }
+}
+@media (max-width: 760px) { .mascots { grid-template-columns: 1fr; } .mascot { grid-template-columns: 120px 1fr; justify-items: start; text-align: left; column-gap: 18px; align-items: center; }
+  .mascot img { grid-row: span 3; height: 100px; margin: 0; } }
+
+.programs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.program { display: grid; gap: 10px; align-content: start; padding: 24px 22px; border-radius: var(--r); background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+.program .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--sky-soft); color: var(--blue); }
+.program:nth-child(2) .ico { background: #FBECEC; color: var(--red); }
+.program:nth-child(3) .ico { background: #E7E9F4; color: var(--indigo); }
+.program:nth-child(4) .ico { background: #E6ECF3; color: var(--navy); }
+.program .ico svg { width: 24px; height: 24px; }
+.program h3 { font-size: 1.125rem; }
+.program p { font-size: var(--s-sm); color: var(--muted); }
+@media (max-width: 960px) { .programs { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .programs { grid-template-columns: 1fr; } }
+
+/* Navy checkered call-to-action band (Mt. Fuji check pattern from the banner) */
+.cta { position: relative; background-color: var(--navy); color: #fff; border-radius: 26px; overflow: hidden;
+  background-image: repeating-conic-gradient(rgba(154,180,233,.10) 0 25%, transparent 0 50%); background-size: 34px 34px; }
+.cta-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; padding: clamp(28px, 5vw, 52px); }
+.cta-inner > * { min-width: 0; }
+.cta h2 { color: #fff; }
+.cta p { color: #C9D5EE; }
+.cta .eyebrow { color: var(--sky); }
+.cta .tigers { display: flex; justify-content: center; align-items: end; gap: 0; }
+.cta .tigers img { height: 112px; width: auto; filter: drop-shadow(0 6px 0 rgba(0,0,0,.18)); }
+.cta .tigers img + img { margin-left: -14px; }
+@media (max-width: 760px) { .cta-inner { grid-template-columns: 1fr; } .cta .tigers { justify-content: start; } .cta .tigers img { height: 84px; } }
+
+/* Inner page headers */
+.page-band { background: linear-gradient(180deg, var(--sky-mist) 0%, var(--sky-soft) 100%); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.page-band::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: linear-gradient(90deg, var(--blue) 0 33.3%, var(--indigo) 33.3% 66.6%, var(--red) 66.6%); }
+.page-band .wrap { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding-block: 52px 44px; }
+.page-head { display: grid; gap: 12px; max-width: 760px; min-width: 0; }
+.page-head h1 { font-size: clamp(2rem, 4.6vw, 3.1rem); font-weight: 800; letter-spacing: -0.02em; }
+html[data-lang="ja"] .page-head h1, html[data-lang="ko"] .page-head h1 { font-weight: 900; letter-spacing: 0; }
+.page-head .lede { color: #3E4558; max-width: 58ch; }
+.band-art { display: flex; align-items: end; }
+.band-art img { height: 128px; width: auto; }
+.band-art img + img { margin-left: -16px; }
+@media (max-width: 700px) { .page-band .wrap { grid-template-columns: 1fr; } .band-art { order: -1; } .band-art img { height: 84px; } }
+
+/* Events */
+.ev-list { display: grid; gap: 14px; }
+.event { display: grid; grid-template-columns: 92px 1fr auto; gap: 22px; align-items: start; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; }
+.event > * { min-width: 0; }
+.datebox { display: grid; justify-items: center; border-radius: 12px; overflow: hidden; background: var(--sky-soft); text-align: center; }
+.datebox .m { width: 100%; background: var(--red); color: #fff; font-family: var(--f-display); font-weight: 800; font-size: .75rem; letter-spacing: .16em; padding: 5px 0 4px; }
+.datebox .d { font-family: var(--f-display); font-size: 2.1rem; font-weight: 800; line-height: 1; color: var(--navy); padding-top: 10px; }
+.datebox .y { font-size: .75rem; color: var(--muted); padding: 2px 0 8px; font-variant-numeric: tabular-nums; }
+.event.is-past .datebox .m { background: var(--muted); }
+.ev-body { display: grid; gap: 8px; }
+.ev-body h3 { font-size: 1.1875rem; }
+.ev-meta { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: var(--s-xs); color: var(--muted); font-weight: 500; }
+.ev-body p { font-size: var(--s-sm); color: var(--muted); max-width: 70ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 600 .75rem/1 var(--f-body); padding: 6px 10px; border-radius: 999px; background: var(--sky-soft); color: var(--blue); white-space: nowrap; }
+.chip.sample { background: transparent; border: 1.5px dashed var(--red); color: var(--red); padding: 4.5px 9px; }
+.chip.past { background: #EEEFF3; color: var(--muted); }
+.ev-act { align-self: center; }
+@media (max-width: 680px) { .event { grid-template-columns: 70px 1fr; gap: 16px; padding: 18px; } .ev-act { grid-column: 2; align-self: start; } .datebox .d { font-size: 1.7rem; } }
+.tabs { display: inline-flex; gap: 4px; padding: 4px; background: var(--sky-soft); border-radius: 999px; }
+.tabs button { appearance: none; border: 0; background: transparent; color: var(--muted); cursor: pointer; font: 600 var(--s-sm)/1 var(--f-body); padding: 10px 16px; border-radius: 999px; }
+.tabs button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.tabs.wrapping { flex-wrap: wrap; border-radius: 18px; }
+.empty { display: grid; justify-items: center; gap: 10px; padding: 36px 20px; text-align: center; color: var(--muted); border: 1.5px dashed var(--line); border-radius: var(--r); }
+.empty img { height: 80px; width: auto; }
+
+/* Posts */
+.posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.post { display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; text-align: left; cursor: pointer; position: relative; overflow: hidden;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); padding: 26px 22px 20px; color: inherit; font: inherit; min-width: 0; }
+.post::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--c, var(--blue)); }
+.post:hover { border-color: var(--c, var(--blue)); box-shadow: 0 10px 24px rgba(20,47,76,.08); }
+.post .cat { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--c, var(--blue)); }
+html[data-lang="ja"] .post .cat, html[data-lang="ko"] .post .cat { letter-spacing: .06em; }
+.post h3 { font-size: 1.1875rem; }
+.post p { font-size: var(--s-sm); color: var(--muted); }
+.post .foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: var(--s-xs); color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); }
+.post .read { color: var(--red); font-weight: 700; }
+@media (max-width: 900px) { .posts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .posts { grid-template-columns: 1fr; } }
+
+dialog.reader { width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 0; border-radius: 20px; background: var(--paper); color: var(--ink); box-shadow: 0 24px 60px rgba(20,47,76,.3); }
+dialog.reader::backdrop { background: rgba(20, 47, 76, .55); }
+.reader-inner { padding: 30px clamp(20px, 4vw, 44px) 40px; display: grid; gap: 14px; border-top: 6px solid var(--red); }
+.reader-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.reader h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+.prose { max-width: 66ch; display: grid; gap: 1.1em; }
+.close-btn { appearance: none; border: 1px solid var(--line); background: var(--paper); color: var(--navy); border-radius: 999px; padding: 8px 14px; cursor: pointer; font: 600 var(--s-sm)/1 var(--f-body); }
+
+.copybox { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); }
+.copybox .addr { font-family: var(--f-display); font-weight: 600; font-size: var(--s-md); user-select: all; word-break: break-all; color: var(--navy); flex: 1 1 180px; min-width: 0; }
+.cta .copybox { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22); }
+.cta .copybox .addr { color: #fff; }
+.copy-btn { appearance: none; border: 0; background: var(--navy); color: #fff; border-radius: 999px; padding: 9px 14px; cursor: pointer; font: 700 var(--s-xs)/1 var(--f-body); }
+.cta .copy-btn { background: var(--red); }
+
+/* About */
+.timeline { display: grid; border-left: 3px solid var(--sky); margin-left: 8px; }
+.tl { position: relative; padding: 0 0 32px 30px; display: grid; gap: 6px; }
+.tl:last-child { padding-bottom: 0; }
+.tl::before { content: ""; position: absolute; left: -11px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 3px solid var(--blue); }
+.tl.now::before { background: var(--red); border-color: var(--red); box-shadow: 0 0 0 5px #FBECEC; }
+.tl .when { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .16em; color: var(--red); text-transform: uppercase; }
+.tl h3 { font-size: 1.125rem; }
+.tl p { font-size: var(--s-sm); color: var(--muted); max-width: 60ch; }
+/* Journey, AEIF and impact */
+.quote { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.45rem, 3.3vw, 2.25rem); line-height: 1.3; color: var(--navy); max-width: 32ch; text-wrap: balance; margin: 0; }
+html[data-lang="ja"] .quote, html[data-lang="ko"] .quote { font-family: var(--f-body); font-weight: 900; max-width: 24em; }
+.quote::before, .quote::after { color: var(--red); }
+.quote::before { content: "“"; } .quote::after { content: "”"; }
+html[data-lang="ja"] .quote::before { content: "「"; } html[data-lang="ja"] .quote::after { content: "」"; }
+.quote-note { color: var(--muted); max-width: 62ch; margin: 14px 0 44px; }
+.timeline.wide { max-width: 900px; }
+.tl.has-photo { grid-template-columns: 1fr minmax(0, 320px); grid-template-rows: auto auto 1fr; column-gap: 28px; }
+.tl.has-photo > :not(figure) { grid-column: 1; }
+.tl.has-photo figure { grid-column: 2; grid-row: 1 / span 3; margin: 0; align-self: start; }
+.tl figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+@media (max-width: 720px) { .tl.has-photo { grid-template-columns: 1fr; grid-template-rows: none; } .tl.has-photo figure { grid-column: 1; grid-row: auto; margin-top: 8px; } }
+.aeif-media { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: start; }
+.aeif-media img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); }
+.aeif-media img.cert { object-fit: contain; }
+@media (max-width: 480px) { .aeif-media { grid-template-columns: 1fr; } }
+.grant { display: inline-flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; padding: 10px 14px; border-radius: 12px; background: var(--sky-soft); color: var(--navy); font-size: var(--s-sm); font-weight: 600; justify-self: start; }
+.grant b { font-family: var(--f-display); font-weight: 800; font-size: 1.25rem; color: var(--red); }
+.goals { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.goals li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; font-weight: 600; color: var(--navy); }
+.goals li svg { width: 22px; height: 16px; margin-top: 6px; }
+.slogan { font-weight: 700; color: var(--red); font-size: var(--s-md); }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stat { display: grid; grid-template-columns: auto 1fr; gap: 4px 20px; align-items: center; padding: 24px 26px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); min-width: 0; }
+.stat .big { grid-row: span 2; font-family: var(--f-display); font-weight: 800; font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1; color: var(--red); font-variant-numeric: tabular-nums; }
+.stat h3 { font-size: 1.0625rem; }
+.stat p { font-size: var(--s-sm); color: var(--muted); }
+@media (max-width: 640px) { .stats { grid-template-columns: 1fr; } }
+.about-logo { display: grid; place-items: center; padding: 28px; background: var(--paper); border-radius: 22px; border: 1px solid var(--line); }
+.about-logo img { width: 100%; max-width: 230px; height: auto; }
+
+.members { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.member { display: grid; grid-template-columns: 68px 1fr; gap: 16px; align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; min-width: 0; }
+.member > * { min-width: 0; }
+.avatar { width: 68px; height: 68px; border-radius: 50%; background: var(--sky-soft); display: grid; place-items: center; overflow: hidden; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar img.ph { width: 40px; height: auto; object-fit: contain; }
+.member .role { font-family: var(--f-display); font-weight: 700; font-size: .6875rem; letter-spacing: .16em; text-transform: uppercase; color: var(--red); }
+html[data-lang="ja"] .member .role, html[data-lang="ko"] .member .role { letter-spacing: .04em; font-size: .75rem; }
+.member h3 { font-size: 1.0625rem; }
+.member .aff { font-size: var(--s-xs); color: var(--muted); }
+.member p.bio { font-size: var(--s-sm); color: var(--muted); grid-column: 1 / -1; }
+@media (max-width: 900px) { .members { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .members { grid-template-columns: 1fr; } }
+.note { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: var(--s-sm); padding: 12px 16px; border-radius: 12px; background: #FBECEC; color: var(--ink); margin-bottom: 24px; }
+.note b { font-family: var(--f-display); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+.support { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.support > div { padding: 26px; border: 1px solid var(--line); border-radius: var(--r); background: var(--paper); display: grid; gap: 8px; align-content: start; }
+.support p { font-size: var(--s-sm); color: var(--muted); }
+@media (max-width: 700px) { .support { grid-template-columns: 1fr; } }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+.contact-grid > * { min-width: 0; }
+form.contact { display: grid; gap: 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: clamp(20px, 3vw, 32px); box-shadow: 0 10px 30px rgba(20,47,76,.06); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-size: var(--s-sm); font-weight: 700; color: var(--navy); }
+.field .opt { color: var(--muted); font-weight: 400; }
+.field input, .field select, .field textarea { width: 100%; font: 400 var(--s-md)/1.5 var(--f-body); color: var(--ink); background: var(--sky-mist); border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 12px; }
+.field textarea { min-height: 150px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(44,83,142,.18); }
+.err { color: #B4232A; font-size: var(--s-sm); font-weight: 500; }
+.compose { display: grid; gap: 12px; padding: 22px; border: 2px solid var(--blue); border-radius: 18px; background: var(--paper); }
+.compose pre { margin: 0; white-space: pre-wrap; word-break: break-word; font: 400 var(--s-sm)/1.6 ui-monospace, Menlo, monospace; background: var(--sky-mist); border-radius: 10px; padding: 14px; max-height: 280px; overflow: auto; }
+.compose .ok { color: var(--navy); font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.compose .ok img { height: 44px; width: auto; }
+.side { display: grid; gap: 30px; }
+.way { padding: 16px 0; border-top: 1px solid var(--line); display: grid; gap: 4px; }
+.way:last-child { border-bottom: 1px solid var(--line); }
+.way h3 { font-size: 1.0625rem; }
+.way p { font-size: var(--s-sm); color: var(--muted); }
+details.faq { border-top: 1px solid var(--line); padding: 14px 0; }
+details.faq:last-of-type { border-bottom: 1px solid var(--line); }
+details.faq summary { cursor: pointer; font-weight: 700; color: var(--navy); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after { content: "+"; color: var(--red); font-weight: 800; }
+details.faq[open] summary::after { content: "−"; }
+details.faq p { margin-top: 8px; font-size: var(--s-sm); color: var(--muted); max-width: 64ch; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .row2 { grid-template-columns: 1fr; } }
+
+/* Footer: the three tigers sit on its top edge */
+footer { background: var(--sky-soft); margin-top: 96px; border-top: 5px solid var(--navy); position: relative; }
+.foot-tigers { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 0; transform: translateY(-86%); display: flex; align-items: end; pointer-events: none; }
+.foot-tigers img { height: 76px; width: auto; }
+.foot-tigers img + img { margin-left: -8px; }
+footer .wrap { padding-block: 44px 36px; display: grid; gap: 26px; }
+.foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center; }
+.foot-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
+.foot-logo img { height: 88px; width: auto; }
+.foot-logo span { font-family: var(--f-brush); font-size: 1.6rem; color: var(--red); line-height: 1.1; }
+.foot-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.foot-nav a { color: var(--navy); text-decoration: none; font-size: var(--s-sm); font-weight: 600; }
+.foot-nav a:hover { text-decoration: underline; }
+.disclaimer { font-size: var(--s-xs); line-height: 1.7; color: var(--muted); max-width: 92ch; border-top: 1px solid #CCD6EC; padding-top: 20px; display: grid; gap: 8px; }
+.page[hidden] { display: none !important; }
+/* Event posters and reports */
+.event { grid-template-columns: 92px 1fr; }
+.event.has-poster { grid-template-columns: 92px 1fr 180px; }
+.ev-body .btns { margin-top: 6px; }
+.ev-credits { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 4px 0 0; padding-top: 12px; border-top: 1px dashed var(--line); font-size: var(--s-xs); line-height: 1.6; max-width: 70ch; }
+.ev-credits dt { font-weight: 700; color: var(--red); white-space: nowrap; }
+.ev-credits dd { margin: 0; color: var(--ink); }
+.ev-poster { appearance: none; border: 0; padding: 0; background: none; cursor: zoom-in; display: grid; gap: 6px; justify-items: center; align-self: start; }
+.ev-poster img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 6px 16px rgba(20,47,76,.10); transition: transform .15s ease; }
+.ev-poster:hover img { transform: translateY(-2px); }
+.ev-poster span { font-size: .75rem; font-weight: 600; color: var(--blue); }
+.btn .ico-doc { width: 16px; height: 16px; flex: none; }
+@media (max-width: 680px) { .event, .event.has-poster { grid-template-columns: 70px 1fr; } .ev-poster { grid-column: 2; justify-self: start; width: 100%; max-width: 260px; } }
+dialog.poster-view { width: min(920px, calc(100vw - 32px)); }
+.pv-inner { padding: 18px 18px 22px; display: grid; gap: 12px; }
+.pv-inner img { width: auto; max-width: 100%; max-height: calc(100vh - 190px); margin-inline: auto; border-radius: 10px; }
+.pv-foot { display: flex; justify-content: center; }
+#pv-title { text-transform: none; letter-spacing: .02em; }
+/* About: section jump menu opened from the three-bar mark */
+#page-about section[id] { scroll-margin-top: 88px; }
+.sec-toggle { appearance: none; display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; margin: -4px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--blue); cursor: pointer; }
+.sec-toggle svg { width: 22px; height: 16px; }
+.sec-toggle::after { content: ""; width: 6px; height: 6px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); margin: -3px 2px 0 1px; }
+.sec-toggle:hover, .sec-toggle[aria-expanded="true"] { background: var(--sky-soft); border-color: var(--sky); }
+.sec-menu { position: absolute; z-index: 30; min-width: 240px; max-width: calc(100vw - 32px); background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 16px 40px rgba(20,47,76,.18); padding: 8px; display: grid; gap: 2px; }
+.sec-menu[hidden] { display: none !important; }
+.sec-menu-title { font-family: var(--f-display); font-size: .6875rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding: 6px 12px 4px; }
+.sec-menu button { appearance: none; border: 0; background: transparent; text-align: left; font: 600 var(--s-sm)/1.4 var(--f-body); color: var(--navy); padding: 10px 12px; border-radius: 10px; cursor: pointer; display: flex; gap: 10px; align-items: center; }
+.sec-menu button::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex: none; }
+.sec-menu button:hover, .sec-menu button:focus-visible { background: var(--sky-soft); outline: none; }
+.hero h1 .swoosh { white-space: nowrap; }
+html[data-lang="ja"] .value .n, html[data-lang="ko"] .value .n { font-family: var(--f-body); font-weight: 700; font-size: .875rem; letter-spacing: .04em; line-height: 1.4; }
+/* Shown only if data.js has a typo */
+.data-error { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: #B4232A; color: #fff; padding: 14px max(16px, env(safe-area-inset-right, 0px)) 14px max(16px, env(safe-area-inset-left, 0px)); font-size: var(--s-sm); line-height: 1.6; }
+.data-error b { font-weight: 700; }
+/* SNS links (filled from SITE.social in data.js; hidden while empty) */
+.social { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.social-label { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--navy); }
+html[data-lang="ja"] .social-label, html[data-lang="ko"] .social-label { letter-spacing: .06em; }
+.social-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.social-links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); color: var(--navy); font-weight: 700; font-size: var(--s-sm); line-height: 1.2; text-decoration: none; }
+.social-links a:hover { border-color: var(--blue); color: var(--blue); }
+/* Event title opens the details */
+.ev-title { appearance: none; border: 0; background: none; padding: 0; margin: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color .15s ease, color .15s ease; }
+.ev-title:hover { color: var(--blue); text-decoration-color: currentColor; }
+/* Event details dialog */
+dialog.ev-detail { width: min(980px, calc(100vw - 24px)); max-height: calc(100vh - 32px); }
+.ed-inner { padding: 20px clamp(18px, 4vw, 40px) 36px; display: grid; gap: 14px; border-top: 6px solid var(--red); }
+.ed-inner .reader-top { position: sticky; top: 0; z-index: 2; background: var(--paper); margin: -20px calc(-1 * clamp(18px, 4vw, 40px)) 0; padding: 14px clamp(18px, 4vw, 40px) 10px; justify-content: flex-end; }
+#ed-body { display: grid; gap: 14px; }
+#ed-body h2 { font-size: clamp(1.4rem, 3.2vw, 1.9rem); }
+.ed-cols { display: grid; grid-template-columns: 1fr 200px; gap: 28px; align-items: start; }
+.ed-cols.no-poster { grid-template-columns: 1fr; }
+.ed-cols > * { min-width: 0; }
+.ed-main { display: grid; gap: 12px; }
+.ed-desc { color: var(--ink); font-size: var(--s-sm); max-width: 70ch; }
+.ed-participants { display: inline-flex; justify-self: start; padding: 6px 12px; border-radius: 12px; background: #FBECEC; color: var(--red); font-weight: 700; font-size: var(--s-sm); }
+.ed-sec { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
+.ed-sec h3 { font-size: 1.0625rem; }
+.ed-sched { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.ed-sched li { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: var(--s-sm); }
+.ed-sched li.ed-day { display: block; padding: 14px 0 6px; border-bottom: 0; font-weight: 700; color: var(--navy); }
+.ed-time { color: var(--red); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ed-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ed-gallery figure { margin: 0; display: grid; gap: 6px; min-width: 0; }
+.ed-gallery button { appearance: none; border: 0; padding: 0; background: none; cursor: zoom-in; border-radius: 10px; overflow: hidden; }
+.ed-gallery img { width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; transition: transform .2s ease; }
+.ed-gallery button:hover img { transform: scale(1.03); }
+.ed-gallery figcaption { font-size: var(--s-xs); color: var(--muted); line-height: 1.5; }
+.ed-video { position: relative; width: 100%; max-width: 760px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
+.ed-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 720px) { .ed-cols { grid-template-columns: 1fr; } .ed-cols .ev-poster { grid-column: 1; max-width: 220px; justify-self: start; } .ed-gallery { grid-template-columns: 1fr 1fr; } .ed-sched li { grid-template-columns: 1fr; gap: 2px; } }
+/* About: photo grid beside the background text */
+.about-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.about-photos figure { margin: 0; position: relative; border-radius: 14px; overflow: hidden; background: var(--sky-soft); }
+.about-photos img { width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; }
+/* ---- Mascots popping up around the home page ---- */
+html, body { overflow-x: clip; }
+.mz { position: absolute; z-index: 0; display: block; line-height: 0; cursor: default; }
+.mz img { display: block; width: auto; height: 100%; transform-origin: 50% 100%; }
+/* greeting bubble in each tiger's own language */
+.mz::after, .mascot[data-say]::after {
+  content: attr(data-say); position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translate(-50%, 6px) scale(.6); opacity: 0;
+  padding: 5px 11px; border-radius: 999px; background: #fff; color: var(--navy); border: 2px solid var(--navy);
+  font: 700 .9rem/1.2 var(--f-body); white-space: nowrap; box-shadow: 0 6px 14px rgba(20,47,76,.15); pointer-events: none;
+  transition: opacity .18s ease, transform .18s cubic-bezier(.3,1.6,.5,1); }
+.mz:hover::after, .mascot[data-say]:hover::after { opacity: 1; transform: translate(-50%, 0) scale(1); }
+.mascot[data-say] { position: relative; }
+.mascot[data-say]::after { bottom: auto; top: 10px; }
+.values.has-mz, .programs.has-mz { position: relative; }
+.values.has-mz .value, .programs.has-mz .program { position: relative; z-index: 1; }
+.mz-peek { height: 64px; }
+.mz-lounge { height: 74px; }
+.mz-values { top: -68px; right: 24px; }
+.mz-programs { top: -54px; right: 36px; }
+.btn-peek { position: relative; display: inline-block; }
+.btn-peek .btn { position: relative; z-index: 1; }
+.mz-btn { height: 46px; top: -36px; right: 14px; }
+@media (prefers-reduced-motion: no-preference) {
+  .mz img { animation: mz-bob 3.6s ease-in-out infinite; }
+  .mz-values img { animation-delay: -.6s; }
+  .mz-lounge img { animation: mz-breathe 3.4s ease-in-out infinite; }
+  .mz-lounge:hover img { animation: mz-wiggle .5s ease-in-out; }
+  @keyframes mz-breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.02, .97); } }
+  .mz-programs img { animation-delay: -2s; }
+  .mz-peek img { animation-name: mz-peek; }
+  .mz:hover img { animation: mz-wiggle .5s ease-in-out; }
+  @keyframes mz-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-4px) rotate(-2deg); } }
+  @keyframes mz-peek { 0%, 70%, 100% { transform: translateY(0); } 80% { transform: translateY(-6px); } 90% { transform: translateY(1px); } }
+  @keyframes mz-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }
+}
+@media (max-width: 640px) {
+  .mz-peek { height: 52px; } .mz-lounge { height: 60px; } .mz-values { top: -55px; right: 14px; } .mz-programs { top: -44px; right: 20px; }
+}
+.about-photos figcaption { position: absolute; left: 8px; bottom: 8px; padding: 3px 9px; border-radius: 999px; background: rgba(20,47,76,.78); color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .02em; }
+
+/* ---- Overall-site additions ---- */
+.hero-split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; padding-block: 56px 40px; }
+.hero-split > * { min-width: 0; }
+.hero-split .hero-copy { justify-items: start; text-align: left; padding: 0; }
+.hero-split .hero-copy .btns { justify-content: flex-start; }
+.hero-split h1 { max-width: 16ch; }
+html[data-lang="ko"] .hero-split h1, html[data-lang="ja"] .hero-split h1 { max-width: 13em; }
+.poster { justify-self: center; width: 100%; max-width: 420px; background: #fff; border-radius: 28px; padding: 14px; box-shadow: 0 18px 40px rgba(20,47,76,.12); border: 1px solid var(--line); }
+.poster img { width: 100%; height: auto; border-radius: 18px; }
+@media (max-width: 860px) { .hero-split { grid-template-columns: 1fr; gap: 28px; padding-top: 40px; } .poster { max-width: 320px; justify-self: start; } }
+.hero .cities { padding-top: 0; }
+.branches { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.branch { display: grid; grid-template-rows: auto 1fr; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; min-width: 0; }
+.branch-art { position: relative; height: 170px; display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 22px; overflow: hidden; }
+.branch.kr .branch-art { background: linear-gradient(160deg, #E4ECFB 0%, #C9D8F5 100%); }
+.branch.jp .branch-art { background: linear-gradient(180deg, #F5F8FE 0%, #DCE6F8 100%); }
+.branch-art .sky { position: absolute; inset: auto 0 0 0; width: 100%; height: auto; opacity: .95;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 40%); mask-image: linear-gradient(to bottom, transparent, #000 40%); }
+.branch-art .tiger { position: relative; height: 128px; width: auto; margin-bottom: 10px; filter: drop-shadow(0 6px 10px rgba(20,47,76,.18)); }
+.branch-art .flagbar { position: absolute; left: 22px; top: 20px; font-family: var(--f-display); font-weight: 800; font-size: .75rem; letter-spacing: .18em; color: var(--navy); background: rgba(255,255,255,.85); padding: 6px 10px; border-radius: 999px; }
+.branch-body { padding: 24px 26px 26px; display: grid; gap: 10px; align-content: start; }
+.branch-body .since { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--red); }
+html[data-lang="ja"] .branch-body .since, html[data-lang="ko"] .branch-body .since { letter-spacing: .04em; }
+.branch-body h3 { font-size: 1.5rem; }
+.branch-body p { color: var(--muted); font-size: var(--s-sm); }
+.branch-body .btns { margin-top: 6px; }
+@media (max-width: 760px) { .branches { grid-template-columns: 1fr; } }
+.ext-note { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 16px 18px; border-radius: 14px; background: var(--sky-soft); font-size: var(--s-sm); }
+.ext-note img { height: 44px; width: auto; }
+.lang button { padding: 7px 10px; }
+@media (max-width: 400px) { .lang button { padding: 7px 8px; } }
+.foot-ext { color: var(--red) !important; }
+.brand-txt { display: inline-grid; gap: 3px; line-height: 1; letter-spacing: .06em; }
+.brand-txt .bt-top { white-space: nowrap; }
+.brand-txt .bt-sub { white-space: nowrap; color: var(--blue); }
+/* Logo text: Source Sans 3 is closest to the logo lettering, and its J sits on the baseline like the logo's */
+.brand-txt, html[data-lang] .brand-txt { font-family: "Source Sans 3", "Open Sans", system-ui, sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: .06em; }
+@media (max-width: 420px) { .brand-txt { display: none; } }
+.social { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.social-label { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--navy); }
+html[data-lang="ja"] .social-label, html[data-lang="ko"] .social-label { letter-spacing: .06em; }
+.social-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.social-links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); color: var(--navy); font-weight: 700; font-size: var(--s-sm); line-height: 1.2; text-decoration: none; }
+.social-links a:hover { border-color: var(--blue); color: var(--blue); }
+#page-about section[id] { scroll-margin-top: 88px; }
+.sec-toggle { appearance: none; display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; margin: -4px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--blue); cursor: pointer; }
+.sec-toggle svg { width: 22px; height: 16px; }
+.sec-toggle::after { content: ""; width: 6px; height: 6px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg); margin: -3px 2px 0 1px; }
+.sec-toggle:hover, .sec-toggle[aria-expanded="true"] { background: var(--sky-soft); border-color: var(--sky); }
+.sec-menu { position: absolute; z-index: 30; min-width: 240px; max-width: calc(100vw - 32px); background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 16px 40px rgba(20,47,76,.18); padding: 8px; display: grid; gap: 2px; }
+.sec-menu[hidden] { display: none !important; }
+.sec-menu-title { font-family: var(--f-display); font-size: .6875rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding: 6px 12px 4px; }
+.sec-menu button { appearance: none; border: 0; background: transparent; text-align: left; font: 600 var(--s-sm)/1.4 var(--f-body); color: var(--navy); padding: 10px 12px; border-radius: 10px; cursor: pointer; display: flex; gap: 10px; align-items: center; }
+.sec-menu button::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex: none; }
+.sec-menu button:hover, .sec-menu button:focus-visible { background: var(--sky-soft); outline: none; }
+
+.hero h1 .swoosh { white-space: nowrap; }
+html[data-lang="ja"] .value .n, html[data-lang="ko"] .value .n { font-family: var(--f-body); font-weight: 700; font-size: .875rem; letter-spacing: .04em; line-height: 1.4; }
+
+/* ---- v3: AEIF page, peeking tigers on the stats ---- */
+#page-aeif section[id] { scroll-margin-top: 88px; }
+.stats.has-mz { position: relative; }
+.stats.has-mz .stat { position: relative; z-index: 1; }
+.mz-stats { top: -54px; right: 40px; }
+@media (max-width: 640px) { .mz-stats { right: 20px; } }
+.aeif-facts { margin-top: 28px; }
+.rt-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.rt { display: grid; grid-template-rows: auto 1fr; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; min-width: 0; }
+.rt img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.rt-body { display: grid; gap: 8px; align-content: start; padding: 18px 20px 20px; }
+.rt-body .place { font-family: var(--f-display); font-weight: 700; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { letter-spacing: .04em; }
+.rt-body h3 { font-size: 1.0625rem; line-height: 1.4; }
+.rt-body p { font-size: var(--s-sm); color: var(--muted); }
+.rt-num { justify-self: start; padding: 4px 10px; border-radius: 10px; background: #FBECEC; color: var(--red); font-weight: 700; font-size: var(--s-xs); }
+.rt-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 4px; font-size: var(--s-sm); font-weight: 700; }
+@media (max-width: 960px) { .rt-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .rt-list { grid-template-columns: 1fr; } }
+.engage { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.engage li { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 12px 0; border-top: 1px dashed var(--line); font-size: var(--s-sm); }
+.engage .d { color: var(--red); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 720px) { .engage { grid-template-columns: 1fr; } }
+.res-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.res-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); font-size: var(--s-sm); }
+.res-list .kind { font-family: var(--f-display); font-weight: 700; font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; color: #fff; background: var(--navy); border-radius: 999px; padding: 3px 9px; }
+.res-list .kind.video { background: var(--red); }
+.res-list a { font-weight: 700; }
+/* ---- Japan Branch tab ---- */
+.jp-hero .hero-copy { padding-block: 48px 4px; }
+.jp-eyebrow { justify-content: center; color: var(--red); }
+.jp-tabbar { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 70px); z-index: 15; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.jp-tabs { display: flex; gap: 6px; padding-block: 10px; overflow-x: auto; scrollbar-width: none; }
+.jp-tabs::-webkit-scrollbar { display: none; }
+.jp-tabs a { flex: none; text-decoration: none; color: var(--muted); font-weight: 700; font-size: var(--s-sm); padding: 9px 18px; border-radius: 999px; background: var(--sky-soft); white-space: nowrap; }
+.jp-tabs a:hover { color: var(--navy); }
+.jp-tabs a[aria-current="page"] { background: var(--navy); color: #fff; }
+.jp-view[hidden] { display: none !important; }
+@media (max-width: 480px) { .jp-tabs a { padding: 8px 13px; } .jp-hero .hero-copy { padding-top: 32px; } }
+.email-label { font-size: var(--s-xs); font-weight: 700; color: var(--muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="bars" viewBox="0 0 30 22">
+      <polygon points="5,0 25,0 25,5 3,5" fill="#2C538E"/><rect x="25" y="0" width="5" height="5" fill="#BE3431"/>
+      <polygon points="3,8.5 25,8.5 25,13.5 1,13.5" fill="#28356A"/><rect x="25" y="8.5" width="5" height="5" fill="#BE3431"/>
+      <polygon points="1,17 25,17 25,22 0,22" fill="#142F4C"/><rect x="25" y="17" width="5" height="5" fill="#BE3431"/>
+    </symbol>
+    <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 1.5c.8 6.2 3.3 8.9 10 10.5-6.7 1.6-9.2 4.3-10 10.5-.8-6.2-3.3-8.9-10-10.5 6.7-1.6 9.2-4.3 10-10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#home" data-nav="home" aria-label="TogetherWeTri home">
+      <img src="mark.png" alt="" width="72" height="30">
+      <span class="brand-txt"><span class="bt-top">TOGETHER WE TRI</span><span class="bt-sub">U.S. · ROK · JAPAN</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="#home" data-nav="home"><span class="en">Home</span><span class="ja">ホーム</span><span class="ko">홈</span></a>
+      <a href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개</span></a>
+      <a href="#aeif" data-nav="aeif"><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></a>
+      <a href="#japan" data-nav="japan"><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></a>
+      <a href="#contact" data-nav="contact"><span class="en">Contact</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-ja" data-lang="ja" aria-pressed="false">日本語</button>
+      <button type="button" id="lang-ko" data-lang="ko" aria-pressed="false">한국어</button>
+    </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><span class="en">Menu</span><span class="ja">メニュー</span><span class="ko">메뉴</span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<div class="page" id="page-home" data-page="home">
+  <section class="hero">
+    <div class="wrap hero-split">
+      <div class="hero-copy">
+        <span class="hero-tag"><svg aria-hidden="true"><use href="#sparkle"/></svg>We Go Together!<svg aria-hidden="true"><use href="#sparkle"/></svg></span>
+        <h1><span class="en">Bridging the U.S., the ROK and Japan through <span class="swoosh">public diplomacy</span></span><span class="ja">パブリック・ディプロマシーで、<span class="swoosh">日米韓をつなぐ</span></span><span class="ko">공공외교로 <span class="swoosh">한·미·일을 잇다</span></span></h1>
+        <p class="lede"><span class="en">TogetherWeTri is a youth initiative founded in 2025 by alumni of the U.S.–ROK–Japan Young Trilateral Leaders (YTL) Summit. With branches in Korea and Japan, we turn trilateral dialogue into youth-led action that lasts beyond a single summit.</span><span class="ja">TogetherWeTriは、日米韓ヤング・リーダーズ・サミット（Young Trilateral Leaders Summit：YTL）の修了生が2025年に立ち上げたユース・イニシアティブです。韓国と日本に支部を置き、三か国の対話を、一度きりのサミットで終わらない若者主導のアクションへとつなげています。</span><span class="ko">TogetherWeTri는 한미일 미래세대 리더 서밋(Young Trilateral Leaders Summit, YTL) 수료생들이 2025년에 시작한 청년 이니셔티브입니다. 한국과 일본에 지부를 두고, 한미일 대화를 한 번의 서밋으로 끝나지 않는 청년 주도의 실천으로 이어가고 있습니다.</span></p>
+        <div class="btns">
+          <a class="btn" href="#japan" data-nav="japan"><span class="en">Japan Branch</span><span class="ja">日本支部を見る</span><span class="ko">일본 지부 보기</span></a>
+          <a class="btn ghost" href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개 보기</span></a>
+        </div>
+      </div>
+      <div class="poster"><img src="poster-wegotogether.png" width="467" height="450" alt="We Go Together: the mascots Hanul for Korea, Hank for the United States and Haru for Japan"></div>
+    </div>
+    <div class="wrap cities" aria-label="Local time in the three capitals">
+      <span>SEOUL<b id="t-seoul">--:--</b></span>
+      <span>TOKYO<b id="t-tokyo">--:--</b></span>
+      <span>WASHINGTON, D.C.<b id="t-dc">--:--</b></span>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:32px">
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact"><span class="k"><span class="en">Founded</span><span class="ja">設立</span><span class="ko">설립</span></span><span class="v"><span class="en">2025, in Korea</span><span class="ja">2025年・韓国</span><span class="ko">2025년, 한국</span></span></div>
+        <div class="fact"><span class="k"><span class="en">Founded by</span><span class="ja">設立者</span><span class="ko">설립자</span></span><span class="v"><span class="en">YTL Summit alumni</span><span class="ja">YTLサミット修了生</span><span class="ko">YTL 서밋 수료생</span></span></div>
+        <div class="fact"><span class="k"><span class="en">Branches</span><span class="ja">支部</span><span class="ko">지부</span></span><span class="v"><span class="en">Korea · Japan</span><span class="ja">韓国・日本</span><span class="ko">한국 · 일본</span></span></div>
+        <div class="fact"><span class="k"><span class="en">Recognition</span><span class="ja">採択</span><span class="ko">선정</span></span><span class="v"><a href="#aeif" data-nav="aeif"><span class="en">U.S. Department of State AEIF 2025 awardee</span><span class="ja">米国国務省 AEIF 2025年度 採択</span><span class="ko">미국 국무부 AEIF 2025 선정</span> →</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:24px">
+    <div class="wrap split">
+      <div class="block-head" style="margin-bottom:0;gap:16px">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Why we exist</span><span class="ja">私たちの問題意識</span><span class="ko">우리가 존재하는 이유</span></span>
+        <p class="quote"><span class="en">How can we sustain this trilateral dialogue beyond a single summit?</span><span class="ja">一度きりのサミットを超えて、三国間の対話をどう持続させるか？</span><span class="ko">한 번의 서밋을 넘어, 한미일 대화를 어떻게 이어갈 수 있을까?</span></p>
+        <p class="muted"><span class="en">Since the 2023 Camp David Summit, the three governments have reaffirmed trilateral cooperation again and again, but most of it still happens in high-level government dialogue. We build the people-to-people ties underneath it: trust among young people that holds regardless of which administration is in office.</span><span class="ja">2023年のキャンプ・デービッド首脳会談以降、三か国の政府は日米韓協力の重要性を繰り返し確認してきました。しかしその多くは、いまも政府間のハイレベルな対話にとどまっています。私たちは、その下に人と人とのつながりを築きます。政権が変わっても揺らがない、若者同士の信頼です。</span><span class="ko">2023년 캠프 데이비드 정상회의 이후 세 나라 정부는 한미일 협력의 중요성을 거듭 확인해 왔습니다. 하지만 그 대부분은 여전히 정부 간 고위급 대화에 머물러 있습니다. 우리는 그 아래에서 사람과 사람을 잇습니다. 정부가 바뀌어도 흔들리지 않는 청년 간의 신뢰입니다.</span></p>
+        <p><a href="#about" data-nav="about"><span class="en">Read our full background →</span><span class="ja">設立の背景を読む →</span><span class="ko">설립 배경 읽기 →</span></a></p>
+      </div>
+      <div class="values has-mz">
+        <span class="mz mz-lounge mz-values" data-say="こんにちは！" aria-hidden="true"><img src="haru.png" alt=""></span>
+        <div class="value">
+          <span class="n"><span class="en">Value one</span><span class="ja">私たちが大切にすること 1</span><span class="ko">우리가 지키는 가치 1</span></span>
+          <h3><span class="en">A platform for practice</span><span class="ja">実践のためのプラットフォーム</span><span class="ko">실천의 플랫폼</span></h3>
+          <p><span class="en">Translating government-to-government dialogue into youth-led projects, events and actions.</span><span class="ja">政府間の対話を、若者主導のプロジェクト・イベント・行動へとつなげます。</span><span class="ko">정부 간 대화를 청년 주도의 프로젝트, 행사, 실천으로 연결합니다.</span></p>
+        </div>
+        <div class="value two">
+          <span class="n"><span class="en">Value two</span><span class="ja">私たちが大切にすること 2</span><span class="ko">우리가 지키는 가치 2</span></span>
+          <h3><span class="en">A network of trust</span><span class="ja">信頼のネットワーク</span><span class="ko">신뢰의 네트워크</span></h3>
+          <p><span class="en">Lasting ties among next-generation leaders that are not swayed by political circumstances.</span><span class="ja">政治状況に左右されない、次世代リーダー同士の持続的なつながりを育てます。</span><span class="ko">정치적 상황에 흔들리지 않는 차세대 리더 간의 지속적인 관계를 키웁니다.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Our impact in action</span><span class="ja">活動の成果</span><span class="ko">활동 성과</span></span>
+        <h2><span class="en">Let's do it together</span><span class="ja">一緒にやりましょう</span><span class="ko">같이 합시다</span></h2>
+        <p class="slogan">같이 합시다 · 一緒にやりましょう · Let's do it together</p>
+      </div>
+      <div class="stats has-mz">
+        <span class="mz mz-peek mz-stats" data-say="Hi!" aria-hidden="true"><img src="hank-peek.png" alt=""></span>
+        <div class="stat">
+          <span class="big">6</span>
+          <h3><span class="en">Regional cooperation roundtables</span><span class="ja">地域協力ラウンドテーブル</span><span class="ko">지역 협력 라운드테이블</span></h3>
+          <p><span class="en">Expanding dialogue across cities and sectors in Korea and Japan.</span><span class="ja">韓国と日本で、都市・分野を越えて対話を広げました。</span><span class="ko">한국과 일본에서 도시와 분야를 넘어 대화를 넓혔습니다.</span></p>
+        </div>
+        <div class="stat">
+          <span class="big">500+</span>
+          <h3><span class="en">Youth and university students engaged</span><span class="ja">参加した若者・大学生</span><span class="ko">참여한 청년·대학생</span></h3>
+          <p><span class="en">From diverse academic backgrounds.</span><span class="ja">多様な学問分野から参加しました。</span><span class="ko">다양한 전공 분야에서 참여했습니다.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head-row">
+        <div class="block-head">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Our branches</span><span class="ja">支部</span><span class="ko">지부</span></span>
+          <h2><span class="en">Two branches, one network</span><span class="ja">二つの支部、一つのネットワーク</span><span class="ko">두 개의 지부, 하나의 네트워크</span></h2>
+        </div>
+        <span class="btn-peek"><span class="mz mz-peek mz-btn" data-say="안녕!" aria-hidden="true"><img src="hanul-peek.png" alt=""></span><a class="btn ghost" href="#japan" data-nav="japan"><span class="en">Japan Branch page</span><span class="ja">日本支部のページ</span><span class="ko">일본 지부 페이지</span></a></span>
+      </div>
+      <div class="branches">
+        <article class="branch kr">
+          <div class="branch-art"><span class="flagbar">KOREA · 한국</span><img class="tiger" src="hanul.png" width="139" height="136" alt=""></div>
+          <div class="branch-body">
+            <span class="since"><span class="en">Since 2025</span><span class="ja">2025年〜</span><span class="ko">2025년부터</span></span>
+            <h3><span class="en">Korea Branch</span><span class="ja">韓国支部</span><span class="ko">한국 지부</span></h3>
+            <p><span class="en">Where TogetherWeTri began. From August 2025 to September 2026, the Korea Branch carried out an AEIF-funded project, including regional cooperation roundtables at American Corners.</span><span class="ja">TogetherWeTriが始まった場所です。2025年8月から2026年9月まで、AEIFの助成を受けたプロジェクトを実施し、アメリカン・コーナーでの地域協力ラウンドテーブルなどを開催しました。</span><span class="ko">TogetherWeTri가 시작된 곳입니다. 2025년 8월부터 2026년 9월까지 AEIF 지원 프로젝트를 수행하며, 아메리칸 코너에서 지역 협력 라운드테이블 등을 개최했습니다.</span></p>
+            <div class="btns">
+              <a class="btn ghost" href="#contact" data-nav="contact" data-topic="korea"><span class="en">Contact the Korea Branch</span><span class="ja">韓国支部に問い合わせる</span><span class="ko">한국 지부에 문의하기</span></a>
+              <a class="btn" href="#" data-korea-link hidden><span class="en">Visit the Korea Branch site ↗</span><span class="ja">韓国支部サイトへ ↗</span><span class="ko">한국 지부 사이트 바로가기 ↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="branch jp">
+          <div class="branch-art"><img class="sky" src="banner.webp" width="1115" height="296" alt=""><span class="flagbar">JAPAN · 日本</span><img class="tiger" src="haru.png" width="164" height="139" alt=""></div>
+          <div class="branch-body">
+            <span class="since"><span class="en">Since March 2026</span><span class="ja">2026年3月〜</span><span class="ko">2026년 3월부터</span></span>
+            <h3><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></h3>
+            <p><span class="en">Dialogues, regional projects and a newsletter that bring trilateral cooperation to young people across Japan.</span><span class="ja">日本各地の若者に日米韓協力を届ける、ダイアローグ、地域プロジェクト、ニュースレターを展開しています。</span><span class="ko">일본 각지의 청년들에게 한미일 협력을 전하는 대화 세션, 지역 프로젝트, 뉴스레터를 운영하고 있습니다.</span></p>
+            <div class="btns">
+              <a class="btn" href="#japan" data-nav="japan"><span class="en">Japan Branch page →</span><span class="ja">日本支部のページへ →</span><span class="ko">일본 지부 페이지로 →</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></span>
+          <h2><span class="en">Join the next generation of trilateral leaders</span><span class="ja">日米韓の次世代リーダーの輪に加わろう</span><span class="ko">한미일 차세대 리더와 함께하세요</span></h2>
+          <p><span class="en">Come to an event, join a branch, or partner with us on a project in your community.</span><span class="ja">イベントへの参加、支部での活動、地域での連携など、関わり方はさまざまです。</span><span class="ko">행사 참여, 지부 활동, 지역 협력 등 다양한 방법으로 함께할 수 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" style="margin-top:6px"><span class="en">Get in touch</span><span class="ja">お問い合わせ</span><span class="ko">문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="page" id="page-about" data-page="about" hidden>
+  <div class="page-band">
+    <div class="wrap">
+      <div class="page-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개</span></span>
+        <h1><span class="en">A youth network for U.S.–ROK–Japan cooperation</span><span class="ja">日米韓協力のためのユース・ネットワーク</span><span class="ko">한미일 협력을 위한 청년 네트워크</span></h1>
+        <p class="lede"><span class="en">Who we are, how our journey began, and what we have done so far.</span><span class="ja">私たちが何者で、どのように歩んできたのか。これまでの活動を紹介します。</span><span class="ko">우리가 누구인지, 어떻게 시작했는지, 그리고 지금까지의 활동을 소개합니다.</span></p>
+      </div>
+      <div class="band-art" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+    </div>
+  </div>
+
+  <section class="block" id="about-goals">
+    <div class="wrap split">
+      <div class="block-head" style="margin-bottom:0">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Our goals</span><span class="ja">事業の目標</span><span class="ko">사업 목표</span></span>
+        <h2><span class="en">Two lasting values we aim to leave behind</span><span class="ja">社会に残したい、二つの価値</span><span class="ko">사회에 남기고 싶은 두 가지 가치</span></h2>
+        <p class="muted"><span class="en">TogetherWeTri works toward two goals that outlast any single event or administration.</span><span class="ja">TogetherWeTriは、一度きりのイベントや特定の政権を超えて続く、二つの目標に取り組んでいます。</span><span class="ko">TogetherWeTri는 한 번의 행사나 특정 정부를 넘어 이어지는 두 가지 목표를 향해 활동합니다.</span></p>
+      </div>
+      <div class="values">
+        <div class="value">
+          <span class="n"><span class="en">Goal one</span><span class="ja">目標 1</span><span class="ko">목표 1</span></span>
+          <h3><span class="en">A platform for practice</span><span class="ja">実践のためのプラットフォーム</span><span class="ko">실천의 플랫폼</span></h3>
+          <p><span class="en">Translating government-to-government dialogue into youth-led projects, events and actions.</span><span class="ja">政府間の対話を、若者主導のプロジェクト・イベント・行動へとつなげます。</span><span class="ko">정부 간 대화를 청년 주도의 프로젝트, 행사, 실천으로 연결합니다.</span></p>
+        </div>
+        <div class="value two">
+          <span class="n"><span class="en">Goal two</span><span class="ja">目標 2</span><span class="ko">목표 2</span></span>
+          <h3><span class="en">A network of trust</span><span class="ja">信頼のネットワーク</span><span class="ko">신뢰의 네트워크</span></h3>
+          <p><span class="en">Lasting ties among next-generation leaders that are not swayed by political circumstances.</span><span class="ja">政治状況に左右されない、次世代リーダー同士の持続的なつながりを育てます。</span><span class="ko">정치적 상황에 흔들리지 않는 차세대 리더 간의 지속적인 관계를 키웁니다.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="about-background">
+    <div class="wrap split">
+      <div style="display:grid;gap:24px">
+        <div class="block-head" style="margin-bottom:0">
+          <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Background</span><span class="ja">設立の背景</span><span class="ko">설립 배경</span></span>
+          <h2><span class="en">Closing the gap between summits and society</span><span class="ja">首脳会談と社会のあいだのギャップを埋める</span><span class="ko">정상회의와 사회 사이의 간극을 메우다</span></h2>
+        </div>
+        <div class="about-photos">
+          <figure><img src="impact-gwangju-2025.jpg" width="603" height="336" loading="lazy" alt="Students at the Gwangju American Corner"><figcaption><span class="en">Gwangju · Nov 2025</span><span class="ja">光州・2025年11月</span><span class="ko">광주 · 2025년 11월</span></figcaption></figure>
+          <figure><img src="impact-busan-2025.jpg" width="1089" height="726" loading="lazy" alt="Participants at the Busan American Corner"><figcaption><span class="en">Busan · Dec 2025</span><span class="ja">釜山・2025年12月</span><span class="ko">부산 · 2025년 12월</span></figcaption></figure>
+          <figure><img src="tokyo0306-1.jpg" width="1309" height="637" loading="lazy" alt="Participants of the YTL U.S.-ROK-Japan Cooperation Dialogue in Tokyo"><figcaption><span class="en">Tokyo · Mar 2026</span><span class="ja">東京・2026年3月</span><span class="ko">도쿄 · 2026년 3월</span></figcaption></figure>
+          <figure><img src="tokyo0613-1.jpg" width="1400" height="934" loading="lazy" alt="Participants and speakers at the U.S.-ROK-Japan Professional x Youth Dialogue"><figcaption><span class="en">Tokyo · Jun 2026</span><span class="ja">東京・2026年6月</span><span class="ko">도쿄 · 2026년 6월</span></figcaption></figure>
+        </div>
+      </div>
+      <div class="prose">
+        <p><span class="en">TogetherWeTri is an initiative launched in Korea in 2025 by alumni of the U.S.–ROK–Japan Young Trilateral Leaders (YTL) Summit. From August 2025 to September 2026, the Korea Branch carried out a project with seed funding from the U.S. Department of State's Alumni Engagement Innovation Fund (AEIF). The Japan Branch began its activities in March 2026.</span><span class="ja">TogetherWeTriは、日米韓ヤング・リーダーズ・サミット（Young Trilateral Leaders Summit：YTL）の修了生が、2025年に韓国で立ち上げたイニシアティブです。韓国支部は、米国国務省の同窓生エンゲージメント・イノベーション基金（AEIF）のシード資金を受け、2025年8月から2026年9月までプロジェクトを実施しました。日本支部は2026年3月に活動を開始しました。</span><span class="ko">TogetherWeTri는 한미일 미래세대 리더 서밋(Young Trilateral Leaders Summit, YTL) 수료생들이 2025년 한국에서 시작한 이니셔티브입니다. 한국 지부는 미국 국무부 동문 참여 혁신 기금(AEIF)의 시드 펀딩을 받아 2025년 8월부터 2026년 9월까지 프로젝트를 수행했습니다. 일본 지부는 2026년 3월부터 활동을 시작했습니다.</span></p>
+        <p><span class="en">Since the 2023 Camp David Summit, successive Japan–U.S. and Japan–ROK joint statements and summit meetings have consistently identified the advancement of trilateral economic security and cooperation on advanced technology as a top shared priority among the three countries.</span><span class="ja">2023年のキャンプ・デービッド首脳会談以降、日米・日韓の共同声明や首脳会談では、日米韓の経済安全保障と先端技術協力の推進が、三か国共通の最重要課題として一貫して位置づけられてきました。</span><span class="ko">2023년 캠프 데이비드 정상회의 이후 미일·한일 공동성명과 정상회담에서는 한미일 경제안보와 첨단기술 협력 강화가 세 나라 공통의 최우선 과제로 일관되게 제시되어 왔습니다.</span></p>
+        <p><span class="en">At the same time, as instability in the security, economic and technology domains of the Indo-Pacific grows, trilateral cooperation has remained concentrated at the level of high-level government dialogue. A structural gap persists in translating these achievements into concrete action at the level of young people and local communities.</span><span class="ja">一方で、インド太平洋地域の安全保障・経済・技術の各分野で不安定さが増すなか、日米韓協力は政府間の高官レベルの対話に集中しており、その成果を若者や地域社会のレベルで具体的な行動へとつなげるうえで、構造的なギャップが残っています。</span><span class="ko">한편 인도·태평양 지역의 안보·경제·기술 분야에서 불안정성이 커지는 가운데, 한미일 협력은 정부 간 고위급 대화에 집중되어 있으며, 그 성과를 청년과 지역사회 차원의 구체적인 행동으로 연결하는 데에는 구조적인 간극이 남아 있습니다.</span></p>
+        <p><span class="en">Precisely because political uncertainty is increasing, trust-based relationships among young people and private-sector cooperative networks, ones that do not depend on the direction of any particular administration, have become all the more essential.</span><span class="ja">政治的な不確実性が高まっているからこそ、特定の政権の方針に左右されない、若者同士の信頼関係と民間の協力ネットワークがいっそう重要になっています。</span><span class="ko">정치적 불확실성이 커지고 있기에, 특정 정부의 방향에 좌우되지 않는 청년 간의 신뢰 관계와 민간 협력 네트워크가 더욱 중요해지고 있습니다.</span></p>
+        <p><span class="en">With this challenge in mind, TogetherWeTri aims to leave behind two lasting values for society: first, a platform that translates government-to-government dialogue into youth-led practice; and second, a network of trust among next-generation leaders that is not swayed by political circumstances.</span><span class="ja">この課題意識のもと、TogetherWeTriは社会に二つの価値を残すことを目指しています。第一に、政府間の対話を若者主導の実践へとつなげるプラットフォーム。第二に、政治状況に左右されない次世代リーダーの信頼のネットワークです。</span><span class="ko">이러한 문제의식 아래 TogetherWeTri는 사회에 두 가지 가치를 남기고자 합니다. 첫째, 정부 간 대화를 청년 주도의 실천으로 연결하는 플랫폼. 둘째, 정치적 상황에 흔들리지 않는 차세대 리더 간의 신뢰 네트워크입니다.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about-journey">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">How we got here</span><span class="ja">これまでの歩み</span><span class="ko">지금까지의 여정</span></span>
+        <h2><span class="en">Turning ideas into action</span><span class="ja">アイデアを、アクションへ</span><span class="ko">아이디어를 실천으로</span></h2>
+      </div>
+      <p class="quote"><span class="en">How can we sustain this trilateral dialogue beyond a single summit?</span><span class="ja">一度きりのサミットを超えて、三国間の対話をどう持続させるか？</span><span class="ko">한 번의 서밋을 넘어, 한미일 대화를 어떻게 이어갈 수 있을까?</span></p>
+      <p class="quote-note"><span class="en">This question is at the heart of TogetherWeTri: bridging the U.S., the ROK and Japan through public diplomacy.</span><span class="ja">この問いが、TogetherWeTriの活動の中心にあります。パブリック・ディプロマシーを通じて、日米韓をつなぎます。</span><span class="ko">이 질문이 TogetherWeTri 활동의 중심에 있습니다. 공공외교를 통해 한미일을 잇습니다.</span></p>
+      <div class="timeline wide">
+        <div class="tl">
+          <span class="when"><span class="en">August 18, 2023</span><span class="ja">2023年8月18日</span><span class="ko">2023년 8월 18일</span></span>
+          <h3><span class="en">Camp David Summit</span><span class="ja">キャンプ・デービッド首脳会談</span><span class="ko">캠프 데이비드 정상회의</span></h3>
+          <p><span class="en">The leaders of the United States, the ROK and Japan hold their first standalone trilateral summit and set a framework for regular cooperation.</span><span class="ja">日米韓の首脳が初の単独での三か国首脳会談を開催し、定期的な協力の枠組みを打ち出しました。</span><span class="ko">한미일 정상이 첫 단독 3국 정상회의를 열고 정례적인 협력의 틀을 마련했습니다.</span></p>
+        </div>
+        <div class="tl has-photo">
+          <span class="when"><span class="en">July 2024 · Busan</span><span class="ja">2024年7月・釜山</span><span class="ko">2024년 7월 · 부산</span></span>
+          <h3><span class="en">Young Trilateral Leaders Summit in Busan</span><span class="ja">日米韓ヤング・リーダーズ・サミット（釜山）</span><span class="ko">한미일 미래세대 리더 서밋 (부산)</span></h3>
+          <p><span class="en">Young leaders from the three countries gather for the YTL Summit in Busan, Korea.</span><span class="ja">三か国の若いリーダーが、韓国・釜山でのYTLサミットに集まりました。</span><span class="ko">세 나라의 청년 리더들이 부산에서 열린 YTL 서밋에 모였습니다.</span></p>
+          <figure><img src="journey-busan-2024.jpg" width="1200" height="734" loading="lazy" alt="Group photo of participants at the 2024 Young Trilateral Leaders Summit in Busan"></figure>
+        </div>
+        <div class="tl has-photo">
+          <span class="when"><span class="en">July 2025 · Osaka</span><span class="ja">2025年7月・大阪</span><span class="ko">2025년 7월 · 오사카</span></span>
+          <h3><span class="en">Young Trilateral Leaders Summit in Osaka</span><span class="ja">日米韓ヤング・リーダーズ・サミット（大阪）</span><span class="ko">한미일 미래세대 리더 서밋 (오사카)</span></h3>
+          <p><span class="en">The YTL Summit is held in Osaka, Japan.</span><span class="ja">YTLサミットが大阪で開催されました。</span><span class="ko">YTL 서밋이 일본 오사카에서 열렸습니다.</span></p>
+          <figure><img src="journey-osaka-2025.jpg" width="864" height="462" loading="lazy" alt="Participants making heart gestures at the Young Trilateral Leaders Summit 2025 in Osaka"></figure>
+        </div>
+        <div class="tl">
+          <span class="when">2025</span>
+          <h3><span class="en">TogetherWeTri launches in Korea</span><span class="ja">TogetherWeTri、韓国で始動</span><span class="ko">TogetherWeTri, 한국에서 출범</span></h3>
+          <p><span class="en">Alumni of the YTL Summit start the initiative in Korea.</span><span class="ja">日米韓ヤング・リーダーズ・サミット（YTL）の修了生が、韓国でイニシアティブを立ち上げました。</span><span class="ko">YTL 서밋 수료생들이 한국에서 이니셔티브를 시작했습니다.</span></p>
+        </div>
+        <div class="tl">
+          <span class="when"><span class="en">August 2025 – September 2026</span><span class="ja">2025年8月〜2026年9月</span><span class="ko">2025년 8월 ~ 2026년 9월</span></span>
+          <h3><span class="en">AEIF-funded project in Korea</span><span class="ja">韓国支部によるAEIF助成プロジェクト</span><span class="ko">한국 지부의 AEIF 지원 프로젝트</span></h3>
+          <p><span class="en">The Korea Branch carries out a project with seed funding from the U.S. Department of State's Alumni Engagement Innovation Fund (AEIF), including regional cooperation roundtables in Korea and Japan.</span><span class="ja">韓国支部が、米国国務省の同窓生エンゲージメント・イノベーション基金（AEIF）のシード資金を受け、韓国と日本での地域協力ラウンドテーブルなどのプロジェクトを実施しました。</span><span class="ko">한국 지부가 미국 국무부 동문 참여 혁신 기금(AEIF)의 시드 펀딩을 받아 한국과 일본에서 지역 협력 라운드테이블 등의 프로젝트를 수행했습니다.</span></p>
+          <p><a href="#aeif" data-nav="aeif"><span class="en">See the AEIF project →</span><span class="ja">AEIF採択事業の詳細を見る →</span><span class="ko">AEIF 사업 자세히 보기 →</span></a></p>
+        </div>
+        <div class="tl now">
+          <span class="when"><span class="en">March 2026</span><span class="ja">2026年3月</span><span class="ko">2026년 3월</span></span>
+          <h3><span class="en">Japan Branch begins activities</span><span class="ja">日本支部、活動開始</span><span class="ko">일본 지부 활동 시작</span></h3>
+          <p><span class="en">The Japan Branch starts building the network in Japan through events, regional projects and a newsletter.</span><span class="ja">日本支部が、イベント、地域プロジェクト、ニュースレターを通じて日本でのネットワークづくりを始めました。</span><span class="ko">일본 지부가 행사, 지역 프로젝트, 뉴스레터를 통해 일본에서 네트워크를 만들기 시작했습니다.</span></p>
+          <p><a href="#japan" data-nav="japan"><span class="en">Japan Branch page →</span><span class="ja">日本支部のページへ →</span><span class="ko">일본 지부 페이지로 →</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="block tint" id="about-mascots">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Our mascots</span><span class="ja">マスコット</span><span class="ko">마스코트</span></span>
+        <h2><span class="en">Meet Hanul, Hank and Haru</span><span class="ja">ハヌル、ハンク、ハルを紹介します</span><span class="ko">하늘, 행크, 하루를 소개합니다</span></h2>
+      </div>
+      <div class="mascots">
+        <div class="mascot hanul" data-say="안녕!"><img src="hanul.png" width="139" height="136" alt="Hanul, a blue tiger cub with red and white stripes"><span class="name">Hanul</span><span class="who"><span class="en">Korea</span><span class="ja">韓国</span><span class="ko">한국</span></span></div>
+        <div class="mascot hank" data-say="Hi!"><img src="hank.png" width="145" height="142" alt="Hank, a navy tiger cub with stars and red stripes"><span class="name">Hank</span><span class="who"><span class="en">United States</span><span class="ja">米国</span><span class="ko">미국</span></span></div>
+        <div class="mascot haru" data-say="こんにちは！"><img src="haru.png" width="164" height="139" alt="Haru, a red tiger cub with cherry blossom markings"><span class="name">Haru</span><span class="who"><span class="en">Japan</span><span class="ja">日本</span><span class="ko">일본</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></span>
+          <h2><span class="en">Join the next generation of trilateral leaders</span><span class="ja">日米韓の次世代リーダーの輪に加わろう</span><span class="ko">한미일 차세대 리더와 함께하세요</span></h2>
+          <p><span class="en">Come to an event, join a branch, or partner with us on a project in your community.</span><span class="ja">イベントへの参加、支部での活動、地域での連携など、関わり方はさまざまです。</span><span class="ko">행사 참여, 지부 활동, 지역 협력 등 다양한 방법으로 함께할 수 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" style="margin-top:6px"><span class="en">Get in touch</span><span class="ja">お問い合わせ</span><span class="ko">문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AEIF ============ -->
+<div class="page" id="page-aeif" data-page="aeif" hidden>
+  <div class="page-band">
+    <div class="wrap">
+      <div class="page-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Alumni Engagement Innovation Fund</span><span class="ja">同窓生エンゲージメント・イノベーション基金</span><span class="ko">동문 참여 혁신 기금</span></span>
+        <h1><span class="en">Our AEIF project: connecting young trilateral leaders</span><span class="ja">AEIF採択事業：若き日米韓リーダーをつなぐ</span><span class="ko">AEIF 사업: 한미일 청년 리더를 잇다</span></h1>
+        <p class="lede"><span class="en">From August 2025 to September 2026, the Korea Branch carried out a U.S. Department of State Alumni Engagement Innovation Fund project. Here is what it set out to do and what it achieved.</span><span class="ja">2025年8月から2026年9月まで、韓国支部が米国国務省の同窓生エンゲージメント・イノベーション基金（AEIF）の事業を実施しました。事業の目標と成果を紹介します。</span><span class="ko">2025년 8월부터 2026년 9월까지 한국 지부가 미국 국무부 동문 참여 혁신 기금(AEIF) 사업을 수행했습니다. 사업의 목표와 성과를 소개합니다.</span></p>
+      </div>
+      <div class="band-art" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+    </div>
+  </div>
+
+  <section class="block" id="aeif-overview">
+    <div class="wrap split">
+      <div style="display:grid;gap:18px;align-content:start">
+        <div class="block-head" style="margin-bottom:0">
+          <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Alumni Engagement Innovation Fund</span><span class="ja">同窓生エンゲージメント・イノベーション基金</span><span class="ko">동문 참여 혁신 기금</span></span>
+          <h2><span class="en">AEIF awardee, 2025–26</span><span class="ja">AEIF 採択事業（2025〜26年）</span><span class="ko">AEIF 선정 사업 (2025–26)</span></h2>
+        </div>
+        <p class="muted"><span class="en">TogetherWeTri was named an Alumni Engagement Innovation Fund 2025 awardee by the U.S. Department of State for the project “Shaping a Safer, Stronger, and More Prosperous Future for U.S.-ROK Ties at the American Corners.” The Korea Branch carried out the project from August 2025 to September 2026.</span><span class="ja">TogetherWeTriは、米国国務省の同窓生エンゲージメント・イノベーション基金（AEIF）2025年度の採択団体に選ばれました。事業名は「Shaping a Safer, Stronger, and More Prosperous Future for U.S.-ROK Ties at the American Corners」です。韓国支部が、2025年8月から2026年9月まで事業を実施しました。</span><span class="ko">TogetherWeTri는 미국 국무부 동문 참여 혁신 기금(AEIF) 2025년 선정 단체로 뽑혔습니다. 사업명은 “Shaping a Safer, Stronger, and More Prosperous Future for U.S.-ROK Ties at the American Corners”이며, 한국 지부가 2025년 8월부터 2026년 9월까지 사업을 수행했습니다.</span></p>
+        <p class="grant"><span class="en">U.S. Department of State AEIF grant</span><span class="ja">米国国務省 AEIF助成額</span><span class="ko">미국 국무부 AEIF 지원금</span> <b>$58,000</b></p>
+        <h3 style="font-size:1.0625rem;margin-top:6px"><span class="en">Project goals</span><span class="ja">事業の目標</span><span class="ko">사업 목표</span></h3>
+        <ul class="goals">
+          <li><svg aria-hidden="true"><use href="#bars"/></svg><span><span class="en">Connecting young trilateral leaders</span><span class="ja">若き三国間リーダーをつなぐ</span><span class="ko">젊은 한미일 리더를 잇다</span></span></li>
+          <li><svg aria-hidden="true"><use href="#bars"/></svg><span><span class="en">Strengthening U.S.–ROK–Japan youth networks</span><span class="ja">日米韓の若者ネットワークを強化する</span><span class="ko">한미일 청년 네트워크를 강화하다</span></span></li>
+          <li><svg aria-hidden="true"><use href="#bars"/></svg><span><span class="en">Building a sustainable trilateral dialogue platform</span><span class="ja">持続可能な三国間対話の場をつくる</span><span class="ko">지속 가능한 한미일 대화의 장을 만들다</span></span></li>
+        </ul>
+      </div>
+      <div class="aeif-media">
+        <img class="cert" src="aeif-certificate.jpg" width="992" height="742" loading="lazy" alt="U.S. Department of State Alumni Engagement Innovation Fund 2025 Awardee certificate for TogetherWeTri">
+        <img src="aeif-award.jpg" width="1000" height="667" loading="lazy" alt="TogetherWeTri members holding the AEIF certificate between U.S. and Korean flags">
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="aeif-results">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Our impact in action</span><span class="ja">活動の成果</span><span class="ko">활동 성과</span></span>
+        <h2><span class="en">Let's do it together</span><span class="ja">一緒にやりましょう</span><span class="ko">같이 합시다</span></h2>
+        <p class="slogan">같이 합시다 · 一緒にやりましょう · Let's do it together</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="big">6</span>
+          <h3><span class="en">Regional cooperation roundtables</span><span class="ja">地域協力ラウンドテーブル</span><span class="ko">지역 협력 라운드테이블</span></h3>
+          <p><span class="en">Expanding dialogue across cities and sectors in Korea and Japan.</span><span class="ja">韓国と日本で、都市・分野を越えて対話を広げました。</span><span class="ko">한국과 일본에서 도시와 분야를 넘어 대화를 넓혔습니다.</span></p>
+        </div>
+        <div class="stat">
+          <span class="big">500+</span>
+          <h3><span class="en">Youth and university students engaged</span><span class="ja">参加した若者・大学生</span><span class="ko">참여한 청년·대학생</span></h3>
+          <p><span class="en">From diverse academic backgrounds.</span><span class="ja">多様な学問分野から参加しました。</span><span class="ko">다양한 전공 분야에서 참여했습니다.</span></p>
+        </div>
+      </div>
+      <div class="facts aeif-facts">
+        <div class="fact"><span class="k"><span class="en">Grant</span><span class="ja">助成額</span><span class="ko">지원금</span></span><span class="v num">$58,000</span></div>
+        <div class="fact"><span class="k"><span class="en">Period</span><span class="ja">期間</span><span class="ko">기간</span></span><span class="v"><span class="en">Aug 2025 – Sep 2026</span><span class="ja">2025年8月〜2026年9月</span><span class="ko">2025년 8월 ~ 2026년 9월</span></span></div>
+        <div class="fact"><span class="k"><span class="en">Carried out by</span><span class="ja">実施</span><span class="ko">수행</span></span><span class="v"><span class="en">TogetherWeTri Korea Branch</span><span class="ja">TogetherWeTri 韓国支部</span><span class="ko">TogetherWeTri 한국 지부</span></span></div>
+        <div class="fact"><span class="k"><span class="en">Cities</span><span class="ja">開催地</span><span class="ko">개최지</span></span><span class="v"><span class="en">Gwangju · Busan · Tokyo</span><span class="ja">光州・釜山・東京</span><span class="ko">광주 · 부산 · 도쿄</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="aeif-roundtables">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Regional cooperation roundtables</span><span class="ja">地域協力ラウンドテーブル</span><span class="ko">지역 협력 라운드테이블</span></span>
+        <h2><span class="en">Six roundtables across Korea and Japan</span><span class="ja">韓国と日本で開いた6つのラウンドテーブル</span><span class="ko">한국과 일본에서 열린 6개의 라운드테이블</span></h2>
+        <p class="muted"><span class="en">Expanding dialogue across cities and sectors, with youth and university students from diverse academic backgrounds.</span><span class="ja">都市や分野を越えて対話を広げ、多様な学問分野の若者・大学生が参加しました。</span><span class="ko">도시와 분야를 넘어 대화를 넓히며, 다양한 전공의 청년과 대학생이 참여했습니다.</span></p>
+      </div>
+      <div class="rt-list">
+        <article class="rt">
+          <img src="impact-gwangju-2025.jpg" width="603" height="336" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Gwangju · November 2025</span><span class="ja">光州・2025年11月</span><span class="ko">광주 · 2025년 11월</span></span>
+            <h3><span class="en">Regional roundtable at the Gwangju American Corner</span><span class="ja">光州アメリカン・コーナーでの地域ラウンドテーブル</span><span class="ko">광주 아메리칸 코너 지역 라운드테이블</span></h3>
+            
+            <p><span class="en">Students and young people in Gwangju explore U.S.–ROK–Japan cooperation at the Gwangju American Corner.</span><span class="ja">光州の学生・若者が、光州アメリカン・コーナーで日米韓協力について話し合いました。</span><span class="ko">광주의 학생과 청년들이 광주 아메리칸 코너에서 한미일 협력에 대해 논의했습니다.</span></p>
+            
+          </div>
+        </article>
+        <article class="rt">
+          <img src="impact-busan-2025.jpg" width="1089" height="726" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Busan · December 2025</span><span class="ja">釜山・2025年12月</span><span class="ko">부산 · 2025년 12월</span></span>
+            <h3><span class="en">Regional roundtable at the Busan American Corner, Pukyong National University</span><span class="ja">釜山アメリカン・コーナー（国立釜慶大学校）での地域ラウンドテーブル</span><span class="ko">부산 아메리칸 코너(국립부경대학교) 지역 라운드테이블</span></h3>
+            
+            <p><span class="en">The roundtable series continues in Busan, bringing local students into the trilateral conversation.</span><span class="ja">ラウンドテーブルは釜山へ。地元の学生が日米韓の対話に加わりました。</span><span class="ko">라운드테이블은 부산으로 이어져, 지역 학생들이 한미일 대화에 함께했습니다.</span></p>
+            
+          </div>
+        </article>
+        <article class="rt">
+          <img src="tokyo0306-1.jpg" width="1309" height="637" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Tokyo · March 6, 2026</span><span class="ja">東京・2026年3月6日</span><span class="ko">도쿄 · 2026년 3월 6일</span></span>
+            <h3><span class="en">YTL U.S.–ROK–Japan Cooperation Dialogue in Tokyo</span><span class="ja">YTL 日米韓協力ダイアローグ in 東京</span><span class="ko">YTL 한미일 협력 대화 in 도쿄</span></h3>
+            <span class="rt-num"><span class="en">80+ participants</span><span class="ja">参加者80名以上</span><span class="ko">참가자 80명 이상</span></span>
+            <p><span class="en">At Lakeland University Japan, a hybrid dialogue on the role of youth and next-generation leadership in sustaining trilateral cooperation.</span><span class="ja">レイクランド大学ジャパンで、日米韓協力を持続させる若者・次世代リーダーの役割について、ハイブリッド形式で議論しました。</span><span class="ko">레이크랜드 대학교 재팬에서 한미일 협력을 이어갈 청년과 차세대 리더의 역할을 하이브리드 형식으로 논의했습니다.</span></p>
+            <div class="rt-links"><a href="https://youtu.be/sIRlnjUECDs" target="_blank" rel="noopener"><span class="en">Video ↗</span><span class="ja">動画 ↗</span><span class="ko">영상 ↗</span></a><a href="report-tokyo0308.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
+          </div>
+        </article>
+        <article class="rt">
+          <img src="tokyo0308-1.jpg" width="1400" height="933" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Tokyo · March 8, 2026</span><span class="ja">東京・2026年3月8日</span><span class="ko">도쿄 · 2026년 3월 8일</span></span>
+            <h3><span class="en">Trilateral Sports Diplomacy Dialogue in Tokyo</span><span class="ja">日米韓スポーツ外交ダイアローグ in 東京</span><span class="ko">한미일 스포츠 외교 대화 in 도쿄</span></h3>
+            <span class="rt-num"><span class="en">40+ participants</span><span class="ja">参加者40名以上</span><span class="ko">참가자 40명 이상</span></span>
+            <p><span class="en">Connecting past and upcoming Olympic host cities in the three countries, the dialogue explored sports as a practical platform for trilateral cooperation.</span><span class="ja">三か国の過去・将来のオリンピック開催都市をつなぎ、スポーツを日米韓協力の実践的な場として考えました。</span><span class="ko">세 나라의 과거·미래 올림픽 개최 도시를 연결하며, 스포츠를 한미일 협력의 실천적인 장으로 살펴보았습니다.</span></p>
+            <div class="rt-links"><a href="https://youtu.be/BWPahOFDPqM" target="_blank" rel="noopener"><span class="en">Video ↗</span><span class="ja">動画 ↗</span><span class="ko">영상 ↗</span></a><a href="report-tokyo0308.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
+          </div>
+        </article>
+        <article class="rt">
+          <img src="tokyo0612-1.jpg" width="1400" height="934" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Tokyo · June 12–13, 2026</span><span class="ja">東京・2026年6月12〜13日</span><span class="ko">도쿄 · 2026년 6월 12~13일</span></span>
+            <h3><span class="en">#Now It Is Your Turn: Counterspeech Co-creation Seminar</span><span class="ja">#Now It Is Your Turn：カウンタースピーチ共創セミナー</span><span class="ko">#Now It Is Your Turn: 카운터스피치 공동 창작 세미나</span></h3>
+            
+            <p><span class="en">YTL and Trilateral Teacher Training alumni visited Nikkei Inc. and co-created media literacy and counterspeech lessons for high school classrooms at Hosei University.</span><span class="ja">YTLと日韓合同英語教員養成プログラム（TTT）の修了生が日本経済新聞社を訪問し、法政大学で高校向けのメディアリテラシー・カウンタースピーチ教材を共創しました。</span><span class="ko">YTL과 TTT 수료생들이 니혼게이자이신문사를 방문하고, 호세이대학에서 고등학교용 미디어 리터러시·카운터스피치 교재를 함께 만들었습니다.</span></p>
+            <div class="rt-links"><a href="report-tokyo0612.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
+          </div>
+        </article>
+        <article class="rt">
+          <img src="tokyo0613-1.jpg" width="1400" height="934" loading="lazy" alt="">
+          <div class="rt-body">
+            <span class="place"><span class="en">Tokyo · June 13, 2026</span><span class="ja">東京・2026年6月13日</span><span class="ko">도쿄 · 2026년 6월 13일</span></span>
+            <h3><span class="en">U.S.–ROK–Japan Professional × Youth Dialogue</span><span class="ja">日米韓 プロフェッショナル × ユース・ダイアローグ</span><span class="ko">한미일 프로페셔널 × 유스 대화</span></h3>
+            <span class="rt-num"><span class="en">133 participants from 7 countries and regions</span><span class="ja">参加者133名（7か国・地域）</span><span class="ko">참가자 133명(7개 국가·지역)</span></span>
+            <p><span class="en">Co-hosted with the Japan-America Student Conference (JASC), with keynotes from former ambassadors and practitioners and small-group discussions.</span><span class="ja">日米学生会議（JASC）と共催。元大使や実務家による基調講演と、少人数のグループディスカッションを行いました。</span><span class="ko">일미학생회의(JASC)와 공동 주최하여, 전직 대사와 실무자의 기조연설과 소그룹 토론을 진행했습니다.</span></p>
+            <div class="rt-links"><a href="report-tokyo0613.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="aeif-tokyo">
+    <div class="wrap split">
+      <div class="block-head" style="margin-bottom:0">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Tokyo Trilateral Engagement Program</span><span class="ja">東京トライラテラル・エンゲージメント・プログラム</span><span class="ko">도쿄 한미일 교류 프로그램</span></span>
+        <h2><span class="en">Five days in Tokyo, March 4–8, 2026</span><span class="ja">東京での5日間（2026年3月4〜8日）</span><span class="ko">도쿄에서의 5일 (2026년 3월 4~8일)</span></h2>
+        <p class="muted"><span class="en">The program expanded TogetherWeTri into Japan. Alongside two public dialogues, the team met diplomatic, policy, academic and civil-society partners to discuss priorities such as supply chain resilience, critical minerals and emerging technology, and to lay the groundwork for the Japan Branch.</span><span class="ja">このプログラムで、TogetherWeTriの活動は日本へと広がりました。2つの公開ダイアローグに加え、外交・政策・学術・市民社会のパートナーと面会し、サプライチェーンの強靭化、重要鉱物、新興技術などの優先分野について意見を交わしながら、日本支部の土台をつくりました。</span><span class="ko">이 프로그램을 통해 TogetherWeTri의 활동이 일본으로 확장되었습니다. 두 차례의 공개 대화와 함께 외교·정책·학계·시민사회 파트너를 만나 공급망 회복력, 핵심 광물, 신흥 기술 등 우선 분야를 논의하고, 일본 지부의 기반을 마련했습니다.</span></p>
+        <p><a href="report-tokyo0308.pdf" target="_blank" rel="noopener"><span class="en">Read the Tokyo program report (PDF) ↗</span><span class="ja">東京プログラムのレポートを読む（PDF） ↗</span><span class="ko">도쿄 프로그램 보고서 읽기(PDF) ↗</span></a></p>
+      </div>
+      <div>
+        <h3 style="font-size:1.0625rem;margin-bottom:6px"><span class="en">Meetings and exchanges</span><span class="ja">面会・交流先</span><span class="ko">면담 및 교류</span></h3>
+        <ul class="engage" style="grid-template-columns:1fr">
+            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">Embassy of the Republic of Korea in Japan</span><span class="ja">駐日大韓民国大使館</span><span class="ko">주일 대한민국 대사관</span></span></li>
+            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">U.S. Embassy Tokyo (Public Diplomacy and Political Sections)</span><span class="ja">在日米国大使館（広報・文化交流部、政治部）</span><span class="ko">주일 미국 대사관(공공외교·정무 담당)</span></span></li>
+            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">GR Japan</span><span class="ja">GR Japan</span><span class="ko">GR Japan</span></span></li>
+            <li><span class="d"><span class="en">Mar 5</span><span class="ja">3月5日</span><span class="ko">3월 5일</span></span><span><span class="en">Temple University Japan, Institute of Contemporary Asian Studies (joint seminar)</span><span class="ja">テンプル大学ジャパン 現代アジア研究所（合同セミナー）</span><span class="ko">템플대학교 재팬 현대아시아연구소(공동 세미나)</span></span></li>
+            <li><span class="d"><span class="en">Mar 6</span><span class="ja">3月6日</span><span class="ko">3월 6일</span></span><span><span class="en">National Diet of Japan (tour and meeting with members of the House of Representatives)</span><span class="ja">国会（見学と衆議院議員との面会）</span><span class="ko">일본 국회(견학 및 중의원 의원 면담)</span></span></li>
+            <li><span class="d"><span class="en">Mar 7</span><span class="ja">3月7日</span><span class="ko">3월 7일</span></span><span><span class="en">Japan-America Student Conference (JASC)</span><span class="ja">日米学生会議（JASC）</span><span class="ko">일미학생회의(JASC)</span></span></li>
+            <li><span class="d"><span class="en">Mar 7</span><span class="ja">3月7日</span><span class="ko">3월 7일</span></span><span><span class="en">Meeting with academic experts on trilateral cooperation</span><span class="ja">日米韓協力の有識者との面会</span><span class="ko">한미일 협력 전문가 면담</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="aeif-resources">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><button type="button" class="sec-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sec-menu" aria-label="Jump to a section" title="Jump to a section"><svg aria-hidden="true"><use href="#bars"/></svg></button><span class="en">Reports and videos</span><span class="ja">レポート・動画</span><span class="ko">보고서 및 영상</span></span>
+        <h2><span class="en">See it for yourself</span><span class="ja">レポートと動画で見る</span><span class="ko">보고서와 영상으로 보기</span></h2>
+      </div>
+      <ul class="res-list">
+        <li><span class="kind">PDF</span><a href="report-tokyo0308.pdf" target="_blank" rel="noopener"><span class="en">Tokyo Trilateral Engagement Program report (March 4–8, 2026)</span><span class="ja">東京トライラテラル・エンゲージメント・プログラム報告書（2026年3月4〜8日）</span><span class="ko">도쿄 한미일 교류 프로그램 보고서(2026년 3월 4~8일)</span></a></li>
+        <li><span class="kind">PDF</span><a href="report-tokyo0612.pdf" target="_blank" rel="noopener"><span class="en">#Now It Is Your Turn: Counterspeech Co-creation Seminar (June 12–13, 2026)</span><span class="ja">#Now It Is Your Turn：カウンタースピーチ共創セミナー（2026年6月12〜13日）</span><span class="ko">#Now It Is Your Turn: 카운터스피치 공동 창작 세미나(2026년 6월 12~13일)</span></a></li>
+        <li><span class="kind">PDF</span><a href="report-tokyo0613.pdf" target="_blank" rel="noopener"><span class="en">U.S.–ROK–Japan Professional × Youth Dialogue (June 13, 2026)</span><span class="ja">日米韓 プロフェッショナル × ユース・ダイアローグ（2026年6月13日）</span><span class="ko">한미일 프로페셔널 × 유스 대화(2026년 6월 13일)</span></a></li>
+        <li><span class="kind video">VIDEO</span><a href="https://youtu.be/sIRlnjUECDs" target="_blank" rel="noopener"><span class="en">YTL U.S.–ROK–Japan Cooperation Dialogue in Tokyo</span><span class="ja">YTL 日米韓協力ダイアローグ in 東京</span><span class="ko">YTL 한미일 협력 대화 in 도쿄</span> ↗</a></li>
+        <li><span class="kind video">VIDEO</span><a href="https://youtu.be/BWPahOFDPqM" target="_blank" rel="noopener"><span class="en">Trilateral Sports Diplomacy Dialogue in Tokyo</span><span class="ja">日米韓スポーツ外交ダイアローグ in 東京</span><span class="ko">한미일 스포츠 외교 대화 in 도쿄</span> ↗</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></span>
+          <h2><span class="en">Join the next generation of trilateral leaders</span><span class="ja">日米韓の次世代リーダーの輪に加わろう</span><span class="ko">한미일 차세대 리더와 함께하세요</span></h2>
+          <p><span class="en">Come to an event, join a branch, or partner with us on a project in your community.</span><span class="ja">イベントへの参加、支部での活動、地域での連携など、関わり方はさまざまです。</span><span class="ko">행사 참여, 지부 활동, 지역 협력 등 다양한 방법으로 함께할 수 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" style="margin-top:6px"><span class="en">Get in touch</span><span class="ja">お問い合わせ</span><span class="ko">문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ JAPAN BRANCH ============ -->
+<div class="page" id="page-japan" data-page="japan" hidden>
+  <section class="hero jp-hero">
+    <div class="wrap hero-copy">
+      <span class="eyebrow jp-eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg>JAPAN BRANCH · 日本支部 · 일본 지부</span>
+      <h1>
+        <span class="en">From summit statements to <span class="swoosh">youth-led action</span></span><span class="ja">首脳間の対話を、<span class="swoosh">若者の実践へ</span></span><span class="ko">정상 간의 대화를, <span class="swoosh">청년의 실천으로</span></span>
+      </h1>
+      <p class="lede"><span class="en">TogetherWeTri was started in Korea in 2025 by alumni of the Japan–U.S.–Korea Young Trilateral Leaders (YTL) Summit. Active since March 2026, the Japan Branch connects students, young professionals and local communities in Japan with peers in the United States and Korea, and turns trilateral priorities into work people can join.</span><span class="ja">TogetherWeTriは、日米韓ヤング・リーダーズ・サミット（Young Trilateral Leaders Summit：YTL）の修了生が2025年に韓国で立ち上げたイニシアティブです。2026年3月に活動を開始した日本支部は、日本の学生・若手社会人・地域社会を米国・韓国の仲間とつなぎ、日米韓協力の優先課題を誰もが参加できる活動へと落とし込みます。</span><span class="ko">TogetherWeTri는 한미일 미래세대 리더 서밋(YTL) 수료생들이 2025년 한국에서 시작한 이니셔티브입니다. 2026년 3월 활동을 시작한 일본 지부는 일본의 학생·청년 직장인·지역사회를 미국·한국의 동료들과 연결하고, 한미일 협력의 우선 과제를 누구나 참여할 수 있는 활동으로 만들어 갑니다.</span></p>
+      <div class="btns">
+        <a class="btn" href="#japan-events" data-nav="japan-events"><span class="en">See our events</span><span class="ja">イベントを見る</span><span class="ko">행사 보기</span></a>
+        <a class="btn ghost" href="#japan-members" data-nav="japan-members"><span class="en">Meet the team</span><span class="ja">メンバー紹介</span><span class="ko">멤버 소개</span></a>
+      </div>
+    </div>
+    <div class="hero-art"><img src="banner.webp" width="1115" height="296" alt="Illustrated Tokyo skyline with Tokyo Tower, Mount Fuji and cherry blossom trees in navy, blue and red"></div>
+  </section>
+
+  <div class="jp-tabbar">
+    <div class="wrap">
+      <nav class="jp-tabs" aria-label="Japan Branch">
+        <a href="#japan" data-nav="japan"><span class="en">Overview</span><span class="ja">概要</span><span class="ko">개요</span></a>
+        <a href="#japan-events" data-nav="japan-events"><span class="en">Events</span><span class="ja">イベント</span><span class="ko">행사</span></a>
+        <a href="#japan-news" data-nav="japan-news"><span class="en">News</span><span class="ja">ニュース</span><span class="ko">뉴스</span></a>
+        <a href="#japan-members" data-nav="japan-members"><span class="en">Members</span><span class="ja">メンバー</span><span class="ko">멤버</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <div class="jp-view" data-view="japan">
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">What we do</span><span class="ja">活動内容</span><span class="ko">활동 내용</span></span>
+        <h2><span class="en">Four ways the Japan Branch works</span><span class="ja">日本支部の4つの活動</span><span class="ko">일본 지부의 네 가지 활동</span></h2>
+      </div>
+      <div class="programs has-mz">
+        <span class="mz mz-peek mz-programs" data-say="Hi!" aria-hidden="true"><img src="hank-peek.png" alt=""></span>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-3.5-3"/></svg></span>
+          <h3><span class="en">Dialogues &amp; workshops</span><span class="ja">対話・ワークショップ</span><span class="ko">대화·워크숍</span></h3>
+          <p><span class="en">Youth-led, youth-focused dialogue sessions exploring social, local, and global issues through a trilateral lens.</span><span class="ja">社会・地域・国際課題などをテーマに、若者が企画し、若者が参加する日米韓の対話セッション。</span><span class="ko">사회·지역·국제 과제 등을 주제로 청년이 기획하고 청년이 참여하는 한미일 대화 세션.</span></p>
+        </div>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <h3><span class="en">Regional projects</span><span class="ja">地域プロジェクト</span><span class="ko">지역 프로젝트</span></h3>
+          <p><span class="en">Bringing opportunities to explore Japan-U.S.-ROK cooperation through relatable topics to young people across Japan.</span><span class="ja">全国各地の若者に、日米韓の協力を身近なテーマから考える機会を届けます。</span><span class="ko">일본 각지의 청년들에게 한미일 협력을 친숙한 주제로 생각해 볼 기회를 전합니다.</span></p>
+        </div>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg></span>
+          <h3><span class="en">Policy to practice</span><span class="ja">政策から実践へ</span><span class="ko">정책에서 실천으로</span></h3>
+          <p><span class="en">Making Japan-U.S.-ROK diplomatic and policy issues accessible and easy for young people to understand.</span><span class="ja">日米韓の外交・政策課題を、若者にも分かりやすく解説します。</span><span class="ko">한미일의 외교·정책 과제를 청년들도 이해하기 쉽게 풀어 설명합니다.</span></p>
+        </div>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.3 15.8M13.2 7.2l4.5 8.6M7.5 18h9"/></svg></span>
+          <h3><span class="en">Peer network</span><span class="ja">ピア・ネットワーク</span><span class="ko">피어 네트워크</span></h3>
+          <p><span class="en">Connecting YTL alumni, students, and young professionals all over the globe with diverse interests and experiences.</span><span class="ja">世界中にいる多様な関心や経験を持つYTL修了生、学生、若手社会人をつなぎます。</span><span class="ko">다양한 관심과 경험을 가진 전 세계의 YTL 수료생, 학생, 청년 직장인을 연결합니다.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap split">
+      <div class="block-head" style="margin-bottom:0">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Highlights</span><span class="ja">活動の様子</span><span class="ko">활동 모습</span></span>
+        <h2><span class="en">Dialogues across Japan</span><span class="ja">日本各地での対話</span><span class="ko">일본 각지에서의 대화</span></h2>
+        <p class="muted"><span class="en">From Tokyo to Sendai, the Japan Branch brings students, professionals and local partners together around trilateral cooperation.</span><span class="ja">東京から仙台まで、日本支部は学生・社会人・地域のパートナーを、日米韓協力をテーマに結びつけています。</span><span class="ko">도쿄에서 센다이까지, 일본 지부는 학생·직장인·지역 파트너를 한미일 협력이라는 주제로 연결하고 있습니다.</span></p>
+        <p><a href="#japan-events" data-nav="japan-events"><span class="en">See all events →</span><span class="ja">すべてのイベントを見る →</span><span class="ko">모든 행사 보기 →</span></a></p>
+      </div>
+      <div class="about-photos">
+        <figure><img src="tokyo0306-1.jpg" width="1309" height="637" loading="lazy" alt="Participants of the YTL U.S.-ROK-Japan Cooperation Dialogue in Tokyo"><figcaption><span class="en">Tokyo · Mar 2026</span><span class="ja">東京・2026年3月</span><span class="ko">도쿄 · 2026년 3월</span></figcaption></figure>
+        <figure><img src="tokyo0613-1.jpg" width="1400" height="934" loading="lazy" alt="Participants and speakers at the U.S.-ROK-Japan Professional x Youth Dialogue"><figcaption><span class="en">Tokyo · Jun 2026</span><span class="ja">東京・2026年6月</span><span class="ko">도쿄 · 2026년 6월</span></figcaption></figure>
+        <figure><img src="tokyo0612-1.jpg" width="1400" height="934" loading="lazy" alt="Participants holding the #Now It Is Your Turn banner"><figcaption><span class="en">Tokyo · Jun 2026</span><span class="ja">東京・2026年6月</span><span class="ko">도쿄 · 2026년 6월</span></figcaption></figure>
+        <figure><img src="sendai1010-1.jpg" width="1400" height="837" loading="lazy" alt="Speakers, panelists and TogetherWeTri members in Sendai"><figcaption><span class="en">Sendai · Oct 2026</span><span class="ja">仙台・2026年10月</span><span class="ko">센다이 · 2026년 10월</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head-row">
+        <div class="block-head">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Coming up</span><span class="ja">今後の予定</span><span class="ko">예정</span></span>
+          <h2><span class="en">Upcoming events</span><span class="ja">今後のイベント</span><span class="ko">예정된 행사</span></h2>
+        </div>
+        <a class="btn ghost" href="#japan-events" data-nav="japan-events"><span class="en">All events</span><span class="ja">すべてのイベント</span><span class="ko">모든 행사</span></a>
+      </div>
+      <div class="ev-list" id="home-events"></div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="block-head-row">
+        <div class="block-head">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Latest</span><span class="ja">最新情報</span><span class="ko">최신 소식</span></span>
+          <h2><span class="en">From the newsletter</span><span class="ja">ニュースレターより</span><span class="ko">뉴스레터에서</span></h2>
+        </div>
+        <span class="btn-peek"><span class="mz mz-peek mz-btn" data-say="안녕!" aria-hidden="true"><img src="hanul-peek.png" alt=""></span><a class="btn ghost" href="#japan-news" data-nav="japan-news"><span class="en">All posts</span><span class="ja">すべての記事</span><span class="ko">모든 글</span></a></span>
+      </div>
+      <div class="posts" id="home-posts"></div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></span>
+          <h2><span class="en">Join the next generation of trilateral leaders</span><span class="ja">日米韓の次世代リーダーの輪に加わろう</span><span class="ko">한미일 차세대 리더와 함께하세요</span></h2>
+          <p><span class="en">Come to an event, join the team, or partner with us on a project in your community.</span><span class="ja">イベントへの参加、運営メンバーとしての活動、地域でのプロジェクト連携など、関わり方はさまざまです。</span><span class="ko">행사 참여, 운영 멤버 활동, 지역 프로젝트 협력 등 다양한 방법으로 함께할 수 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" style="margin-top:6px"><span class="en">Get in touch</span><span class="ja">お問い合わせ</span><span class="ko">문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Events -->
+  <div class="jp-view" data-view="japan-events" hidden>
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Events</span><span class="ja">イベント</span><span class="ko">행사</span></span>
+        <h2><span class="en">Dialogues, workshops and meetups</span><span class="ja">ワークショップ、交流会</span><span class="ko">대화, 워크숍, 교류회</span></h2>
+        <p class="muted"><span class="en">Open to students and young professionals interested in Japan–U.S.–Korea cooperation. Each listing shows its language and format.</span><span class="ja">日米韓協力に関心のある学生・若手社会人ならどなたでも参加できます。使用言語と開催形式は各イベントに記載しています。</span><span class="ko">한미일 협력에 관심 있는 학생과 청년 직장인이라면 누구나 참여할 수 있습니다. 사용 언어와 진행 방식은 각 행사에 표시되어 있습니다.</span></p>
+      </div>
+      <div class="block-head-row">
+        <div class="tabs" role="group" aria-label="Filter events">
+          <button type="button" id="ev-up" data-ev="upcoming" aria-pressed="true"><span class="en">Upcoming</span><span class="ja">開催予定</span><span class="ko">예정</span></button>
+          <button type="button" id="ev-past" data-ev="past" aria-pressed="false"><span class="en">Past</span><span class="ja">過去のイベント</span><span class="ko">지난 행사</span></button>
+        </div>
+        <span class="muted num" id="ev-count" style="font-size:var(--s-sm)"></span>
+      </div>
+      <div class="ev-list" id="events-list"></div>
+    </div>
+  </section>
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Host with us</span><span class="ja">共催のご相談</span><span class="ko">공동 개최 문의</span></span>
+          <h2><span class="en">Bring a trilateral session to your campus or town</span><span class="ja">あなたの大学や地域で、日米韓セッションを</span><span class="ko">당신의 대학이나 지역에서 한미일 세션을</span></h2>
+          <p><span class="en">We co-organize events with student groups, universities and local organizations across Japan.</span><span class="ja">全国の学生団体・大学・地域団体とイベントを共催しています。</span><span class="ko">일본 각지의 학생 단체·대학·지역 단체와 함께 행사를 공동 개최하고 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" data-topic="partnership" style="margin-top:6px"><span class="en">Propose an event</span><span class="ja">イベントを提案する</span><span class="ko">행사 제안하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+  </div>
+
+  <!-- News -->
+  <div class="jp-view" data-view="japan-news" hidden>
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">News &amp; Newsletter</span><span class="ja">ニュース・ニュースレター</span><span class="ko">뉴스·뉴스레터</span></span>
+        <h2><span class="en">Notes from the Japan Branch</span><span class="ja">日本支部からのお知らせ</span><span class="ko">일본 지부 소식</span></h2>
+        <p class="muted"><span class="en">Newsletter issues, event recaps, explainers on trilateral policy, and stories from our members.</span><span class="ja">ニュースレター、イベント報告、日米韓の政策解説、メンバーのストーリーを掲載しています。</span><span class="ko">뉴스레터, 행사 보고, 한미일 정책 해설, 멤버 이야기를 전합니다.</span></p>
+      </div>
+      <div class="block-head-row">
+        <div class="tabs wrapping" role="group" aria-label="Filter posts" id="post-filters"></div>
+      </div>
+      <div class="posts" id="posts-list"></div>
+    </div>
+  </section>
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px">
+          <span class="eyebrow"><span class="en">Newsletter</span><span class="ja">ニュースレター</span><span class="ko">뉴스레터</span></span>
+          <h2><span class="en">Get the Japan Branch newsletter</span><span class="ja">日本支部のニュースレターを受け取る</span><span class="ko">일본 지부 뉴스레터 받기</span></h2>
+          <p><span class="en">Event announcements, recaps and policy explainers in English and Japanese.</span><span class="ja">イベント告知、活動報告、政策解説を英語と日本語でお届けします。</span><span class="ko">행사 안내, 활동 보고, 정책 해설을 영어와 일본어로 전해 드립니다.</span></p>
+        </div>
+        <div id="subscribe-slot" style="display:grid;gap:12px"></div>
+      </div></div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Members -->
+  <div class="jp-view" data-view="japan-members" hidden>
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Our team</span><span class="ja">メンバー紹介</span><span class="ko">멤버 소개</span></span>
+        <h2><span class="en">The people behind the Japan Branch</span><span class="ja">日本支部のメンバー</span><span class="ko">일본 지부 멤버</span></h2>
+      </div>
+      <div class="note" id="members-note"><b><span class="en">Template</span><span class="ja">テンプレート</span><span class="ko">템플릿</span></b><span><span class="en">These profiles are placeholders. Replace them with your team's names, roles and photos.</span><span class="ja">以下は仮のプロフィールです。メンバーの氏名・役職・写真に差し替えてください。</span><span class="ko">아래는 임시 프로필입니다. 멤버의 이름·역할·사진으로 바꿔 주세요.</span></span></div>
+      <div class="members" id="members"></div>
+    </div>
+  </section>
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Join the team</span><span class="ja">運営メンバー募集</span><span class="ko">운영 멤버 모집</span></span>
+          <h2><span class="en">Join the Japan Branch team</span><span class="ja">日本支部の運営メンバーになろう</span><span class="ko">일본 지부 운영 멤버가 되어 주세요</span></h2>
+          <p><span class="en">Help plan events, write for the newsletter or run local projects.</span><span class="ja">イベント企画、ニュースレター執筆、地域プロジェクトの運営に関わることができます。</span><span class="ko">행사 기획, 뉴스레터 작성, 지역 프로젝트 운영에 참여할 수 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" data-topic="join" style="margin-top:6px"><span class="en">Apply</span><span class="ja">応募する</span><span class="ko">지원하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" id="page-contact" data-page="contact" hidden>
+  <div class="page-band">
+    <div class="wrap">
+      <div class="page-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Contact</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></span>
+        <h1><span class="en">Get in touch</span><span class="ja">お問い合わせ</span><span class="ko">문의하기</span></h1>
+        <p class="lede"><span class="en">We reply in English, Japanese or Korean.</span><span class="ja">英語・日本語・韓国語で対応します。</span><span class="ko">영어, 일본어, 한국어로 답변드립니다.</span></p>
+      </div>
+      <div class="band-art" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+    </div>
+  </div>
+  <section class="block">
+    <div class="wrap contact-grid">
+      <div style="display:grid;gap:20px">
+        <form class="contact" id="contact-form" novalidate>
+          <div class="row2">
+            <div class="field"><label for="c-name"><span class="en">Name</span><span class="ja">お名前</span><span class="ko">이름</span></label><input id="c-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="c-email"><span class="en">Email</span><span class="ja">メールアドレス</span><span class="ko">이메일</span></label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="c-aff"><span class="en">University or organization</span><span class="ja">所属（大学・団体など）</span><span class="ko">소속 (대학·단체 등)</span> <span class="opt"><span class="en">(optional)</span><span class="ja">（任意）</span><span class="ko">(선택)</span></span></label><input id="c-aff" name="affiliation" autocomplete="organization"></div>
+            <div class="field"><label for="c-topic"><span class="en">Topic</span><span class="ja">お問い合わせ内容</span><span class="ko">문의 유형</span></label><select id="c-topic" name="topic"></select></div>
+          </div>
+          <div class="field"><label for="c-msg"><span class="en">Message</span><span class="ja">メッセージ</span><span class="ko">메시지</span></label><textarea id="c-msg" name="message" required></textarea></div>
+          <p class="err" id="c-err" hidden></p>
+          <div><button class="btn" type="submit" id="c-submit">Send message</button></div>
+        </form>
+        <div class="compose" id="sent" hidden>
+          <p class="ok"><img src="hank.png" alt=""><span><span class="en">Thank you. Your message has been sent.</span><span class="ja">送信しました。ありがとうございます。</span><span class="ko">전송되었습니다. 감사합니다.</span></span></p>
+        </div>
+        <div class="compose" id="compose" hidden>
+          <p class="ok"><img src="hanul.png" alt=""><span><span class="en">Your message is ready to send.</span><span class="ja">メッセージの準備ができました。</span><span class="ko">메시지가 준비되었습니다.</span></span></p>
+          <p class="muted" style="font-size:var(--s-sm)"><span class="en">Copy it and email it to the address below, or open it in your email app.</span><span class="ja">コピーして下記アドレスにメールで送るか、メールアプリで開いてください。</span><span class="ko">복사해서 아래 주소로 이메일을 보내거나, 메일 앱에서 열어 주세요.</span></p>
+          <pre id="compose-text"></pre>
+          <div class="btns">
+            <button type="button" class="btn" id="copy-compose"><span class="en">Copy message</span><span class="ja">メッセージをコピー</span><span class="ko">메시지 복사</span></button>
+            <a class="btn ghost" id="mailto-compose" href="#"><span class="en">Open in email app</span><span class="ja">メールアプリで開く</span><span class="ko">메일 앱에서 열기</span></a>
+          </div>
+        </div>
+      </div>
+      <aside class="side">
+        <div style="display:grid;gap:10px">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Email</span><span class="ja">メール</span><span class="ko">이메일</span></span>
+          <p class="email-label" data-gen-email><span class="en">TogetherWeTri (general)</span><span class="ja">TogetherWeTri（全体）</span><span class="ko">TogetherWeTri (전체)</span></p>
+          <div class="copybox" data-gen-email><span class="addr" id="email-addr"></span><button type="button" class="copy-btn" data-copy="email"><span class="en">Copy</span><span class="ja">コピー</span><span class="ko">복사</span></button></div>
+          <p class="email-label" data-jp-email><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></p>
+          <div class="copybox" data-jp-email><span class="addr" id="email-addr-jp"></span><button type="button" class="copy-btn" data-copy="japan"><span class="en">Copy</span><span class="ja">コピー</span><span class="ko">복사</span></button></div>
+        </div>
+        <div style="display:grid;gap:10px" data-social-wrap hidden>
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Social media</span><span class="ja">SNS</span><span class="ko">SNS</span></span>
+          <div class="social-links" data-social></div>
+        </div>
+        <div style="display:grid;gap:12px">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Ways to get involved</span><span class="ja">参加の方法</span><span class="ko">참여 방법</span></span>
+          <div>
+            <div class="way"><h3><span class="en">Attend an event</span><span class="ja">イベントに参加する</span><span class="ko">행사에 참여하기</span></h3><p><span class="en">The easiest way to meet the network. Pick one from the Japan Branch events page.</span><span class="ja">ネットワークと出会う一番の近道です。日本支部のイベントページからお選びください。</span><span class="ko">네트워크를 만나는 가장 쉬운 방법입니다. 일본 지부 행사 페이지에서 골라 보세요.</span></p></div>
+            <div class="way"><h3><span class="en">Join the team</span><span class="ja">運営メンバーになる</span><span class="ko">운영 멤버 되기</span></h3><p><span class="en">Help plan events, write for the newsletter or run local projects.</span><span class="ja">イベント企画、ニュースレター執筆、地域プロジェクトの運営に関わることができます。</span><span class="ko">행사 기획, 뉴스레터 작성, 지역 프로젝트 운영에 참여할 수 있습니다.</span></p></div>
+            <div class="way"><h3><span class="en">Partner with us</span><span class="ja">連携する</span><span class="ko">협력하기</span></h3><p><span class="en">Universities, companies, local governments and NGOs can co-host sessions or support projects.</span><span class="ja">大学・企業・自治体・NGOの皆さまと、セッションの共催やプロジェクト支援で連携します。</span><span class="ko">대학·기업·지자체·NGO와 세션 공동 개최나 프로젝트 지원으로 협력합니다.</span></p></div>
+            <div class="way"><h3><span class="en">Speak or mentor</span><span class="ja">登壇・メンターとして関わる</span><span class="ko">연사·멘토로 참여하기</span></h3><p><span class="en">Share your experience in diplomacy, policy, industry or technology with young participants.</span><span class="ja">外交・政策・産業・技術分野での経験を、若い参加者に共有してください。</span><span class="ko">외교·정책·산업·기술 분야의 경험을 젊은 참가자들과 나누어 주세요.</span></p></div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">FAQ</span><span class="ja">よくある質問</span><span class="ko">자주 묻는 질문</span></span>
+          <div style="margin-top:12px">
+            <details class="faq"><summary><span class="en">Do I need to be a YTL Summit alum?</span><span class="ja">YTLサミットの修了生でなくても参加できますか？</span><span class="ko">YTL 서밋 수료생이 아니어도 참여할 수 있나요?</span></summary><p><span class="en">No. Our events are open to anyone interested in Japan–U.S.–Korea cooperation unless a listing says otherwise.</span><span class="ja">はい、参加できます。特に記載がない限り、日米韓協力に関心のある方ならどなたでもご参加いただけます。</span><span class="ko">네. 별도 안내가 없는 한, 한미일 협력에 관심 있는 분이라면 누구나 참여할 수 있습니다.</span></p></details>
+            <details class="faq"><summary><span class="en">What language are events in?</span><span class="ja">イベントの使用言語は？</span><span class="ko">행사는 어떤 언어로 진행되나요?</span></summary><p><span class="en">Most are in English, Japanese, or both. The language is listed on every event.</span><span class="ja">多くは英語・日本語、またはその両方です。各イベントに使用言語を記載しています。</span><span class="ko">대부분 영어, 일본어 또는 두 언어로 진행됩니다. 각 행사에 사용 언어가 표시되어 있습니다.</span></p></details>
+            <details class="faq"><summary><span class="en">Is there a fee?</span><span class="ja">参加費はかかりますか？</span><span class="ko">참가비가 있나요?</span></summary><p><span class="en">Any fee is shown on the event listing. If nothing is listed, ask us when you register.</span><span class="ja">参加費がある場合は各イベントに記載します。記載がない場合は、申し込み時にお問い合わせください。</span><span class="ko">참가비가 있는 경우 행사 안내에 표시합니다. 표시가 없으면 신청할 때 문의해 주세요.</span></p></details>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</div>
+<dialog class="reader" id="reader" aria-labelledby="reader-title">
+  <div class="reader-inner">
+    <div class="reader-top">
+      <span class="eyebrow" id="reader-cat"></span>
+      <button type="button" class="close-btn" id="reader-close"><span class="en">Close</span><span class="ja">閉じる</span><span class="ko">닫기</span></button>
+    </div>
+    <h2 id="reader-title"></h2>
+    <span class="muted" id="reader-meta" style="font-size:var(--s-sm)"></span>
+    <div class="prose" id="reader-body"></div>
+  </div>
+</dialog>
+<dialog class="reader poster-view" id="poster-view" aria-labelledby="pv-title">
+  <div class="pv-inner">
+    <div class="reader-top">
+      <span class="eyebrow" id="pv-title"></span>
+      <button type="button" class="close-btn" id="pv-close"><span class="en">Close</span><span class="ja">閉じる</span><span class="ko">닫기</span></button>
+    </div>
+    <img id="pv-img" src="" alt="">
+    <div class="pv-foot"><a class="btn ghost" id="pv-open" href="#" target="_blank" rel="noopener"><span class="en">Open full size ↗</span><span class="ja">原寸で開く ↗</span><span class="ko">원본 크기로 열기 ↗</span></a></div>
+  </div>
+</dialog>
+<dialog class="reader ev-detail" id="ev-detail" aria-labelledby="ed-title">
+  <div class="ed-inner">
+    <div class="reader-top"><button type="button" class="close-btn" id="ed-close"><span class="en">Close</span><span class="ja">閉じる</span><span class="ko">닫기</span></button></div>
+    <div id="ed-body"></div>
+  </div>
+</dialog>
+<div class="sec-menu" id="sec-menu" role="menu" hidden>
+  <p class="sec-menu-title"><span class="en">On this page</span><span class="ja">このページの項目</span><span class="ko">이 페이지의 항목</span></p>
+  <div data-menu-for="about" style="display:contents">
+  <button type="button" role="menuitem" data-jump="about-goals"><span class="en">Our goals</span><span class="ja">事業の目標</span><span class="ko">사업 목표</span></button>
+  <button type="button" role="menuitem" data-jump="about-background"><span class="en">Background</span><span class="ja">設立の背景</span><span class="ko">설립 배경</span></button>
+  <button type="button" role="menuitem" data-jump="about-journey"><span class="en">How we got here</span><span class="ja">これまでの歩み</span><span class="ko">지금까지의 여정</span></button>
+  <button type="button" role="menuitem" data-jump="about-mascots"><span class="en">Our mascots</span><span class="ja">マスコット</span><span class="ko">마스코트</span></button>
+  </div>
+  <div data-menu-for="aeif" style="display:contents">
+  <button type="button" role="menuitem" data-jump="aeif-overview"><span class="en">Project overview</span><span class="ja">事業の概要</span><span class="ko">사업 개요</span></button>
+  <button type="button" role="menuitem" data-jump="aeif-results"><span class="en">Results</span><span class="ja">成果</span><span class="ko">성과</span></button>
+  <button type="button" role="menuitem" data-jump="aeif-roundtables"><span class="en">Six roundtables</span><span class="ja">6つのラウンドテーブル</span><span class="ko">6개의 라운드테이블</span></button>
+  <button type="button" role="menuitem" data-jump="aeif-tokyo"><span class="en">Tokyo program</span><span class="ja">東京プログラム</span><span class="ko">도쿄 프로그램</span></button>
+  <button type="button" role="menuitem" data-jump="aeif-resources"><span class="en">Reports and videos</span><span class="ja">レポート・動画</span><span class="ko">보고서 및 영상</span></button>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="foot-tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="foot-logo" href="#home" data-nav="home" aria-label="TogetherWeTri home">
+        <img src="logo-global.png" alt="TogetherWeTri logo" width="95" height="88">
+        <span>We Go<br>Together!</span>
+      </a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개</span></a>
+        <a href="#aeif" data-nav="aeif"><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></a>
+        <a href="#japan" data-nav="japan"><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></a>
+        <a href="#contact" data-nav="contact"><span class="en">Contact</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></a>
+      </nav>
+    </div>
+    <div class="social" data-social-wrap hidden>
+      <span class="social-label"><span class="en">Follow us</span><span class="ja">SNSでフォロー</span><span class="ko">SNS 팔로우</span></span>
+      <div class="social-links" data-social></div>
+    </div>
+    <div class="disclaimer">
+      <p class="num">© <span id="yr">2026</span> TogetherWeTri</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Remember where data.js breaks so the page can point to the line
+  window.addEventListener("error", function (e) {
+    if (e.filename && /data\.js/.test(e.filename)) window.__dataError = { line: e.lineno, msg: e.message };
+  });
+</script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
