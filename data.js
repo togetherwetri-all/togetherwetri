@@ -41,7 +41,7 @@ const SITE = {
   // Formspree form URL (e.g. "https://formspree.io/f/abcdwxyz").
   // When set, the contact form sends messages directly to your inbox.
   // When empty (""), visitors copy their message and send it by email themselves.
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/xeaaoovr",
 
   // Newsletter sign-up URL (e.g. a Google Form). If empty, the site asks people to subscribe by email.
   newsletterSignupUrl: "",
