@@ -9,7 +9,8 @@
 <meta property="og:title" content="TogetherWeTri">
 <meta property="og:description" content="Bridging the U.S., the ROK and Japan through public diplomacy. パブリック・ディプロマシーで、日米韓をつなぐ。공공외교로 한·미·일을 잇다.">
 <!-- 公開後、og:image を絶対URL（例: https://ユーザー名.github.io/リポジトリ名/og.png）に書き換えると、SNSでのリンク表示に画像が出ます -->
-<meta property="og:image" content="og.png">
+<meta property="og:image" content="https://togetherwetri-all.github.io/togetherwetri/og.png">
+<meta property="og:url" content="https://togetherwetri-all.github.io/togetherwetri/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -580,15 +581,47 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
 /* ---- Japan Branch tab ---- */
 .jp-hero .hero-copy { padding-block: 48px 4px; }
 .jp-eyebrow { justify-content: center; color: var(--red); }
-.jp-tabbar { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 70px); z-index: 15; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.jp-tabs { display: flex; gap: 6px; padding-block: 10px; overflow-x: auto; scrollbar-width: none; }
-.jp-tabs::-webkit-scrollbar { display: none; }
-.jp-tabs a { flex: none; text-decoration: none; color: var(--muted); font-weight: 700; font-size: var(--s-sm); padding: 9px 18px; border-radius: 999px; background: var(--sky-soft); white-space: nowrap; }
-.jp-tabs a:hover { color: var(--navy); }
-.jp-tabs a[aria-current="page"] { background: var(--navy); color: #fff; }
-.jp-view[hidden] { display: none !important; }
-@media (max-width: 480px) { .jp-tabs a { padding: 8px 13px; } .jp-hero .hero-copy { padding-top: 32px; } }
+.sub-tabbar { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 70px); z-index: 15; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.sub-tabs { display: flex; gap: 6px; padding-block: 10px; overflow-x: auto; scrollbar-width: none; }
+.sub-tabs::-webkit-scrollbar { display: none; }
+.sub-tabs a { flex: none; text-decoration: none; color: var(--muted); font-weight: 700; font-size: var(--s-sm); padding: 9px 18px; border-radius: 999px; background: var(--sky-soft); white-space: nowrap; }
+.sub-tabs a:hover { color: var(--navy); }
+.sub-tabs a[aria-current="page"] { background: var(--navy); color: #fff; }
+.sub-view[hidden] { display: none !important; }
+@media (max-width: 480px) { .sub-tabs a { padding: 8px 13px; } .jp-hero .hero-copy { padding-top: 32px; } }
 .email-label { font-size: var(--s-xs); font-weight: 700; color: var(--muted); margin-top: 4px; }
+/* ---- v2: home hero, branch pages, sub-tabs ---- */
+.home-hero .hero-copy { padding-block: 56px 8px; }
+.home-hero .hero-art { max-width: 1240px; }
+.hero h1 .ln { display: block; }
+.branch-hero h1 { max-width: none; font-size: clamp(1.7rem, 6.2vw, 3.6rem); }
+html[data-lang="ja"] .branch-hero h1, html[data-lang="ko"] .branch-hero h1 { max-width: none; font-size: clamp(1.7rem, 6vw, 3.2rem); }
+.hero-btn { background: #fff; }
+.hero-btn.red { color: var(--red); border-color: var(--red); }
+.hero-btn.navy { color: var(--navy); border-color: var(--navy); }
+.hero-btn.red:hover, .hero-btn.red:active, .hero-btn.red.is-on { background: var(--red); border-color: var(--red); color: #fff; }
+.hero-btn.navy:hover, .hero-btn.navy:active, .hero-btn.navy.is-on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.kr-hero .hero-copy, .us-hero .hero-copy { padding-block: 48px 4px; }
+.us-hero .hero-art { max-width: 760px; }
+.us-hero .hero-art > img { -webkit-mask-image: linear-gradient(to right, transparent, #000 22%, #000 78%, transparent), linear-gradient(to bottom, transparent, #000 20%); mask-image: linear-gradient(to right, transparent, #000 22%, #000 78%, transparent), linear-gradient(to bottom, transparent, #000 20%); }
+.chip.soon { background: var(--red); color: #fff; font-weight: 700; }
+.sub-tabbar { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 70px); z-index: 15; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.aeif-card { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 24px; }
+.aeif-card img { width: 100%; height: auto; border-radius: 14px; }
+@media (max-width: 640px) { .aeif-card { grid-template-columns: 1fr; } .aeif-card img { max-width: 220px; } }
+.branch.us .branch-art { background: linear-gradient(180deg, #F5F8FE 0%, #DCE6F8 100%); }
+.branch.kr .branch-art .sky, .branch.us .branch-art .sky { height: 100%; object-fit: cover; }
+@media (min-width: 1000px) { .branches { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 761px) and (max-width: 999px) { .branches { grid-template-columns: 1fr 1fr; } }
+.home-hero h1 { max-width: none; font-size: clamp(1.7rem, 4.6vw, 3.4rem); }
+html[data-lang="ja"] .home-hero h1, html[data-lang="ko"] .home-hero h1 { max-width: none; font-size: clamp(1.1rem, 5.4vw, 3.4rem); }
+.ed-sched li.no-time { grid-template-columns: 14px 1fr; gap: 10px; }
+.ed-sched li.no-time .ed-time { width: 6px; height: 6px; border-radius: 50%; background: var(--red); margin-top: .62em; }
+.ed-links { display: flex; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 600px) {
+  .home-hero .hero-art > img, .kr-hero .hero-art > img { height: 150px; object-fit: cover; }
+  .home-hero .hero-art > img { object-position: 47% 50%; }
+}
 </style>
 </head>
 <body>
@@ -612,8 +645,9 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="#home" data-nav="home"><span class="en">Home</span><span class="ja">ホーム</span><span class="ko">홈</span></a>
       <a href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개</span></a>
-      <a href="#aeif" data-nav="aeif"><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></a>
       <a href="#japan" data-nav="japan"><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></a>
+      <a href="#korea" data-nav="korea"><span class="en">Korea Branch</span><span class="ja">韓国支部</span><span class="ko">한국 지부</span></a>
+      <a href="#us" data-nav="us"><span class="en">U.S. Branch</span><span class="ja">米国支部</span><span class="ko">미국 지부</span></a>
       <a href="#contact" data-nav="contact"><span class="en">Contact</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -628,34 +662,21 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
 <main>
 <!-- ============ HOME ============ -->
 <div class="page" id="page-home" data-page="home">
-  <section class="hero">
-    <div class="wrap hero-split">
-      <div class="hero-copy">
+  <section class="hero home-hero">
+    <div class="wrap hero-copy">
         <span class="hero-tag"><svg aria-hidden="true"><use href="#sparkle"/></svg>We Go Together!<svg aria-hidden="true"><use href="#sparkle"/></svg></span>
-        <h1><span class="en">Bridging the U.S., the ROK and Japan through <span class="swoosh">public diplomacy</span></span><span class="ja">パブリック・ディプロマシーで、<span class="swoosh">日米韓をつなぐ</span></span><span class="ko">공공외교로 <span class="swoosh">한·미·일을 잇다</span></span></h1>
+        <h1><span class="en"><span class="ln">Bridging the U.S., the ROK and Japan</span><span class="ln">through <span class="swoosh">public diplomacy</span></span></span><span class="ja"><span class="ln">パブリック・ディプロマシーで、</span><span class="ln"><span class="swoosh">日米韓をつなぐ</span></span></span><span class="ko"><span class="ln">공공외교로</span><span class="ln"><span class="swoosh">한·미·일을 잇다</span></span></span></h1>
         <p class="lede"><span class="en">TogetherWeTri is a youth initiative founded in 2025 by alumni of the U.S.–ROK–Japan Young Trilateral Leaders (YTL) Summit. With branches in Korea and Japan, we turn trilateral dialogue into youth-led action that lasts beyond a single summit.</span><span class="ja">TogetherWeTriは、日米韓ヤング・リーダーズ・サミット（Young Trilateral Leaders Summit：YTL）の修了生が2025年に立ち上げたユース・イニシアティブです。韓国と日本に支部を置き、三か国の対話を、一度きりのサミットで終わらない若者主導のアクションへとつなげています。</span><span class="ko">TogetherWeTri는 한미일 미래세대 리더 서밋(Young Trilateral Leaders Summit, YTL) 수료생들이 2025년에 시작한 청년 이니셔티브입니다. 한국과 일본에 지부를 두고, 한미일 대화를 한 번의 서밋으로 끝나지 않는 청년 주도의 실천으로 이어가고 있습니다.</span></p>
         <div class="btns">
-          <a class="btn" href="#japan" data-nav="japan"><span class="en">Japan Branch</span><span class="ja">日本支部を見る</span><span class="ko">일본 지부 보기</span></a>
-          <a class="btn ghost" href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개 보기</span></a>
+          <a class="btn" href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개 보기</span></a>
+          <a class="btn ghost" href="#contact" data-nav="contact"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></a>
         </div>
-      </div>
-      <div class="poster"><img src="poster-wegotogether.png" width="467" height="450" alt="We Go Together: the mascots Hanul for Korea, Hank for the United States and Haru for Japan"></div>
     </div>
+    <div class="hero-art"><img src="banner-together.webp" width="2560" height="480" alt="Illustrated cityscape with rainbow arches, plaid hills, blossoming trees and a starry sky in navy, blue and red"></div>
     <div class="wrap cities" aria-label="Local time in the three capitals">
       <span>SEOUL<b id="t-seoul">--:--</b></span>
       <span>TOKYO<b id="t-tokyo">--:--</b></span>
       <span>WASHINGTON, D.C.<b id="t-dc">--:--</b></span>
-    </div>
-  </section>
-
-  <section class="block" style="padding-top:32px">
-    <div class="wrap">
-      <div class="facts">
-        <div class="fact"><span class="k"><span class="en">Founded</span><span class="ja">設立</span><span class="ko">설립</span></span><span class="v"><span class="en">2025, in Korea</span><span class="ja">2025年・韓国</span><span class="ko">2025년, 한국</span></span></div>
-        <div class="fact"><span class="k"><span class="en">Founded by</span><span class="ja">設立者</span><span class="ko">설립자</span></span><span class="v"><span class="en">YTL Summit alumni</span><span class="ja">YTLサミット修了生</span><span class="ko">YTL 서밋 수료생</span></span></div>
-        <div class="fact"><span class="k"><span class="en">Branches</span><span class="ja">支部</span><span class="ko">지부</span></span><span class="v"><span class="en">Korea · Japan</span><span class="ja">韓国・日本</span><span class="ko">한국 · 일본</span></span></div>
-        <div class="fact"><span class="k"><span class="en">Recognition</span><span class="ja">採択</span><span class="ko">선정</span></span><span class="v"><a href="#aeif" data-nav="aeif"><span class="en">U.S. Department of State AEIF 2025 awardee</span><span class="ja">米国国務省 AEIF 2025年度 採択</span><span class="ko">미국 국무부 AEIF 2025 선정</span> →</a></span></div>
-      </div>
     </div>
   </section>
 
@@ -711,20 +732,19 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
       <div class="block-head-row">
         <div class="block-head">
           <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Our branches</span><span class="ja">支部</span><span class="ko">지부</span></span>
-          <h2><span class="en">Two branches, one network</span><span class="ja">二つの支部、一つのネットワーク</span><span class="ko">두 개의 지부, 하나의 네트워크</span></h2>
+          <h2><span class="en">Three countries, one network</span><span class="ja">三つの国、一つのネットワーク</span><span class="ko">세 나라, 하나의 네트워크</span></h2>
         </div>
-        <span class="btn-peek"><span class="mz mz-peek mz-btn" data-say="안녕!" aria-hidden="true"><img src="hanul-peek.png" alt=""></span><a class="btn ghost" href="#japan" data-nav="japan"><span class="en">Japan Branch page</span><span class="ja">日本支部のページ</span><span class="ko">일본 지부 페이지</span></a></span>
       </div>
-      <div class="branches">
+      <div class="branches has-mz">
+        <span class="mz mz-peek mz-programs" data-say="안녕!" aria-hidden="true"><img src="hanul-peek.png" alt=""></span>
         <article class="branch kr">
-          <div class="branch-art"><span class="flagbar">KOREA · 한국</span><img class="tiger" src="hanul.png" width="139" height="136" alt=""></div>
+          <div class="branch-art"><img class="sky" src="banner-korea.webp" width="1191" height="372" alt=""><span class="flagbar">KOREA · 한국</span><img class="tiger" src="hanul.png" width="139" height="136" alt=""></div>
           <div class="branch-body">
             <span class="since"><span class="en">Since 2025</span><span class="ja">2025年〜</span><span class="ko">2025년부터</span></span>
             <h3><span class="en">Korea Branch</span><span class="ja">韓国支部</span><span class="ko">한국 지부</span></h3>
             <p><span class="en">Where TogetherWeTri began. From August 2025 to September 2026, the Korea Branch carried out an AEIF-funded project, including regional cooperation roundtables at American Corners.</span><span class="ja">TogetherWeTriが始まった場所です。2025年8月から2026年9月まで、AEIFの助成を受けたプロジェクトを実施し、アメリカン・コーナーでの地域協力ラウンドテーブルなどを開催しました。</span><span class="ko">TogetherWeTri가 시작된 곳입니다. 2025년 8월부터 2026년 9월까지 AEIF 지원 프로젝트를 수행하며, 아메리칸 코너에서 지역 협력 라운드테이블 등을 개최했습니다.</span></p>
             <div class="btns">
-              <a class="btn ghost" href="#contact" data-nav="contact" data-topic="korea"><span class="en">Contact the Korea Branch</span><span class="ja">韓国支部に問い合わせる</span><span class="ko">한국 지부에 문의하기</span></a>
-              <a class="btn" href="#" data-korea-link hidden><span class="en">Visit the Korea Branch site ↗</span><span class="ja">韓国支部サイトへ ↗</span><span class="ko">한국 지부 사이트 바로가기 ↗</span></a>
+              <a class="btn" href="#korea" data-nav="korea"><span class="en">Korea Branch page →</span><span class="ja">韓国支部のページへ →</span><span class="ko">한국 지부 페이지로 →</span></a>
             </div>
           </div>
         </article>
@@ -736,6 +756,17 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
             <p><span class="en">Dialogues, regional projects and a newsletter that bring trilateral cooperation to young people across Japan.</span><span class="ja">日本各地の若者に日米韓協力を届ける、ダイアローグ、地域プロジェクト、ニュースレターを展開しています。</span><span class="ko">일본 각지의 청년들에게 한미일 협력을 전하는 대화 세션, 지역 프로젝트, 뉴스레터를 운영하고 있습니다.</span></p>
             <div class="btns">
               <a class="btn" href="#japan" data-nav="japan"><span class="en">Japan Branch page →</span><span class="ja">日本支部のページへ →</span><span class="ko">일본 지부 페이지로 →</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="branch us">
+          <div class="branch-art"><img class="sky" src="banner-us.webp" width="900" height="480" alt=""><span class="flagbar">U.S. · 米国 · 미국</span><img class="tiger" src="hank.png" width="150" height="139" alt=""></div>
+          <div class="branch-body">
+            <span class="since"><span class="en">Coming soon</span><span class="ja">準備中</span><span class="ko">준비 중</span></span>
+            <h3><span class="en">U.S. Branch</span><span class="ja">米国支部</span><span class="ko">미국 지부</span></h3>
+            <p><span class="en">We are preparing a branch in the United States. YTL alumni and students in the U.S. who want to help launch it are welcome.</span><span class="ja">米国での支部立ち上げを準備しています。立ち上げに関わりたい米国在住のYTL修了生・学生を歓迎します。</span><span class="ko">미국 지부 출범을 준비하고 있습니다. 함께 만들어 갈 미국의 YTL 수료생과 학생을 환영합니다.</span></p>
+            <div class="btns">
+              <a class="btn" href="#us" data-nav="us"><span class="en">U.S. Branch page →</span><span class="ja">米国支部のページへ →</span><span class="ko">미국 지부 페이지로 →</span></a>
             </div>
           </div>
         </article>
@@ -761,6 +792,15 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
 
 <!-- ============ ABOUT ============ -->
 <div class="page" id="page-about" data-page="about" hidden>
+  <div class="sub-tabbar">
+    <div class="wrap">
+      <nav class="sub-tabs" aria-label="About us">
+        <a href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개</span></a>
+        <a href="#about-aeif" data-nav="about-aeif"><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></a>
+      </nav>
+    </div>
+  </div>
+  <div class="sub-view" data-view="about">
   <div class="page-band">
     <div class="wrap">
       <div class="page-head">
@@ -853,7 +893,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
           <span class="when"><span class="en">August 2025 – September 2026</span><span class="ja">2025年8月〜2026年9月</span><span class="ko">2025년 8월 ~ 2026년 9월</span></span>
           <h3><span class="en">AEIF-funded project in Korea</span><span class="ja">韓国支部によるAEIF助成プロジェクト</span><span class="ko">한국 지부의 AEIF 지원 프로젝트</span></h3>
           <p><span class="en">The Korea Branch carries out a project with seed funding from the U.S. Department of State's Alumni Engagement Innovation Fund (AEIF), including regional cooperation roundtables in Korea and Japan.</span><span class="ja">韓国支部が、米国国務省の同窓生エンゲージメント・イノベーション基金（AEIF）のシード資金を受け、韓国と日本での地域協力ラウンドテーブルなどのプロジェクトを実施しました。</span><span class="ko">한국 지부가 미국 국무부 동문 참여 혁신 기금(AEIF)의 시드 펀딩을 받아 한국과 일본에서 지역 협력 라운드테이블 등의 프로젝트를 수행했습니다.</span></p>
-          <p><a href="#aeif" data-nav="aeif"><span class="en">See the AEIF project →</span><span class="ja">AEIF採択事業の詳細を見る →</span><span class="ko">AEIF 사업 자세히 보기 →</span></a></p>
+          <p><a href="#about-aeif" data-nav="about-aeif"><span class="en">See the AEIF project →</span><span class="ja">AEIF採択事業の詳細を見る →</span><span class="ko">AEIF 사업 자세히 보기 →</span></a></p>
         </div>
         <div class="tl now">
           <span class="when"><span class="en">March 2026</span><span class="ja">2026年3月</span><span class="ko">2026년 3월</span></span>
@@ -894,10 +934,10 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
       </div></div>
     </div>
   </section>
-</div>
+  </div>
 
-<!-- ============ AEIF ============ -->
-<div class="page" id="page-aeif" data-page="aeif" hidden>
+  <!-- AEIF Project (sub-page of About) -->
+  <div class="sub-view" data-view="about-aeif" hidden>
   <div class="page-band">
     <div class="wrap">
       <div class="page-head">
@@ -975,6 +1015,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
             <h3><span class="en">Regional roundtable at the Gwangju American Corner</span><span class="ja">光州アメリカン・コーナーでの地域ラウンドテーブル</span><span class="ko">광주 아메리칸 코너 지역 라운드테이블</span></h3>
             
             <p><span class="en">Students and young people in Gwangju explore U.S.–ROK–Japan cooperation at the Gwangju American Corner.</span><span class="ja">光州の学生・若者が、光州アメリカン・コーナーで日米韓協力について話し合いました。</span><span class="ko">광주의 학생과 청년들이 광주 아메리칸 코너에서 한미일 협력에 대해 논의했습니다.</span></p>
+            <div class="rt-links"><a href="https://youtu.be/43I2Fiacp_0" target="_blank" rel="noopener"><span class="en">Video ↗</span><span class="ja">動画 ↗</span><span class="ko">영상 ↗</span></a><a href="report-gwangju1115.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
             
           </div>
         </article>
@@ -985,6 +1026,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
             <h3><span class="en">Regional roundtable at the Busan American Corner, Pukyong National University</span><span class="ja">釜山アメリカン・コーナー（国立釜慶大学校）での地域ラウンドテーブル</span><span class="ko">부산 아메리칸 코너(국립부경대학교) 지역 라운드테이블</span></h3>
             
             <p><span class="en">The roundtable series continues in Busan, bringing local students into the trilateral conversation.</span><span class="ja">ラウンドテーブルは釜山へ。地元の学生が日米韓の対話に加わりました。</span><span class="ko">라운드테이블은 부산으로 이어져, 지역 학생들이 한미일 대화에 함께했습니다.</span></p>
+            <div class="rt-links"><a href="report-busan1219.pdf" target="_blank" rel="noopener"><span class="en">Report (PDF) ↗</span><span class="ja">レポート（PDF） ↗</span><span class="ko">보고서(PDF) ↗</span></a></div>
             
           </div>
         </article>
@@ -1084,28 +1126,29 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
       </div></div>
     </div>
   </section>
+  </div>
 </div>
 
 <!-- ============ JAPAN BRANCH ============ -->
 <div class="page" id="page-japan" data-page="japan" hidden>
-  <section class="hero jp-hero">
+  <section class="hero jp-hero branch-hero">
     <div class="wrap hero-copy">
       <span class="eyebrow jp-eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg>JAPAN BRANCH · 日本支部 · 일본 지부</span>
       <h1>
-        <span class="en">From summit statements to <span class="swoosh">youth-led action</span></span><span class="ja">首脳間の対話を、<span class="swoosh">若者の実践へ</span></span><span class="ko">정상 간의 대화를, <span class="swoosh">청년의 실천으로</span></span>
+        <span class="en"><span class="ln">From summit statements</span><span class="ln">to <span class="swoosh">youth-led action</span></span></span><span class="ja"><span class="ln">首脳間の対話を、</span><span class="ln"><span class="swoosh">若者の実践へ</span></span></span><span class="ko"><span class="ln">정상 간의 대화를,</span><span class="ln"><span class="swoosh">청년의 실천으로</span></span></span>
       </h1>
       <p class="lede"><span class="en">TogetherWeTri was started in Korea in 2025 by alumni of the Japan–U.S.–Korea Young Trilateral Leaders (YTL) Summit. Active since March 2026, the Japan Branch connects students, young professionals and local communities in Japan with peers in the United States and Korea, and turns trilateral priorities into work people can join.</span><span class="ja">TogetherWeTriは、日米韓ヤング・リーダーズ・サミット（Young Trilateral Leaders Summit：YTL）の修了生が2025年に韓国で立ち上げたイニシアティブです。2026年3月に活動を開始した日本支部は、日本の学生・若手社会人・地域社会を米国・韓国の仲間とつなぎ、日米韓協力の優先課題を誰もが参加できる活動へと落とし込みます。</span><span class="ko">TogetherWeTri는 한미일 미래세대 리더 서밋(YTL) 수료생들이 2025년 한국에서 시작한 이니셔티브입니다. 2026년 3월 활동을 시작한 일본 지부는 일본의 학생·청년 직장인·지역사회를 미국·한국의 동료들과 연결하고, 한미일 협력의 우선 과제를 누구나 참여할 수 있는 활동으로 만들어 갑니다.</span></p>
       <div class="btns">
-        <a class="btn" href="#japan-events" data-nav="japan-events"><span class="en">See our events</span><span class="ja">イベントを見る</span><span class="ko">행사 보기</span></a>
-        <a class="btn ghost" href="#japan-members" data-nav="japan-members"><span class="en">Meet the team</span><span class="ja">メンバー紹介</span><span class="ko">멤버 소개</span></a>
+        <a class="btn hero-btn red" href="#japan-events" data-nav="japan-events"><span class="en">See our events</span><span class="ja">イベントを見る</span><span class="ko">행사 보기</span></a>
+        <a class="btn hero-btn navy" href="#japan-members" data-nav="japan-members"><span class="en">Meet the team</span><span class="ja">メンバー紹介</span><span class="ko">멤버 소개</span></a>
       </div>
     </div>
     <div class="hero-art"><img src="banner.webp" width="1115" height="296" alt="Illustrated Tokyo skyline with Tokyo Tower, Mount Fuji and cherry blossom trees in navy, blue and red"></div>
   </section>
 
-  <div class="jp-tabbar">
+  <div class="sub-tabbar">
     <div class="wrap">
-      <nav class="jp-tabs" aria-label="Japan Branch">
+      <nav class="sub-tabs" aria-label="Japan Branch">
         <a href="#japan" data-nav="japan"><span class="en">Overview</span><span class="ja">概要</span><span class="ko">개요</span></a>
         <a href="#japan-events" data-nav="japan-events"><span class="en">Events</span><span class="ja">イベント</span><span class="ko">행사</span></a>
         <a href="#japan-news" data-nav="japan-news"><span class="en">News</span><span class="ja">ニュース</span><span class="ko">뉴스</span></a>
@@ -1115,7 +1158,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
   </div>
 
   <!-- Overview -->
-  <div class="jp-view" data-view="japan">
+  <div class="sub-view" data-view="japan">
   <section class="block">
     <div class="wrap">
       <div class="block-head">
@@ -1207,7 +1250,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
   </div>
 
   <!-- Events -->
-  <div class="jp-view" data-view="japan-events" hidden>
+  <div class="sub-view" data-view="japan-events" hidden>
   <section class="block">
     <div class="wrap">
       <div class="block-head">
@@ -1241,7 +1284,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
   </div>
 
   <!-- News -->
-  <div class="jp-view" data-view="japan-news" hidden>
+  <div class="sub-view" data-view="japan-news" hidden>
   <section class="block">
     <div class="wrap">
       <div class="block-head">
@@ -1270,7 +1313,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
   </div>
 
   <!-- Members -->
-  <div class="jp-view" data-view="japan-members" hidden>
+  <div class="sub-view" data-view="japan-members" hidden>
   <section class="block">
     <div class="wrap">
       <div class="block-head">
@@ -1295,6 +1338,197 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
     </div>
   </section>
   </div>
+</div>
+
+<!-- ============ KOREA BRANCH ============ -->
+<div class="page" id="page-korea" data-page="korea" hidden>
+  <section class="hero branch-hero kr-hero">
+    <div class="wrap hero-copy">
+      <span class="eyebrow jp-eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg>KOREA BRANCH · 韓国支部 · 한국 지부</span>
+      <h1><span class="en"><span class="ln">Trilateral cooperation,</span><span class="ln">rooted in <span class="swoosh">our regions</span></span></span><span class="ja"><span class="ln">日米韓の協力を、</span><span class="ln"><span class="swoosh">地域から</span></span></span><span class="ko"><span class="ln">한미일 협력을,</span><span class="ln"><span class="swoosh">지역에서부터</span></span></span></h1>
+      <p class="lede"><span class="en">TogetherWeTri began in Korea in 2025. The Korea Branch brings YTL alumni and local students together at American Corners outside Seoul, turning trilateral priorities into regional dialogue and policy ideas. From August 2025 to September 2026 it carried out a project funded by the U.S. Department of State's Alumni Engagement Innovation Fund (AEIF).</span><span class="ja">TogetherWeTriは2025年に韓国で始まりました。韓国支部は、ソウル以外の各地のアメリカン・コーナーにYTL修了生と地元の学生を集め、日米韓協力の課題を地域の対話と政策アイデアへとつなげています。2025年8月から2026年9月までは、米国国務省の同窓生エンゲージメント・イノベーション基金（AEIF）の助成を受けた事業を実施しました。</span><span class="ko">TogetherWeTri는 2025년 한국에서 시작되었습니다. 한국 지부는 서울 밖 여러 지역의 아메리칸 코너에서 YTL 수료생과 지역 학생들을 연결하고, 한미일 협력의 과제를 지역의 대화와 정책 아이디어로 이어 갑니다. 2025년 8월부터 2026년 9월까지 미국 국무부 동문 참여 혁신 기금(AEIF)의 지원을 받아 사업을 수행했습니다.</span></p>
+      <div class="btns">
+        <a class="btn hero-btn red" href="#korea-events" data-nav="korea-events"><span class="en">See our events</span><span class="ja">イベントを見る</span><span class="ko">행사 보기</span></a>
+        <a class="btn hero-btn navy" href="#about-aeif" data-nav="about-aeif"><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></a>
+      </div>
+    </div>
+    <div class="hero-art"><img src="banner-korea.webp" width="1191" height="372" alt="Illustrated Gyeongbokgung Palace under a starry sky with shooting stars, in navy, blue and red"></div>
+  </section>
+
+  <div class="sub-tabbar">
+    <div class="wrap">
+      <nav class="sub-tabs" aria-label="Korea Branch">
+        <a href="#korea" data-nav="korea"><span class="en">Overview</span><span class="ja">概要</span><span class="ko">개요</span></a>
+        <a href="#korea-events" data-nav="korea-events"><span class="en">Events</span><span class="ja">イベント</span><span class="ko">행사</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <div class="sub-view" data-view="korea">
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">What we do</span><span class="ja">活動内容</span><span class="ko">활동 내용</span></span>
+        <h2><span class="en">How the Korea Branch works</span><span class="ja">韓国支部の活動</span><span class="ko">한국 지부의 활동</span></h2>
+      </div>
+      <div class="programs has-mz">
+        <span class="mz mz-peek mz-programs" data-say="안녕!" aria-hidden="true"><img src="hanul-peek.png" alt=""></span>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-3.5-3"/></svg></span>
+          <h3><span class="en">Regional roundtables</span><span class="ja">地域ラウンドテーブル</span><span class="ko">지역 라운드테이블</span></h3>
+          <p><span class="en">Workshops at American Corners outside Seoul where YTL alumni and local students discuss how their city can contribute to trilateral cooperation.</span><span class="ja">ソウル以外のアメリカン・コーナーで、YTL修了生と地元の学生が、自分たちの街が日米韓協力にどう貢献できるかを話し合います。</span><span class="ko">서울 밖의 아메리칸 코너에서 YTL 수료생과 지역 학생들이 우리 도시가 한미일 협력에 어떻게 기여할 수 있을지 논의합니다.</span></p>
+        </div>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg></span>
+          <h3><span class="en">Policy proposals</span><span class="ja">政策提言</span><span class="ko">정책 제안</span></h3>
+          <p><span class="en">Participants draft policy proposals together, and each roundtable is summarized in a final report.</span><span class="ja">参加者が一緒に政策提言をまとめ、各ラウンドテーブルの成果を最終報告書にまとめています。</span><span class="ko">참가자들이 함께 정책 제안을 만들고, 각 라운드테이블의 성과를 최종 보고서로 정리합니다.</span></p>
+        </div>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <h3><span class="en">Local partnerships</span><span class="ja">地域との連携</span><span class="ko">지역 파트너십</span></h3>
+          <p><span class="en">Working with American Corners, universities and local media to reach young people in every region.</span><span class="ja">アメリカン・コーナー、大学、地元メディアと連携し、各地の若者に参加の機会を届けます。</span><span class="ko">아메리칸 코너, 대학, 지역 언론과 협력해 각 지역의 청년들에게 참여 기회를 전합니다.</span></p>
+        </div>
+        <div class="program">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.3 15.8M13.2 7.2l4.5 8.6M7.5 18h9"/></svg></span>
+          <h3><span class="en">Alumni network</span><span class="ja">修了生ネットワーク</span><span class="ko">수료생 네트워크</span></h3>
+          <p><span class="en">YTL alumni from Korea, the U.S. and Japan come back as speakers, panelists and organizers.</span><span class="ja">韓国・米国・日本のYTL修了生が、登壇者・パネリスト・運営者として再び集まります。</span><span class="ko">한국·미국·일본의 YTL 수료생들이 연사, 패널, 운영진으로 다시 모입니다.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap split">
+      <div class="block-head" style="margin-bottom:0">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Highlights</span><span class="ja">活動の様子</span><span class="ko">활동 모습</span></span>
+        <h2><span class="en">Roundtables across Korea</span><span class="ja">韓国各地でのラウンドテーブル</span><span class="ko">한국 각지의 라운드테이블</span></h2>
+        <p class="muted"><span class="en">From Gwangju to Busan, local students and YTL alumni discuss what their regions can bring to U.S.–ROK–Japan cooperation.</span><span class="ja">光州から釜山まで、地元の学生とYTL修了生が、地域が日米韓協力にもたらせるものを話し合っています。</span><span class="ko">광주에서 부산까지, 지역 학생과 YTL 수료생들이 지역이 한미일 협력에 기여할 수 있는 것을 함께 논의합니다.</span></p>
+        <p><a href="#korea-events" data-nav="korea-events"><span class="en">See all events →</span><span class="ja">すべてのイベントを見る →</span><span class="ko">모든 행사 보기 →</span></a></p>
+      </div>
+      <div class="about-photos">
+        <figure><img src="gwangju1115-1.jpg" width="1400" height="788" loading="lazy" alt="Participants at the Gwangju American Corner"><figcaption><span class="en">Gwangju · Nov 2025</span><span class="ja">光州・2025年11月</span><span class="ko">광주 · 2025년 11월</span></figcaption></figure>
+        <figure><img src="gwangju1115-5.jpg" width="1400" height="933" loading="lazy" alt="Policy proposal session in Gwangju"><figcaption><span class="en">Gwangju · Nov 2025</span><span class="ja">光州・2025年11月</span><span class="ko">광주 · 2025년 11월</span></figcaption></figure>
+        <figure><img src="busan1219-1.jpg" width="1400" height="933" loading="lazy" alt="Group photo at the Busan American Corner"><figcaption><span class="en">Busan · Dec 2025</span><span class="ja">釜山・2025年12月</span><span class="ko">부산 · 2025년 12월</span></figcaption></figure>
+        <figure><img src="busan1219-4.jpg" width="1400" height="933" loading="lazy" alt="Panel discussion in Busan"><figcaption><span class="en">Busan · Dec 2025</span><span class="ja">釜山・2025年12月</span><span class="ko">부산 · 2025년 12월</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head-row">
+        <div class="block-head">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Events</span><span class="ja">イベント</span><span class="ko">행사</span></span>
+          <h2><span class="en">Recent events</span><span class="ja">最近のイベント</span><span class="ko">최근 행사</span></h2>
+        </div>
+        <a class="btn ghost" href="#korea-events" data-nav="korea-events"><span class="en">All events</span><span class="ja">すべてのイベント</span><span class="ko">모든 행사</span></a>
+      </div>
+      <div class="ev-list" id="kr-home-events"></div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap">
+      <div class="aeif-card">
+        <img src="aeif-award.jpg" alt="" loading="lazy">
+        <div style="display:grid;gap:10px;justify-items:start">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></span>
+          <h2><span class="en">Funded by the U.S. Department of State</span><span class="ja">米国国務省の助成を受けた事業</span><span class="ko">미국 국무부 지원 사업</span></h2>
+          <p class="muted"><span class="en">From August 2025 to September 2026, the Korea Branch carried out an Alumni Engagement Innovation Fund (AEIF) project, including six regional cooperation roundtables in Korea and Japan.</span><span class="ja">2025年8月から2026年9月まで、韓国支部は同窓生エンゲージメント・イノベーション基金（AEIF）の事業を実施し、韓国と日本で6回の地域協力ラウンドテーブルを開きました。</span><span class="ko">2025년 8월부터 2026년 9월까지 한국 지부는 동문 참여 혁신 기금(AEIF) 사업을 수행하며, 한국과 일본에서 6회의 지역 협력 라운드테이블을 개최했습니다.</span></p>
+          <a class="btn ghost" href="#about-aeif" data-nav="about-aeif"><span class="en">See the AEIF project →</span><span class="ja">AEIF採択事業の詳細を見る →</span><span class="ko">AEIF 사업 자세히 보기 →</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></span>
+          <h2><span class="en">Bring a roundtable to your city</span><span class="ja">あなたの街でラウンドテーブルを</span><span class="ko">당신의 도시에서 라운드테이블을</span></h2>
+          <p><span class="en">Universities, American Corners and local organizations in Korea can host a session with us.</span><span class="ja">韓国の大学、アメリカン・コーナー、地域団体と一緒にセッションを開いています。</span><span class="ko">한국의 대학, 아메리칸 코너, 지역 단체와 함께 세션을 열고 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" data-topic="korea" style="margin-top:6px"><span class="en">Contact the Korea Branch</span><span class="ja">韓国支部に問い合わせる</span><span class="ko">한국 지부에 문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Events -->
+  <div class="sub-view" data-view="korea-events" hidden>
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Events</span><span class="ja">イベント</span><span class="ko">행사</span></span>
+        <h2><span class="en">Korea Branch events</span><span class="ja">韓国支部のイベント</span><span class="ko">한국 지부 행사</span></h2>
+        <p class="muted"><span class="en">Click an event title to see the program, photos, video and report.</span><span class="ja">イベント名を押すと、プログラム・写真・動画・レポートを見られます。</span><span class="ko">행사 제목을 누르면 프로그램, 사진, 영상, 보고서를 볼 수 있습니다.</span></p>
+      </div>
+      <div class="block-head-row" style="justify-content:flex-end"><span class="muted num" id="kr-ev-count" style="font-size:var(--s-sm)"></span></div>
+      <div class="ev-list" id="kr-events-list"></div>
+    </div>
+  </section>
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">Get involved</span><span class="ja">参加する</span><span class="ko">함께하기</span></span>
+          <h2><span class="en">Bring a roundtable to your city</span><span class="ja">あなたの街でラウンドテーブルを</span><span class="ko">당신의 도시에서 라운드테이블을</span></h2>
+          <p><span class="en">Universities, American Corners and local organizations in Korea can host a session with us.</span><span class="ja">韓国の大学、アメリカン・コーナー、地域団体と一緒にセッションを開いています。</span><span class="ko">한국의 대학, 아메리칸 코너, 지역 단체와 함께 세션을 열고 있습니다.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" data-topic="korea" style="margin-top:6px"><span class="en">Contact the Korea Branch</span><span class="ja">韓国支部に問い合わせる</span><span class="ko">한국 지부에 문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
+  </div>
+</div>
+
+<!-- ============ U.S. BRANCH ============ -->
+<div class="page" id="page-us" data-page="us" hidden>
+  <section class="hero branch-hero us-hero">
+    <div class="wrap hero-copy">
+      <span class="eyebrow jp-eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg>U.S. BRANCH · 米国支部 · 미국 지부</span>
+      <h1><span class="en"><span class="ln">Building the network</span><span class="ln">in <span class="swoosh">the United States</span></span></span><span class="ja"><span class="ln">アメリカでも、</span><span class="ln"><span class="swoosh">日米韓のネットワークを</span></span></span><span class="ko"><span class="ln">미국에서도,</span><span class="ln"><span class="swoosh">한미일 네트워크를</span></span></span></h1>
+      <p class="lede"><span class="en">The U.S. Branch is being prepared. We are looking for YTL alumni, students and young professionals in the United States who want to help launch it.</span><span class="ja">米国支部は現在、立ち上げの準備中です。米国で一緒に立ち上げに関わってくださるYTL修了生・学生・若手社会人を募集しています。</span><span class="ko">미국 지부는 현재 출범을 준비하고 있습니다. 미국에서 함께 지부를 만들어 갈 YTL 수료생, 학생, 청년 직장인을 찾고 있습니다.</span></p>
+      <span class="chip soon"><span class="en">Coming soon</span><span class="ja">準備中</span><span class="ko">준비 중</span></span>
+      <div class="btns">
+        <a class="btn hero-btn red" href="#contact" data-nav="contact" data-topic="us"><span class="en">Help us launch it</span><span class="ja">立ち上げに参加する</span><span class="ko">출범에 참여하기</span></a>
+      </div>
+    </div>
+    <div class="hero-art"><img src="banner-us.webp" width="900" height="480" alt="Illustrated U.S. Capitol under a starry sky, in navy, blue and red"></div>
+  </section>
+
+  <section class="block">
+    <div class="wrap split">
+      <div class="block-head" style="margin-bottom:0">
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Get involved</span><span class="ja">参加の方法</span><span class="ko">참여 방법</span></span>
+        <h2><span class="en">Ways to help</span><span class="ja">関わり方</span><span class="ko">참여하는 방법</span></h2>
+        <p class="muted"><span class="en">The U.S. Branch will connect the American side of the YTL network with peers in Korea and Japan.</span><span class="ja">米国支部は、YTLネットワークの米国側の仲間を、韓国・日本の仲間とつなぎます。</span><span class="ko">미국 지부는 YTL 네트워크의 미국 측 동료들을 한국·일본의 동료들과 연결합니다.</span></p>
+      </div>
+      <div>
+        <div class="way"><h3><span class="en">Join the launch team</span><span class="ja">立ち上げメンバーになる</span><span class="ko">출범 멤버 되기</span></h3><p><span class="en">Help plan the first U.S. events and set up the branch.</span><span class="ja">米国での最初のイベントの企画や、支部の体制づくりに関わってください。</span><span class="ko">미국 첫 행사 기획과 지부 체계 마련에 함께해 주세요.</span></p></div>
+        <div class="way"><h3><span class="en">Host on your campus</span><span class="ja">大学で開催する</span><span class="ko">캠퍼스에서 개최하기</span></h3><p><span class="en">Bring a trilateral dialogue to your university or student group.</span><span class="ja">あなたの大学や学生団体で、日米韓の対話セッションを開いてください。</span><span class="ko">당신의 대학이나 학생 단체에서 한미일 대화 세션을 열어 주세요.</span></p></div>
+        <div class="way"><h3><span class="en">Connect partners</span><span class="ja">パートナーをつなぐ</span><span class="ko">파트너 연결하기</span></h3><p><span class="en">Introduce organizations that work on U.S.–ROK–Japan relations.</span><span class="ja">日米韓関係に取り組む団体をご紹介ください。</span><span class="ko">한미일 관계를 다루는 단체를 소개해 주세요.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:8px">
+    <div class="wrap">
+      <div class="cta"><div class="cta-inner">
+        <div style="display:grid;gap:12px;justify-items:start">
+          <span class="eyebrow"><span class="en">U.S. Branch</span><span class="ja">米国支部</span><span class="ko">미국 지부</span></span>
+          <h2><span class="en">Help us launch the U.S. Branch</span><span class="ja">米国支部の立ち上げに参加しよう</span><span class="ko">미국 지부 출범에 함께해 주세요</span></h2>
+          <p><span class="en">Tell us a little about yourself and how you would like to be involved.</span><span class="ja">簡単な自己紹介と、どのように関わりたいかをお知らせください。</span><span class="ko">간단한 자기소개와 참여하고 싶은 방식을 알려 주세요.</span></p>
+          <a class="btn light" href="#contact" data-nav="contact" data-topic="us" style="margin-top:6px"><span class="en">Get in touch</span><span class="ja">お問い合わせ</span><span class="ko">문의하기</span></a>
+        </div>
+        <div class="tigers" aria-hidden="true"><img src="hanul.png" alt=""><img src="hank.png" alt=""><img src="haru.png" alt=""></div>
+      </div></div>
+    </div>
+  </section>
 </div>
 
 <!-- ============ CONTACT ============ -->
@@ -1345,6 +1579,8 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
           <div class="copybox" data-gen-email><span class="addr" id="email-addr"></span><button type="button" class="copy-btn" data-copy="email"><span class="en">Copy</span><span class="ja">コピー</span><span class="ko">복사</span></button></div>
           <p class="email-label" data-jp-email><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></p>
           <div class="copybox" data-jp-email><span class="addr" id="email-addr-jp"></span><button type="button" class="copy-btn" data-copy="japan"><span class="en">Copy</span><span class="ja">コピー</span><span class="ko">복사</span></button></div>
+          <p class="email-label" data-kr-email><span class="en">Korea Branch</span><span class="ja">韓国支部</span><span class="ko">한국 지부</span></p>
+          <div class="copybox" data-kr-email><span class="addr" id="email-addr-kr"></span><button type="button" class="copy-btn" data-copy="korea"><span class="en">Copy</span><span class="ja">コピー</span><span class="ko">복사</span></button></div>
         </div>
         <div style="display:grid;gap:10px" data-social-wrap hidden>
           <span class="eyebrow"><svg aria-hidden="true"><use href="#bars"/></svg><span class="en">Social media</span><span class="ja">SNS</span><span class="ko">SNS</span></span>
@@ -1406,7 +1642,7 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
   <button type="button" role="menuitem" data-jump="about-journey"><span class="en">How we got here</span><span class="ja">これまでの歩み</span><span class="ko">지금까지의 여정</span></button>
   <button type="button" role="menuitem" data-jump="about-mascots"><span class="en">Our mascots</span><span class="ja">マスコット</span><span class="ko">마스코트</span></button>
   </div>
-  <div data-menu-for="aeif" style="display:contents">
+  <div data-menu-for="about-aeif" style="display:contents">
   <button type="button" role="menuitem" data-jump="aeif-overview"><span class="en">Project overview</span><span class="ja">事業の概要</span><span class="ko">사업 개요</span></button>
   <button type="button" role="menuitem" data-jump="aeif-results"><span class="en">Results</span><span class="ja">成果</span><span class="ko">성과</span></button>
   <button type="button" role="menuitem" data-jump="aeif-roundtables"><span class="en">Six roundtables</span><span class="ja">6つのラウンドテーブル</span><span class="ko">6개의 라운드테이블</span></button>
@@ -1426,8 +1662,9 @@ html[data-lang="ja"] .rt-body .place, html[data-lang="ko"] .rt-body .place { let
       </a>
       <nav class="foot-nav" aria-label="Footer">
         <a href="#about" data-nav="about"><span class="en">About us</span><span class="ja">私たちについて</span><span class="ko">소개</span></a>
-        <a href="#aeif" data-nav="aeif"><span class="en">AEIF Project</span><span class="ja">AEIF採択事業</span><span class="ko">AEIF 사업</span></a>
         <a href="#japan" data-nav="japan"><span class="en">Japan Branch</span><span class="ja">日本支部</span><span class="ko">일본 지부</span></a>
+        <a href="#korea" data-nav="korea"><span class="en">Korea Branch</span><span class="ja">韓国支部</span><span class="ko">한국 지부</span></a>
+        <a href="#us" data-nav="us"><span class="en">U.S. Branch</span><span class="ja">米国支部</span><span class="ko">미국 지부</span></a>
         <a href="#contact" data-nav="contact"><span class="en">Contact</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></a>
       </nav>
     </div>
