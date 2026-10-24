@@ -82,7 +82,6 @@ const EVENTS = [
     place: { en: "Sendai (INTILAQ Tohoku Innovation Center)", ja: "仙台（INTILAQ 東北イノベーションセンター）" }, format: "inperson / online", langs: "EN / JA",
     desc: { en: "This event brings together young people from Japan, the United States, and the Republic of Korea in Sendai to explore new forms of cooperation across national and cultural boundaries. Featuring experts and emerging leaders from the three countries, the event focuses on innovation, resilience, and regional revitalization across various fields. It provides an opportunity for participants to engage in dialogue and collectively envision new ways for the next generation to advance trilateral cooperation.", ja: "本イベントは、日本・米国・韓国の若者が仙台に集結し、国や立場の違いを越えて「協力」の新しいかたちを語り合う対話イベントです。様々な分野におけるイノベーション（革新）やレジリエンス（回復力）、地方創生をテーマに、日米韓の有識者や若手リーダーをお招きし、次世代の「協力」のあり方を参加者の皆さまと共に考える機会となっております。" }
    , organizer:{en:"INTILAQ Tohoku Innovation Center, zero to one, Inc.", ja: "INTILAQ東北イノベーションセンター, 株式会社 zero to one" }, support: {en:"Sendai City, United States Embassy, Consulate General of the Republic of Korea in Sendai", ja: "仙台市、在日米国大使館、駐仙台大韓民国総領事館"},
-  participants: { en: "40 participants (24 on site, 16 online)", ja: "参加者40名（会場24名・オンライン16名）" },
      lead: { en: "Sora Yamasaki (TogetherWeTri Japan Branch)", ja: "山﨑蒼空（TogetherWeTri 日本支部）" }, 
    schedule: [
       { time: "14:00–14:20", en: "Opening and Congratulatory Remarks", ja: "開会・ご挨拶" },
@@ -259,7 +258,6 @@ const KOREA_EVENTS = [
     desc: { en: "The first TogetherWeTri convening. YTL alumni and Gwangju-based young people examined how locally anchored engagement can reinforce U.S.–ROK–Japan cooperation, and proposed ideas ranging from a Gwangju–San Antonio–Sendai youth congress to cooperation on energy storage, AI and drones.",
             ja: "TogetherWeTri最初のワークショップ。YTL修了生と光州の若者が、地域に根ざした取り組みが日米韓協力をどう支えられるかを議論し、光州・サンアントニオ・仙台の三都市ユース会議から、エネルギー貯蔵・AI・ドローン分野での協力まで、さまざまな提案をまとめました。",
             ko: "TogetherWeTri의 첫 워크숍입니다. YTL 수료생과 광주 지역 청년들이 지역에 뿌리내린 참여가 한미일 협력을 어떻게 뒷받침할 수 있는지 논의하고, 광주–샌안토니오–센다이 청년 회의부터 에너지 저장장치·AI·드론 분야 협력까지 다양한 제안을 도출했습니다." },
-    participants: { en: "14 participants · 8 YTL alumni speakers · 93.3% high satisfaction", ja: "14名が参加・YTL修了生8名が登壇・満足度93.3%", ko: "14명 참가 · YTL 수료생 연사 8명 · 만족도 93.3%" },
     organizer: { en: "TogetherWeTri Korea Branch", ja: "TogetherWeTri 韓国支部", ko: "TogetherWeTri 한국 지부" },
     partners: { en: "Gwangju American Corner", ja: "光州アメリカン・コーナー", ko: "광주 아메리칸 코너" },
     schedule: [
