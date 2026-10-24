@@ -461,11 +461,14 @@ function show(route, opts = {}) {
   $("#site-nav").classList.remove("open");
   $("#menu-btn").setAttribute("aria-expanded", "false");
   if (opts.keepScroll) return;
-  // switching sub-pages keeps the tab bar in view
+  // Opening a sub-page (events, members, ...) scrolls down to it, just below the hero.
+  // Switching back to the overview tab from inside the page does the same.
   const hero = pg && $(".branch-hero", pg);
-  if (samePage && hero) {
+  if (hero && (samePage || route !== page)) {
+    if (!samePage) window.scrollTo({ top: 0 });
     const top = hero.offsetTop + hero.offsetHeight - $(".site-header").offsetHeight;
-    window.scrollTo({ top: Math.min(window.scrollY, top) });
+    const smooth = samePage && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+    requestAnimationFrame(() => window.scrollTo({ top, behavior: smooth ? "smooth" : "auto" }));
   } else window.scrollTo({ top: 0 });
 }
 // Navigate and record the page in browser history so the back button works
